@@ -1,0 +1,23 @@
+# Environment Variables Template for HackBhoomi
+# Copy this content to .env.local and fill in your values
+
+# Site Configuration
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+NEXT_PUBLIC_SITE_NAME=HackBhoomi 2025
+NEXT_PUBLIC_SITE_DESCRIPTION=Internal Hackathon for SIH 2025
+
+# Contact Information
+NEXT_PUBLIC_CONTACT_EMAIL=l.singhshivam1@gmail.com
+NEXT_PUBLIC_UNIVERSITY_NAME=Invertis University
+
+# External Links
+NEXT_PUBLIC_SIH_URL=https://www.sih.gov.in
+NEXT_PUBLIC_INVERTIS_URL=https://www.invertisuniversity.ac.in
+
+# Analytics (Optional)
+NEXT_PUBLIC_GA_ID=your-google-analytics-id
+NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
+
+# Performance
+NEXT_PUBLIC_ENABLE_ANALYTICS=false
+NEXT_PUBLIC_ENABLE_PERFORMANCE_MONITORING=false
