@@ -1389,25 +1389,26 @@ export default function ElkjopInternalEvent() {
           >
             <div className="relative max-w-4xl max-h-full">
               <h2 id="modal-title" className="sr-only">
-                Fullskjerm bilde
+                Fullscreen Image
               </h2>
               <Button
                 variant="ghost"
                 size="icon"
                 className="absolute -top-12 right-0 text-white hover:bg-white/10"
                 onClick={() => setSelectedImage(null)}
-                aria-label="Lukk fullskjerm bilde"
+                aria-label="Close fullscreen image"
               >
                 <X className="w-6 h-6" />
               </Button>
               <img
                 src={selectedImage || "/placeholder.svg"}
-                alt="Fullskjerm bilde fra hackathon"
+                alt="Fullscreen image from hackathon"
                 className="max-w-full max-h-full object-contain rounded-lg"
               />
             </div>
           </div>
         )}
+
       </div>
     </>
   )
