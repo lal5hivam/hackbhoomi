@@ -116,226 +116,146 @@ export default function hackBhoomi() {
 
       <div 
         className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed"
-        style={{ backgroundImage: 'url(/herobg.jpg)' }}
       >
+      
+      
         {/* Header - Elkjøp Internal Style */}
        <header 
-         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-           isScrolled 
-             ? 'bg-gray-900/80 backdrop-blur-md shadow-lg' 
-             : 'bg-gray-900'
-         } text-white`} 
-         role="banner" 
-         id="header"
-       >
-          <div className="max-w-7xl mx-auto px-6 py-4">
-            <div className="flex items-center justify-between w-full">
-              
-              {/* Left Section: Hamburger + Logo + Title */}
-              <div className="flex items-center space-x-4">
-                {/* Hamburger Menu Button */}
-                <button
-                  onClick={() => setIsNavOpen(!isNavOpen)}
-                  className="p-2 text-white hover:bg-white/10 rounded-md transition-colors"
-                  aria-label="Toggle navigation menu"
-                >
-                  <div className="w-6 h-6 flex flex-col justify-center items-center space-y-1">
-                    <div className={`w-5 h-1 bg-white transition-all duration-300 ${isNavOpen ? 'rotate-45 translate-y-1.5' : ''}`}></div>
-                    <div className={`w-5 h-1 bg-white transition-all duration-300 ${isNavOpen ? 'opacity-0' : ''}`}></div>
-                    <div className={`w-5 h-1 bg-white transition-all duration-300 ${isNavOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></div>
-                  </div>
-                </button>
-                
-                {/* Logo + Title */}
-                <div className="flex items-center space-x-4">
-                  <h1 className="text-4xl font-bold">Hack</h1>
-                  <h1 className="text-4xl text-orange-300 font-bold">भूमि</h1>
-                  <div
-                    className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-b-[12px] border-b-orange-500 rotate-90"
-                    aria-hidden="true"
-                  ></div>
-                  <span className="text-2xl font-semibold text-orange-400">SIH 2025</span>
-
-                  <button onClick={() => window.open("https://www.invertisuniversity.ac.in/", "_blank")}>
-                    <img
-                      src="/invertis.png"
-                      alt="Invertis University Logo"
-                      className="h-12 w-auto ml-6"
-                    />
-                  </button>
-                </div>
-              </div>
-
-              {/* Right Section: Location, Date & Register */}
-              <div className="flex items-center space-x-8">
-                <div className="flex items-center space-x-2">
-                  <MapPin className="w-5 h-5 text-orange-400" />
-                  <span className="text-sm">Invertis University, Bareilly</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Calendar className="w-5 h-5 text-orange-400" />
-                  <time dateTime="2025-08-25" className="text-sm">
-                    25 Aug, 2025
-                  </time>
-                </div>
-                <Button className="bg-orange-500 text-black hover:bg-orange-600 px-4 py-2 rounded-lg shadow-md">
-                  Register
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          {/* Navigation */}
-          
-                 </header>
-
-         <nav 
-           className={`fixed top-20 left-0 right-0 z-40 transition-all duration-300 transform ${
-             isScrolled 
-               ? 'bg-black/80 backdrop-blur-md shadow-lg' 
-               : 'bg-black'
-           } ${isNavOpen ? 'translate-y-0' : '-translate-y-full'}`}
-           role="navigation" 
-           aria-label="Main navigation"
-         >
-            <div className="max-w-7xl mx-auto px-6">
-              <ul className="flex justify-center space-x-10 text-sm font-medium">
-                <li>
-                  <a
-                    href="#SIH"
-                    className="text-white hover:text-orange-400 py-3 inline-block"
-                  >
-                    ABOUT SIH
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#program"
-                    className="text-white hover:text-orange-400 py-3 inline-block"
-                  >
-                    SCHEDULE
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#instructions"
-                    className="text-white hover:text-orange-400 py-3 inline-block"
-                  >
-                    INSTRUCTIONS
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#problem-statements"
-                    className="text-white hover:text-orange-400 py-3 inline-block"
-                  >
-                    PROBLEM STATEMENTS
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#vinnere"
-                    className="text-white hover:text-orange-400 py-3 inline-block"
-                  >
-                    WINNERS
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#faq"
-                    className="text-white hover:text-orange-400 py-3 inline-block"
-                  >
-                    FAQ
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#neste"
-                    className="text-white hover:text-orange-400 py-3 inline-block"
-                  >
-                    NESTE EVENT
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-
-
-
-        {/* Hero Section - Elkjøp Internal Style */}
-        <section
-          className="relative overflow-hidden h-screen mt-20"
-          role="main"
+          className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+            isScrolled 
+              ? 'bg-gray-900/80 text-white backdrop-blur-md shadow-lg py-2' 
+              : 'bg-gray-100/60 backdrop-blur-xl border border-gray-300/30 shadow-lg rounded-2xl w-[95%] mx-auto mt-3 py-4  '
+          } text-black`} 
+          // role="banner" 
+          // id="header"
         >
-          {/* Dark overlay for better text readability */}
-          <div className="absolute inset-0 bg-black/30 z-10"></div>
-          
-          <div className="max-w-7xl mx-auto px-4 py-8 relative z-20 h-full flex items-center">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-              <button
-                onClick={() => window.open("https://www.sih.gov.in", "_blank")}
-              >
-                <img 
-                  src="/SIH.png" 
-                  alt="Invertis University Logo" 
-                  className="h-10 w-auto ml-6 mb-4"
-                />
-              </button>
+          <div className="max-w-7xl mx-auto ">
+            <div className="flex items-center justify-between w-full">
 
-                <h2 className="text-8xl font-black leading-none mb-4">
-                  <span className="text-sky-400">Internal</span>
-                  <br />
-                  <span className="text-orange-400">HACKATHON</span>
-                </h2>
-                <p className="text-xl text-white mb-8 max-w-lg">
-                  Your CHANCE to represent Invertis University at the Smart India Hackathon 2025
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-bold text-lg px-6 py-3 rounded-md">
+              {/* -------- TOP LAYOUT (when NOT scrolled) -------- */}
+              {!isScrolled && (
+                <>
+                  {/* Left Section: Hamburger + Logo + Title */}
+                  <div className="flex items-center space-x-4">
+                    {/* Hamburger */}
                     
+
+                    {/* Logo + Title */}
+                    <div className="flex items-center">
+                      <h1 className="text-4xl font-bold font-serif">Hack</h1>
+                      <h1 className="text-4xl text-orange-600 font-bold ml-2">भूमि</h1>
+
+                      <div
+                        className="w-0 h-0 ml-2 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-b-[12px] border-b-orange-500 rotate-90"
+                      ></div>
+
+                      <span className="text-2xl font-semibold text-blue-800 ml-2">SIH 2025</span>
+
+                      <button
+                        onClick={() => window.open("https://www.invertisuniversity.ac.in/", "_blank")}
+                        className="ml-6"
+                      >
+                        <img
+                          src="/invertis.png"
+                          alt="Invertis University Logo"
+                          className="h-12 w-auto transition duration-300 ease-in-out hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)]"
+                        />
+                      </button>
+
+                      <button
+                        onClick={() => window.open("https://www.sih.gov.in", "_blank")}
+                        className="ml-8"
+                      >
+                        <img
+                          src="/SIH.png"
+                          alt="SIH Logo"
+                          className="h-12 w-auto hover:drop-shadow-[0_0_6px_rgba(0,0,0,0.8)] drop-shadow-[0_0_6px_rgba(255,255,255,0.9)]"
+                        />
+                      </button>
+                      
+                    </div>
+                    <div className="flex items-center ">
+                      <MapPin className="w-5 h-5 text-orange-400" />
+                      <span className="text-sm">Invertis University, Bareilly</span>
+                    </div>
+                    <div className="flex items-center ">
+                      <Calendar className="w-5 h-5 text-orange-400" />
+                      <time dateTime="2025-08-25" className="text-sm">
+                        25 Aug, 2025
+                      </time>
+                    </div>
+                    <Button className="bg-orange-500 text-black hover:bg-orange-600 px-4 py-2 rounded-lg shadow-md">
+                      Register
+                    </Button>
+
+                  </div>
+
+                  
+                </>
+              )}
+
+              {/* -------- SCROLLED LAYOUT -------- */}
+              {isScrolled && (
+                <>
+                  {/* Left: Logo */}
+                  <div className="flex items-center space-x-3" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} >
+                      <h1 className="text-3xl font-bold">Hack</h1>
+                      <h1 className="text-3xl text-orange-300 font-bold">भूमि</h1>
+                  </div>
+
+                  {/* Middle: Navbar */}
+                  <nav className="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#SIH" className="hover:text-orange-400">ABOUT SIH</a>
+                    <a href="#program" className="hover:text-orange-400">SCHEDULE</a>
+                    <a href="#instructions" className="hover:text-orange-400">INSTRUCTIONS</a>
+                    <a href="#problem-statements" className="hover:text-orange-400">PROBLEM STATEMENTS</a>
+                    <a href="#vinnere" className="hover:text-orange-400">WINNERS</a>
+                    <a href="#faq" className="hover:text-orange-400">FAQ</a>
+                    <a href="#neste" className="hover:text-orange-400">NESTE EVENT</a>
+                  </nav>
+
+                  {/* Right: Register */}
+                  <Button className="bg-orange-500 text-black hover:bg-orange-600 px-4 py-2 rounded-lg shadow-md">
                     Register
                   </Button>
-                  {/* <Button
-                    variant="outline"
-                    className="border-white text-white hover:bg-white/10 font-bold text-lg px-6 py-3 rounded-md"
-                  >
-                    <Download className="w-5 h-5 mr-2" aria-hidden="true" />
-                    Last ned bilder
-                  </Button> */}
-                </div>
-              </div>
-              {/* <div className="relative">
-                <div className="grid grid-cols-2 gap-4">
-                  <img
-                    src="https://oslo-pull.b-cdn.net/AI_JAM_Fredag-24%20Large.jpeg"
-                    alt="AI Hackathon deltakere i samarbeid under utviklingsfasen"
-                    className="rounded-lg aspect-square object-cover"
-                    loading="eager"
-                  />
-                  <img
-                    src="https://oslo-pull.b-cdn.net/AI_JAM_S%C3%B8ndag-15%20Large.jpeg"
-                    alt="Team presenterer sitt AI-prosjekt på hovedscenen"
-                    className="rounded-lg aspect-square object-cover"
-                    loading="eager"
-                  />
-                  <img
-                    src="https://oslo-pull.b-cdn.net/Vibetank/AI_JAM_L%C3%B8rdag-25.jpeg"
-                    alt="Sommerfest feiring med Elkjøp-ansatte på takterrassen"
-                    className="rounded-lg aspect-square object-cover"
-                    loading="eager"
-                  />
-                  <img
-                    src="https://oslo-pull.b-cdn.net/AI_JAM_Fredag-20%20Large.jpeg"
-                    alt="Kreativt samarbeid mellom utviklingsteam"
-                    className="rounded-lg aspect-square object-cover"
-                    loading="eager"
-                  />
-                </div>
-              </div> */}
+                </>
+              )}
+            </div>
+          </div>
+        </header>
+
+
+
+
+
+        {/* Hero Section - Centered Style */}
+        <section className="relative overflow-hidden h-screen mt-20 flex items-center justify-center" role="main">
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/30 z-10"></div>
+
+          <div className="max-w-7xl mx-auto px-4 py-8 relative z-20 h-full flex flex-col items-center justify-center text-center">
+            
+            <p className="text-xl text-white mb-8 max-w-xl">
+              Your CHANCE to represent Invertis University at
+            </p>
+            <h2 className="text-8xl font-black leading-none mb-4">
+              <span className="text-blue-500 text-6xl">SMART INDIA</span>
+              <br />
+              <span className="text-orange-400">HACKATHON</span>
+              <br />
+              <span className="text-white">2025</span>
+            </h2>
+
+            
+
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-black font-bold text-lg px-6 py-3 rounded-md">
+                Register
+              </Button>
             </div>
           </div>
         </section>
+
 
         {/* Event Stats */}
         <section className="bg-black/80 backdrop-blur-sm py-12" aria-labelledby="stats-heading">

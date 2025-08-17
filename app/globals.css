@@ -85,6 +85,9 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
-  }
+  background-image: url('/invertis2.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 }
