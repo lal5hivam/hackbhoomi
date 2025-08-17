@@ -57,34 +57,13 @@ const FinancecoverImages = [
 
 
 
-const partyImages = [
-  "https://oslo-pull.b-cdn.net/Vibetank/AI_JAM_L%C3%B8rdag-11.jpeg",
-  "https://oslo-pull.b-cdn.net/Vibetank/AI_JAM_L%C3%B8rdag-12.jpeg",
-  "https://oslo-pull.b-cdn.net/Vibetank/AI_JAM_L%C3%B8rdag-13.jpeg",
-  "https://oslo-pull.b-cdn.net/Vibetank/AI_JAM_L%C3%B8rdag-14.jpeg",
-  "https://oslo-pull.b-cdn.net/Vibetank/AI_JAM_L%C3%B8rdag-15.jpeg",
-  "https://oslo-pull.b-cdn.net/Vibetank/AI_JAM_L%C3%B8rdag-16.jpeg",
-  "https://oslo-pull.b-cdn.net/Vibetank/AI_JAM_L%C3%B8rdag-17.jpeg",
-  "https://oslo-pull.b-cdn.net/Vibetank/AI_JAM_L%C3%B8rdag-18.jpeg",
-  "https://oslo-pull.b-cdn.net/Vibetank/AI_JAM_L%C3%B8rdag-19.jpeg",
-  "https://oslo-pull.b-cdn.net/Vibetank/AI_JAM_L%C3%B8rdag-20.jpeg",
-]
-
-const sundayImages = [
-  "https://oslo-pull.b-cdn.net/AI_JAM_S%C3%B8ndag-1%20Large.jpeg",
-  "https://oslo-pull.b-cdn.net/AI_JAM_S%C3%B8ndag-10%20Large.jpeg",
-  "https://oslo-pull.b-cdn.net/AI_JAM_S%C3%B8ndag-11%20Large.jpeg",
-  "https://oslo-pull.b-cdn.net/AI_JAM_S%C3%B8ndag-12%20Large.jpeg",
-  "https://oslo-pull.b-cdn.net/AI_JAM_S%C3%B8ndag-13%20Large.jpeg",
-  "https://oslo-pull.b-cdn.net/AI_JAM_S%C3%B8ndag-14%20Large.jpeg",
-]
 
 const videos = [
   "https://oslo-pull.b-cdn.net/Vibetank/IMG_7636.mp4",
   "https://oslo-pull.b-cdn.net/Vibetank/IMG_7638.mp4",
 ]
 
-export default function ElkjopInternalEvent() {
+export default function hackBhoomi() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
   const [activeSection, setActiveSection] = useState("fredag")
   const [isScrolled, setIsScrolled] = useState(false)
@@ -131,8 +110,8 @@ export default function ElkjopInternalEvent() {
     <>
       <Head>
         {/* Page-specific meta tags */}
-        <link rel="preload" href="https://oslo-pull.b-cdn.net/AI_JAM_Fredag-24%20Large.jpeg" as="image" />
-        <link rel="preload" href="https://oslo-pull.b-cdn.net/Vibetank/AI_JAM_L%C3%B8rdag-25.jpeg" as="image" />
+        <link rel="preload" href="/herobg.jpg" as="image" />
+        <link rel="preload" href="/edtech/PS1.png" as="image" />
       </Head>
 
       <div 
@@ -922,7 +901,7 @@ export default function ElkjopInternalEvent() {
                     aria-label={`Åpne bilde ${index + 1} fra edtech i fullskjerm`}
                   >
                     <img
-                      src={ETcoverImages[index] || "/edtech/edtech2.jpg"} // 👈 show cover image instead
+                      src={ETcoverImages[index] || "placeholder.svg"} // 👈 show cover image instead
                       alt={`Hackathon aktivitet edtech cover, bilde ${index + 1}`}
                       className="w-full h-full object-cover"
                       loading="lazy"
@@ -943,7 +922,7 @@ export default function ElkjopInternalEvent() {
                     aria-label={`Åpne bilde ${index + 1} fra HealthCare i fullskjerm`}
                   >
                     <img
-                      src={HCcoverImages[index] || "/healthcare/hc2.jpg"}
+                      src={HCcoverImages[index] || "placeholder.svg"}
                       alt={`Sommerfest aktivitet HealthCare, bilde ${index + 1}`}
                       className="w-full h-full object-cover"
                       loading="lazy"
@@ -963,7 +942,7 @@ export default function ElkjopInternalEvent() {
                     aria-label={`Åpne bilde ${index + 1} fra Environment i fullskjerm`}
                   >
                     <img
-                      src={EnvironmentcoverImages[index] || "/env1.jpg"}
+                      src={EnvironmentcoverImages[index] || "placeholder.svg"}
                       alt={`Presentasjon og avslutning Environment, bilde ${index + 1}`}
                       className="w-full h-full object-cover"
                       loading="lazy"
@@ -984,7 +963,7 @@ export default function ElkjopInternalEvent() {
                     aria-label={`Åpne bilde ${index + 1} fra Environment i fullskjerm`}
                   >
                     <img
-                      src={FinancecoverImages[index] || "/finance/fin1.jpg"}
+                      src={FinancecoverImages[index] || "placeholder.svg"}
                       alt={`Presentasjon og avslutning Environment, bilde ${index + 1}`}
                       className="w-full h-full object-cover"
                       loading="lazy"

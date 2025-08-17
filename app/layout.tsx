@@ -47,27 +47,14 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    site: "@elkjop",
-    creator: "@elkjop",
-    title: "Elkjøp Sommerfest 2024 - AI Hackathon",
-    description: "Se høydepunktene fra vårt interne AI-hackathon med 150+ deltakere og 25 innovative prosjekter.",
-    images: ["https://oslo-pull.b-cdn.net/AI_JAM_Fredag-24%20Large.jpeg"],
-  },
   alternates: {
-    canonical: "https://events.elkjop.no/sommerfest-2024",
-    languages: {
-      "nb-NO": "https://events.elkjop.no/sommerfest-2024",
-      "sv-SE": "https://events.elkjop.se/sommarfest-2024",
-      "da-DK": "https://events.elkjop.dk/sommerfest-2024",
-    },
+    canonical: "https://hackbhoomi.vercel.app/",
   },
   other: {
-    company: "Elkjøp Nordic AS",
+    company: "Invertis University",
     "event-type": "Internal Hackathon",
-    "event-date": "2024-06-15",
-    location: "Oslo Innovation Hub",
+    "event-date": "2025-25-08",
+    location: "Invertis University, Bareilly, India",
   },
     generator: 'v0.app'
 }
@@ -94,36 +81,36 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Event",
-              name: "Elkjøp Sommerfest 2024 - AI Hackathon",
-              description: "Intern AI-hackathon for Elkjøp-ansatte med fokus på innovasjon og teknologi",
+              name: "HackBhoomi 2025 - Internal Hackathon",
+              description: "Internal Hackathon at Invertis University for SIH 2025.",
               startDate: "2024-06-15T09:00:00+02:00",
               endDate: "2024-06-17T17:00:00+02:00",
               eventStatus: "https://schema.org/EventScheduled",
               eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
               location: {
                 "@type": "Place",
-                name: "Oslo Innovation Hub",
+                name: "Invertis University, Bareilly",
                 address: {
                   "@type": "PostalAddress",
-                  streetAddress: "Innovasjonsveien 1",
-                  addressLocality: "Oslo",
-                  postalCode: "0123",
-                  addressCountry: "NO",
+                  streetAddress: "Invertis University Campus, Bareilly",
+                  addressLocality: "Rajau Paraspur",
+                  postalCode: "243123",
+                  addressCountry: "IN",
                 },
               },
               organizer: {
                 "@type": "Organization",
-                name: "Elkjøp Nordic AS",
-                url: "https://www.elkjop.no",
+                name: "SPOC - Invertis University",
+                url: "https://www.invertisuniversity.ac.in/",
               },
               performer: [
                 {
-                  "@type": "Organization",
-                  name: "Team Innovators",
+                  "@type": "Organizing Committee",
+                  name: "Lal Shivam Singh",
                 },
                 {
-                  "@type": "Organization",
-                  name: "Team TechWizards",
+                  "@type": "Organizing Committee",
+                  name: "Ashish Kumar",
                 },
                 {
                   "@type": "Organization",
@@ -131,15 +118,14 @@ export default function RootLayout({
                 },
               ],
               image: [
-                "https://oslo-pull.b-cdn.net/AI_JAM_Fredag-24%20Large.jpeg",
-                "https://oslo-pull.b-cdn.net/Vibetank/AI_JAM_L%C3%B8rdag-25.jpeg",
+                "https://hackbhoomi.vercel.app/hackbhoomi-banner.png",
               ],
               offers: {
                 "@type": "Offer",
                 availability: "https://schema.org/SoldOut",
                 price: "0",
-                priceCurrency: "NOK",
-                description: "Intern event kun for Elkjøp-ansatte",
+                priceCurrency: "INR",
+                description: "Free Registrations for Students of Invertis University",
               },
             }),
           }}
@@ -152,23 +138,23 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Elkjøp Nordic AS",
-              url: "https://www.elkjop.no",
-              logo: "https://www.elkjop.no/logo.png",
+              name: "Invertis University",
+              url: "https://invertisuniversity.ac.in",
+              logo: "https://hackbhoomi.vercel.app/invertis.png",
               sameAs: [
-                "https://www.facebook.com/elkjop",
-                "https://www.instagram.com/elkjop",
-                "https://www.linkedin.com/company/elkjop",
+                "https://www.facebook.com/invertisuniversity",
+                "https://www.instagram.com/invertisuniversity",
+                "https://www.linkedin.com/school/invertis-university",
               ],
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+47-815-35-400",
-                contactType: "customer service",
-                availableLanguage: ["Norwegian", "Swedish", "Danish"],
+                contactType: "support",
+                availableLanguage: ["English", "Hindi"],
               },
             }),
           }}
         />
+
       </head>
       <body className={inter.className}>
         <ScrollProgressBar />
