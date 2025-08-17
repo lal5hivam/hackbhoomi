@@ -95,5 +95,29 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  cursor: url('/cursor/main.png') 4 4, auto;
+}
+
+/* Links & buttons */
+a, button {
+  cursor: url('/cursor/button.png') 0 0, pointer;
+}
+
+/* Text selection */
+input, textarea, p, span {
+  cursor: url('/cursor/text.png') 0 0, text;
+}
+
+/* Dragging */
+.draggable {
+  cursor: url('/filled.png') 0 0, move;
+}
+
+/* Resizing */
+.resize-horizontal {
+  cursor: url('/cursor/filled.png') 0 0, col-resize;
+}
+.resize-vertical {
+  cursor: url('/cursor/filled.png') 0 0, row-resize;
 }
 }
