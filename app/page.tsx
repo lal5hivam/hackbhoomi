@@ -7,9 +7,9 @@ import { Play, Calendar, Trophy, X, MapPin, Download, Share2, Link } from "lucid
 import Head from "next/head"
 
 const ETcoverImages = [
-  "/edtech/edtech1.jpg",
-  "/edtech/edtech2.jpg",
-  "/edtech/edtech3.jpg",
+  "/edtech/PS1.png",
+  "/edtech/PS2.png",
+  "/edtech/PS3.png",
 ];
 
 const EdTech = [
@@ -123,8 +123,8 @@ export default function hackBhoomi() {
        <header 
           className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
             isScrolled 
-              ? 'bg-gray-900/80 text-white backdrop-blur-md shadow-lg py-2' 
-              : 'bg-gray-100/60 backdrop-blur-xl border border-gray-300/30 shadow-lg rounded-2xl w-[95%] mx-auto mt-3 py-4  '
+              ? 'bg-gray-900/80 text-white backdrop-blur-sm shadow-lg py-3' 
+              : 'bg-gray-300 backdrop-blur-lg border border-gray-300/30 shadow-lg rounded-2xl w-[95%] mx-auto mt-3 py-4  '
           } text-black`} 
           // role="banner" 
           // id="header"
@@ -142,8 +142,8 @@ export default function hackBhoomi() {
 
                     {/* Logo + Title */}
                     <div className="flex items-center">
-                      <h1 className="text-4xl font-bold font-serif">Hack</h1>
-                      <h1 className="text-4xl text-orange-600 font-bold ml-2">भूमि</h1>
+                      <h1 className="text-4xl font-bold font-mono">Hack</h1>
+                      <h1 className="text-4xl text-orange-600 font-bold font-serif ml-2">भूमि</h1>
 
                       <div
                         className="w-0 h-0 ml-2 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-b-[12px] border-b-orange-500 rotate-90"
@@ -185,7 +185,7 @@ export default function hackBhoomi() {
                       </time>
                     </div>
                     <Button 
-                      className="bg-orange-500 text-black hover:bg-orange-600 px-4 py-2 rounded-lg shadow-md"
+                      className="bg-orange-500 text-black relative overflow-hidden transition-all duration-300 hover:scale-125 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] group hover:bg-orange-600 px-4 py-2 rounded-lg shadow-md"
                       onClick={() => window.open("https://forms.cloud.microsoft/r/C3tHRkCuHt", "_blank")}>
                       Register
                     </Button>
@@ -208,18 +208,17 @@ export default function hackBhoomi() {
                   {/* Middle: Navbar */}
                   <nav className="hidden md:flex space-x-8 text-sm font-medium">
                     <a href="#SIH" className="hover:text-orange-400">ABOUT SIH</a>
-                    <a href="#program" className="hover:text-orange-400">SCHEDULE</a>
+                    <a href="#program" className="hover:text-orange-400">TIMELINE</a>
                     <a href="#instructions" className="hover:text-orange-400">INSTRUCTIONS</a>
                     <a href="#problem-statements" className="hover:text-orange-400">PROBLEM STATEMENTS</a>
-                    <a href="#vinnere" className="hover:text-orange-400">WINNERS</a>
+                    <a href="#vinnere" className="hover:text-orange-400">PRIZES</a>
                     <a href="#faq" className="hover:text-orange-400">FAQ</a>
-                    <a href="#neste" className="hover:text-orange-400">NESTE EVENT</a>
                   </nav>
 
                   {/* Right: Register */}
                   <Button 
                     onClick={() => window.open("https://forms.cloud.microsoft/r/C3tHRkCuHt", "_blank")}
-                    className="bg-orange-500 text-black hover:bg-orange-600 px-4 py-2 rounded-lg shadow-md">
+                    className="bg-orange-500 text-black hover:bg-orange-600 px-4 py-2 relative overflow-hidden transition-all duration-300 hover:scale-125 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] group rounded-lg shadow-md">
                     Register
                   </Button>
                 </>
@@ -233,7 +232,7 @@ export default function hackBhoomi() {
 
 
         {/* Hero Section - Centered Style */}
-        <section className="relative overflow-hidden h-screen mt-20 flex items-center justify-center" role="main">
+        <section className="relative overflow-hidden h-screen mt-20 flex backdrop-blur-sm items-center justify-center" role="main">
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/30 z-10"></div>
 
@@ -243,11 +242,11 @@ export default function hackBhoomi() {
               Your CHANCE to represent Invertis University at
             </p>
             <h2 className="text-8xl font-black leading-none mb-4">
-              <span className="text-blue-500 text-6xl">SMART INDIA</span>
+              <span className="text-blue-500 text-6xl font-sans">SMART INDIA</span>
               <br />
-              <span className="text-orange-400">HACKATHON</span>
+              <span className="text-orange-400 font-serif">HACKATHON</span>
               <br />
-              <span className="text-white">2025</span>
+              <span className="text-white font-mono">2025</span>
             </h2>
 
             
@@ -255,7 +254,7 @@ export default function hackBhoomi() {
             <div className="flex flex-wrap gap-4 justify-center">
               <Button 
                 onClick={() => window.open("https://forms.cloud.microsoft/r/C3tHRkCuHt", "_blank")}
-                className="bg-orange-500 hover:bg-orange-600 text-black font-bold text-lg px-6 py-3 rounded-md">
+                className="bg-orange-500  hover:bg-orange-600 text-black font-bold text-2xl px-16 py-10 relative overflow-hidden transition-all duration-300 hover:scale-125 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] group rounded-md">
                 Register
               </Button>
             </div>
@@ -264,7 +263,7 @@ export default function hackBhoomi() {
 
 
         {/* Event Stats */}
-        <section className="bg-black/80 backdrop-blur-sm py-12" aria-labelledby="stats-heading">
+        {/* <section className="bg-black/80 backdrop-blur-sm py-12" aria-labelledby="stats-heading">
           <div className="max-w-6xl mx-auto px-4">
             <h2 id="stats-heading" className="sr-only">
               Event statistikk
@@ -296,7 +295,7 @@ export default function hackBhoomi() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         {/* About SIH */}
 
         <section id="SIH" className="bg-indigo-900/90 backdrop-blur-sm py-16 text-white" aria-labelledby="about-sih-heading">
@@ -389,10 +388,10 @@ export default function hackBhoomi() {
 
 
         {/* Program Section */}
-        <section id="program" className="py-16 bg-gray-50/80 backdrop-blur-sm" aria-labelledby="program-heading">
+        <section id="program" className="py-16 bg-gray-transparent backdrop-blur-md" aria-labelledby="program-heading">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 id="program-heading" className="text-4xl font-black text-indigo-900 mb-12 text-center">
-              SCHEDULE
+            <h2 id="program-heading" className="text-6xl font-black text-white mb-12 text-center">
+              TIMELINE
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -608,8 +607,8 @@ export default function hackBhoomi() {
                       className="border-indigo-900 text-indigo-900 hover:bg-indigo-900 hover:text-white"
                       onClick={() => {
                         const link = document.createElement('a');
-                        link.href = '/TeamInstructions.pdf';
-                        link.download = 'TeamInstructions.pdf';
+                        link.href = '/TeamInstruction.pdf';
+                        link.download = 'TeamInstruction.pdf';
                         document.body.appendChild(link);
                         link.click();
                         document.body.removeChild(link);
@@ -668,15 +667,7 @@ export default function hackBhoomi() {
                       Winning teams from the Internal Hackathon will be nominated by the institute for SIH 2025
                     </li>
                   </ul>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium text-indigo-900">Development</span>
-                    <Button
-                      variant="outline"
-                      className="border-indigo-900 text-indigo-900 hover:bg-indigo-900 hover:text-white"
-                    >
-                      Se prosjekt
-                    </Button>
-                  </div>
+                  
                 </div>
               </article>
 
@@ -743,9 +734,9 @@ export default function hackBhoomi() {
         </section>
 
         {/* Gallery Section */}
-        <section id="problem-statements" className="bg-gray-50/80 backdrop-blur-sm py-16" aria-labelledby="gallery-heading">
+        <section id="problem-statements" className="bg-gray-transparent backdrop-blur-md py-16" aria-labelledby="gallery-heading">
           <div className="max-w-7xl mx-auto px-4">
-            <h2 id="gallery-heading" className="text-4xl font-black text-indigo-900 text-center mb-12">
+            <h2 id="gallery-heading" className="text-6xl font-black text-black text-ellipsis text-center mb-12">
               Problem Statements
             </h2>
 
@@ -818,83 +809,80 @@ export default function hackBhoomi() {
 
             {/*Problem Statements Gallery*/}
             {activeSection === "edtech" && (
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4" role="grid" aria-label="edtech bilder">
-                {EdTech.map((image, index) => (
-                  <button
-                    key={index}
-                    className="aspect-square rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
-                    onClick={() => setSelectedImage(image)} // opens the real hackathon image
-                    aria-label={`Åpne bilde ${index + 1} fra edtech i fullskjerm`}
-                  >
+              <div
+                className="flex flex-col items-center gap-6"
+                role="region"
+                aria-label="edtech bilder"
+              >
+                {ETcoverImages.map((src, index) => (
+                  <div key={index} className="w-full max-w-3xl">
                     <img
-                      src={ETcoverImages[index] || "placeholder.svg"} // 👈 show cover image instead
+                      src={src || "placeholder.svg"}
                       alt={`Hackathon aktivitet edtech cover, bilde ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-auto rounded-lg hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] hover:scale-110 ease-in-out shadow-lg"
                       loading="lazy"
                     />
-                  </button>
+                  </div>
                 ))}
               </div>
             )}
 
 
+
             {activeSection === "HealthCare" && (
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4" role="grid" aria-label="HealthCare bilder">
-                {HealthCare.map((image, index) => (
-                  <button
-                    key={index}
-                    className="aspect-square rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
-                    onClick={() => setSelectedImage(image)}
-                    aria-label={`Åpne bilde ${index + 1} fra HealthCare i fullskjerm`}
-                  >
+              <div
+                className="flex flex-col items-center gap-6"
+                role="region"
+                aria-label="edtech bilder"
+              >
+                {HealthCare.map((src, index) => (
+                  <div key={index} className="w-full max-w-3xl">
                     <img
-                      src={HCcoverImages[index] || "placeholder.svg"}
-                      alt={`Sommerfest aktivitet HealthCare, bilde ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      src={src || "placeholder.svg"}
+                      alt={`Hackathon aktivitet edtech cover, bilde ${index + 1}`}
+                      className="w-full h-auto rounded-lg hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] hover:scale-110 ease-in-out shadow-lg"
                       loading="lazy"
                     />
-                  </button>
+                  </div>
                 ))}
               </div>
             )}
 
             {activeSection === "Environment" && (
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4" role="grid" aria-label="Environment bilder">
-                {Environment.map((image, index) => (
-                  <button
-                    key={index}
-                    className="aspect-square rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
-                    onClick={() => setSelectedImage(image)}
-                    aria-label={`Åpne bilde ${index + 1} fra Environment i fullskjerm`}
-                  >
+              <div
+                className="flex flex-col items-center gap-6"
+                role="region"
+                aria-label="edtech bilder"
+              >
+                {Environment.map((src, index) => (
+                  <div key={index} className="w-full max-w-3xl">
                     <img
-                      src={EnvironmentcoverImages[index] || "placeholder.svg"}
-                      alt={`Presentasjon og avslutning Environment, bilde ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      src={src || "placeholder.svg"}
+                      alt={`Hackathon aktivitet edtech cover, bilde ${index + 1}`}
+                      className="w-full h-auto rounded-lg hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] hover:scale-110 ease-in-out shadow-lg"
                       loading="lazy"
                     />
-                  </button>
+                  </div>
                 ))}
               </div>
             )}
 
 
             {activeSection === "Finance" && (
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4" role="grid" aria-label="Environment bilder">
-                {Finance.map((image, index) => (
-                  <button
-                    key={index}
-                    className="aspect-square rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
-                    onClick={() => setSelectedImage(image)}
-                    aria-label={`Åpne bilde ${index + 1} fra Environment i fullskjerm`}
-                  >
+              <div
+                className="flex flex-col items-center gap-6"
+                role="region"
+                aria-label="edtech bilder"
+              >
+                {Finance.map((src, index) => (
+                  <div key={index} className="w-full max-w-3xl">
                     <img
-                      src={FinancecoverImages[index] || "placeholder.svg"}
-                      alt={`Presentasjon og avslutning Environment, bilde ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      src={src || "placeholder.svg"}
+                      alt={`Hackathon aktivitet edtech cover, bilde ${index + 1}`}
+                      className="w-full h-auto rounded-lg hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] hover:scale-110 ease-in-out shadow-lg"
                       loading="lazy"
                     />
-                  </button>
+                  </div>
                 ))}
               </div>
             )}
@@ -924,34 +912,34 @@ export default function hackBhoomi() {
         {/* Winners Section */}
         <section id="vinnere" className="bg-indigo-900/90 backdrop-blur-sm py-16 text-white" aria-labelledby="winners-heading">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 id="winners-heading" className="text-4xl font-black text-orange-400 mb-12 text-center">
-              WINNERS
+            <h2 id="winners-heading" className="text-6xl font-black text-orange-400 mb-12 text-center">
+              🏆 WINNERS 🏆
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <article className="text-center">
-                <div className="w-24 h-24 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Trophy className="w-12 h-12 text-black" aria-hidden="true" />
+              <article className="text-center relative rounded-lg overflow-hidden transition-all duration-300 hover:scale-125 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] group">
+                <div className="w-24 h-24 bg-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Trophy className="w-12 h-12 text-white" aria-hidden="true" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Champion</h3>
+                <h3 className="text-2xl font-bold mb-2">2nd Runner-up</h3>
                 <p className="text-lg font-bold text-orange-400 mb-1">Team Innovators</p>
                 <p className="text-white/80">prize : TBD</p>
               </article>
 
-              <article className="text-center">
+              <article className="text-center relative rounded-lg overflow-hidden transition-all duration-300 hover:scale-125 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] group">
                 <div className="w-24 h-24 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Trophy className="w-12 h-12 text-black" aria-hidden="true" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Runner-up</h3>
+                <h3 className="text-2xl font-bold mb-2">Champion</h3>
                 <p className="text-lg font-bold text-orange-400 mb-1">Team TechWizards</p>
                 <p className="text-white/80">prize : TBD</p>
               </article>
 
-              <article className="text-center">
-                <div className="w-24 h-24 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Trophy className="w-12 h-12 text-black" aria-hidden="true" />
+              <article className="text-center relative rounded-lg overflow-hidden transition-all duration-300 hover:scale-125 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] group">
+                <div className="w-24 h-24 bg-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Trophy className="w-12 h-12 text-white" aria-hidden="true" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">2nd Runner-up</h3>
+                <h3 className="text-2xl font-bold mb-2">Runner-up</h3>
                 <p className="text-lg font-bold text-orange-400 mb-1">Team DataDreamers</p>
                 <p className="text-white/80">prize : TBD</p>
               </article>
