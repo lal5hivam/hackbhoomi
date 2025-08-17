@@ -184,7 +184,9 @@ export default function hackBhoomi() {
                         25 Aug, 2025
                       </time>
                     </div>
-                    <Button className="bg-orange-500 text-black hover:bg-orange-600 px-4 py-2 rounded-lg shadow-md">
+                    <Button 
+                      className="bg-orange-500 text-black hover:bg-orange-600 px-4 py-2 rounded-lg shadow-md"
+                      onClick={() => window.open("https://forms.cloud.microsoft/r/C3tHRkCuHt", "_blank")}>
                       Register
                     </Button>
 
@@ -215,7 +217,9 @@ export default function hackBhoomi() {
                   </nav>
 
                   {/* Right: Register */}
-                  <Button className="bg-orange-500 text-black hover:bg-orange-600 px-4 py-2 rounded-lg shadow-md">
+                  <Button 
+                    onClick={() => window.open("https://forms.cloud.microsoft/r/C3tHRkCuHt", "_blank")}
+                    className="bg-orange-500 text-black hover:bg-orange-600 px-4 py-2 rounded-lg shadow-md">
                     Register
                   </Button>
                 </>
@@ -249,7 +253,9 @@ export default function hackBhoomi() {
             
 
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-black font-bold text-lg px-6 py-3 rounded-md">
+              <Button 
+                onClick={() => window.open("https://forms.cloud.microsoft/r/C3tHRkCuHt", "_blank")}
+                className="bg-orange-500 hover:bg-orange-600 text-black font-bold text-lg px-6 py-3 rounded-md">
                 Register
               </Button>
             </div>
@@ -994,7 +1000,9 @@ export default function hackBhoomi() {
               <p className="text-gray-600 mb-6">
                 Theme: "Innovation for a Smarter India" - Solve real-world problems and make a difference!
               </p>
-              <Button className="bg-orange-500 hover:bg-orange-600 text-black font-bold text-lg px-8 py-3 rounded-md">
+              <Button 
+                onClick={() => window.open("https://forms.cloud.microsoft/r/C3tHRkCuHt", "_blank")}
+                className="bg-orange-500 hover:bg-orange-600 text-black font-bold text-lg px-8 py-3 rounded-md">
                 Register Now
               </Button>
             </article>
