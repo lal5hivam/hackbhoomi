@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Play, Calendar, Trophy, X, MapPin, Download, Share2, Link } from "lucide-react"
 import Head from "next/head"
+import TracksSection from "@/components/TracksSelection"
 
 const ETcoverImages = [
   "/edtech/PS1.png",
@@ -296,6 +297,12 @@ export default function hackBhoomi() {
             </div>
           </div>
         </section> */}
+
+        {/* Tracks Section */}
+        
+
+        {/* About SIH Section */}
+
         {/* About SIH */}
 
         <section id="SIH" className="bg-indigo-900/90 backdrop-blur-sm py-16 text-white" aria-labelledby="about-sih-heading">
@@ -734,14 +741,13 @@ export default function hackBhoomi() {
         </section>
 
         {/* Gallery Section */}
-        <section id="problem-statements" className="bg-gray-transparent backdrop-blur-md py-16" aria-labelledby="gallery-heading">
+        {/*<section id="problem-statements" className="bg-gray-transparent backdrop-blur-md py-16" aria-labelledby="gallery-heading">
           <div className="max-w-7xl mx-auto px-4">
             <h2 id="gallery-heading" className="text-6xl font-black text-black text-ellipsis text-center mb-12">
               Problem Statements
             </h2>
 
 
-            {/* Gallery Navigation */}
             <nav className="flex justify-center mb-8" aria-label="Problem Statements ">
               <div className="bg-white rounded-md p-1 shadow-lg">
                 <Button
@@ -807,7 +813,6 @@ export default function hackBhoomi() {
               </div>
             </nav>
 
-            {/*Problem Statements Gallery*/}
             {activeSection === "edtech" && (
               <div
                 className="flex flex-col items-center gap-6"
@@ -907,7 +912,9 @@ export default function hackBhoomi() {
               </div>
             )}
           </div>
-        </section>
+        </section>*/}
+
+        <TracksSection />
 
         {/* Winners Section */}
         <section id="vinnere" className="bg-indigo-900/90 backdrop-blur-sm py-16 text-white" aria-labelledby="winners-heading">
