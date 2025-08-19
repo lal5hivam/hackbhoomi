@@ -289,7 +289,7 @@ export default function hackBhoomi() {
 
 
         {/* Hero Section - Centered Style */}
-        <section className="relative overflow-hidden h-screen mt-20 flex backdrop-blur-sm items-center justify-center" role="main">
+        <section className="relative overflow-hidden h-screen  flex backdrop-blur-sm items-center justify-center" role="main">
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/30 z-10"></div>
           
