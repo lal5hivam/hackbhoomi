@@ -637,19 +637,15 @@ export default function hackBhoomi() {
                     </li>
                     <li className="flex items-start">
                       <span className="text-orange-500 mr-2">•</span>
-                      Browse through the categories: Ed-Tech, HealthCare, Environment, Finance, Open-Innovation
+                      Browse through the SIH 2025 official Tracks/Theme and Problem Statements
                     </li>
                     <li className="flex items-start">
                       <span className="text-orange-500 mr-2">•</span>
-                      Choose from 5 problem statement categories
+                      Choose a Track and start building your solution
                     </li>
                     <li className="flex items-start">
                       <span className="text-orange-500 mr-2">•</span>
-                      Each category has 3–4 problem statements – pick the one that matches your team’s interest, skills, or creativity
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-orange-500 mr-2">•</span>
-                      Build a working prototype solution for the problem statement you have chosen.
+                      Build a working prototype solution for the problem statement or Track you have chosen.
                     </li>
                     <li className="flex items-start">
                       <span className="text-orange-500 mr-2">•</span>
@@ -738,7 +734,7 @@ export default function hackBhoomi() {
                 </div>
                 <div className="p-6">
                   <Badge className="bg-orange-500 text-white font-bold mb-2">SIH 2025</Badge>
-                  <h3 className="text-xl font-bold text-indigo-900 mb-2">Team DataDreamers</h3>
+                  <h3 className="text-xl font-bold text-indigo-900 mb-2">Enter the HackArena!</h3>
                   <ul className="text-gray-600 mb-4 space-y-2">
                     <li className="flex items-start">
                       <span className="text-orange-500 mr-2">•</span>
@@ -1037,7 +1033,7 @@ export default function hackBhoomi() {
               <div className="flex items-center justify-center space-x-2 mb-4">
                 <Calendar className="w-6 h-6 text-indigo-900" aria-hidden="true" />
                 <time dateTime="2025-08-25" className="text-xl font-bold text-indigo-900">
-                  25th AUGUST 2025
+                  29th AUGUST 2025
                 </time>
               </div>
               <h3 className="text-2xl font-bold text-indigo-900 mb-4">HACKBHOOOMI INTERNAL HACKATHON</h3>
