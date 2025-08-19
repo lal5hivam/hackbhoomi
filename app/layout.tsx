@@ -73,7 +73,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#1e1b4b" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
+        <meta name="google-site-verification" content="KKtvtbOY9eUhl9HO2_ZuEtHkDINQ1RunUT_JiiJxH00" />
         {/* Structured Data for Event */}
         <script
           type="application/ld+json"

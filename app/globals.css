@@ -121,3 +121,27 @@ input, textarea, p, span {
   cursor: url('/cursor/filled.png') 0 0, row-resize;
 }
 }
+
+@keyframes marquee-slow {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes blink-red {
+  0%, 100% { color: white; }
+  50% { color: orange; }
+}
+
+.animate-marquee-slow {
+  display: inline-block;
+  min-width: 100%;
+  animation: marquee-slow 15s linear infinite;
+}
+
+.animate-blink {
+  animation: blink-red 1s step-start infinite, marquee-slow 15s linear infinite;
+}
+
+.hover\:animate-marquee-pause:hover {
+  animation-play-state: paused, running; /* pause marquee, keep blink running */
+}

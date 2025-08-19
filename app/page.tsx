@@ -7,6 +7,39 @@ import { Play, Calendar, Trophy, X, MapPin, Download, Share2, Link } from "lucid
 import Head from "next/head"
 import TracksSection from "@/components/TracksSelection"
 
+const events = [
+    {
+      title: "Registration Starts",
+      date: "20 Aug",
+      desc: "The race begins — Register, Team Up, Get Set & Ideate!",
+      color: "bg-blue-200",
+    },
+    {
+      title: "Mentorship Sessions",
+      date: "",
+      desc: "Get expert guidance regarding your ideas and solutions!",
+      color: "bg-yellow-200",
+    },
+    {
+      title: "Registration Deadline",
+      date: "23 Aug",
+      desc: "Get ready to innovate — Last chance to register!",
+      color: "bg-green-200",
+    },
+    {
+      title: "Shortlisted Teams Announcement",
+      date: "26 Aug",
+      desc: "And the chosen ones are... Meet the finalists!",
+      color: "bg-red-200",
+    },
+    {
+      title: "HACKATHON DAY - HackBhoomi 2025",
+      date: "29 Aug",
+      desc: "Let the hacking begin! Build, code and create!",
+      color: "bg-blue-200",
+    },
+  ];
+
 const ETcoverImages = [
   "/edtech/PS1.png",
   "/edtech/PS2.png",
@@ -164,6 +197,17 @@ export default function hackBhoomi() {
                       </button>
 
                       <button
+                        onClick={() => window.open("https://invertisincubation.com/", "_blank")}
+                        className="ml-6"
+                      >
+                        <img
+                          src="/images/incub.png"
+                          alt="Invertis Incubation Center Logo"
+                          className="h-12 w-auto transition duration-300 ease-in-out hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)]"
+                        />
+                      </button>
+
+                      <button
                         onClick={() => window.open("https://www.sih.gov.in", "_blank")}
                         className="ml-8"
                       >
@@ -182,7 +226,7 @@ export default function hackBhoomi() {
                     <div className="flex items-center ">
                       <Calendar className="w-5 h-5 text-orange-400" />
                       <time dateTime="2025-08-25" className="text-sm">
-                        25 Aug, 2025
+                        29th Aug, 2025
                       </time>
                     </div>
                     <Button 
@@ -192,7 +236,7 @@ export default function hackBhoomi() {
                     </Button>
 
                   </div>
-
+                  
                   
                 </>
               )}
@@ -213,7 +257,8 @@ export default function hackBhoomi() {
                     <a href="#instructions" className="hover:text-orange-400">INSTRUCTIONS</a>
                     <a href="#problem-statements" className="hover:text-orange-400">PROBLEM STATEMENTS</a>
                     <a href="#vinnere" className="hover:text-orange-400">PRIZES</a>
-                    <a href="#faq" className="hover:text-orange-400">FAQ</a>
+                    <a href="#team" className="hover:text-orange-400">TEAM</a>
+                    <a href="#faq" className="hover:text-orange-400">FAQ's</a>
                   </nav>
 
                   {/* Right: Register */}
@@ -222,10 +267,21 @@ export default function hackBhoomi() {
                     className="bg-orange-500 text-black hover:bg-orange-600 px-4 py-2 relative overflow-hidden transition-all duration-300 hover:scale-125 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] group rounded-lg shadow-md">
                     Register
                   </Button>
+                  
                 </>
               )}
+              
             </div>
+
           </div>
+          {isScrolled && (
+            <div className="w-full bg-transparent py-2 overflow-hidden">
+              <div className="whitespace-nowrap animate-marquee-slow animate-blink font-extrabold text-lg hover:animate-marquee-pause">
+                🚨 The registrations are OPEN, create your team now !! ⚠️ &nbsp;&nbsp;&nbsp; 
+              </div>
+            </div>
+          )}
+
         </header>
 
 
@@ -236,6 +292,7 @@ export default function hackBhoomi() {
         <section className="relative overflow-hidden h-screen mt-20 flex backdrop-blur-sm items-center justify-center" role="main">
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/30 z-10"></div>
+          
 
           <div className="max-w-7xl mx-auto px-4 py-8 relative z-20 h-full flex flex-col items-center justify-center text-center">
             
@@ -264,39 +321,7 @@ export default function hackBhoomi() {
 
 
         {/* Event Stats */}
-        {/* <section className="bg-black/80 backdrop-blur-sm py-12" aria-labelledby="stats-heading">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 id="stats-heading" className="sr-only">
-              Event statistikk
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center bg-orange-500 rounded-lg p-6">
-                <div className="text-4xl font-black text-black mb-2" aria-label="48 timer">
-                  48
-                </div>
-                <div className="text-black font-bold">Timer innovasjon</div>
-              </div>
-              <div className="text-center bg-indigo-900 rounded-lg p-6">
-                <div className="text-4xl font-black text-white mb-2" aria-label="Over 150 deltakere">
-                  150+
-                </div>
-                <div className="text-white font-bold">Deltakere</div>
-              </div>
-              <div className="text-center bg-indigo-900 rounded-lg p-6">
-                <div className="text-4xl font-black text-orange-400 mb-2" aria-label="25 team-prosjekter">
-                  25
-                </div>
-                <div className="text-white font-bold">Team-prosjekter</div>
-              </div>
-              <div className="text-center bg-orange-500 rounded-lg p-6">
-                <div className="text-4xl font-black text-black mb-2" aria-label="1 episk fest">
-                  1
-                </div>
-                <div className="text-black font-bold">Episk fest</div>
-              </div>
-            </div>
-          </div>
-        </section> */}
+        
 
         {/* Tracks Section */}
         
@@ -393,9 +418,33 @@ export default function hackBhoomi() {
         </section>
 
 
+        <section id="program" className="bg-transparent backdrop-blur-md py-12">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-center text-5xl font-extrabold text-white mb-12">
+              Timeline
+            </h2>
+            <div className="relative border-l-4 border-gray-300">
+              {events.map((event, idx) => (
+                <div key={idx} className="mb-10 ml-6">
+                  {/* Dot */}
+                  <div className="absolute w-4 h-4 bg-gray-600 rounded-full -left-2.5 border border-white"></div>
+                  {/* Card */}
+                  <div className={`${event.color} p-5 rounded-lg shadow-md`}>
+                    <h3 className="text-lg font-bold text-gray-900">{event.title}</h3>
+                    <span className="block text-sm font-semibold text-gray-700">
+                      {event.date}
+                    </span>
+                    <p className="mt-2 text-gray-700 text-sm">{event.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
 
         {/* Program Section */}
-        <section id="program" className="py-16 bg-gray-transparent backdrop-blur-md" aria-labelledby="program-heading">
+        {/* <section id="program" className="py-16 bg-gray-transparent backdrop-blur-md" aria-labelledby="program-heading">
           <div className="max-w-6xl mx-auto px-4">
             <h2 id="program-heading" className="text-6xl font-black text-white mb-12 text-center">
               TIMELINE
@@ -559,7 +608,7 @@ export default function hackBhoomi() {
               </article>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Instructions */}
         <section id="instructions" className="py-16 bg-white/90 backdrop-blur-sm" aria-labelledby="instructions-heading">
@@ -1004,11 +1053,71 @@ export default function hackBhoomi() {
           </div>
         </section>
 
+        <section id="team" className="bg-black/80 backdrop-blur-sm py-12" aria-labelledby="support-heading">
+          <div className="max-w-6xl mx-auto justify-center px-4">
+            <h2 id="support-heading" className="text-center text-3xl font-extrabold text-white mb-10">
+              Organizing Team
+            </h2>
+
+            {/* Top single card */}
+            <div className="flex justify-center mb-10">
+              <div className="text-center bg-orange-400 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] rounded-lg p-6 w-full md:w-1/2">
+                <img 
+                  src="/images/talhaSir.png" 
+                  alt="Organizing Committee" 
+                  className="mx-auto h-24 w-24 rounded-full object-contain mb-4"
+                />
+                <div className="text-black font-bold text-xl">Mohd Talha Khan</div>
+                <p className="text-black text-sm mt-2">Director, CSED (SPOC)</p>
+              </div>
+            </div>
+
+            {/* Bottom three cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              
+              {/* Technical Team */}
+              <div className="text-center bg-orange-500 rounded-lg p-6">
+                <img 
+                  src="/images/lalshivam.jpg" 
+                  alt="Lead Organizer" 
+                  className="mx-auto h-20 w-20 rounded-full object-contain mb-4"
+                />
+                <div className="text-black font-bold text-lg">Lal Shivam Singh</div>
+                <p className="text-black text-sm mt-2">Lead Organizer</p>
+              </div>
+              
+              {/* Mentors */}
+              <div className="text-center bg-orange-500 rounded-lg p-6">
+                <img 
+                  src="/images/itech.png" 
+                  alt="Technical Club" 
+                  className="mx-auto h-20 w-20 rounded-full object-contain mb-4"
+                />
+                <div className="text-black font-bold text-lg">iTech</div>
+                <p className="text-black text-sm mt-2">The Technical Club, Abhiruchi</p>
+              </div>
+              
+              {/* Sponsors & Partners */}
+              <div className="text-center bg-orange-500 rounded-lg p-6">
+                <img 
+                  src="/images/incub.png" 
+                  alt="Incubation Center" 
+                  className="mx-auto h-20 w-20 rounded-full object-contain mb-4"
+                />
+                <div className="text-black font-bold text-lg">Innovation & Incubation Center</div>
+                <p className="text-black text-sm mt-2">Invertis University</p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
         {/* FAQ Section */}
         <section id="faq" className="bg-gray-50/80 backdrop-blur-sm py-16" aria-labelledby="faq-heading">
           <div className="max-w-4xl mx-auto px-4">
             <h2 id="faq-heading" className="text-4xl font-black text-indigo-900 mb-12 text-center">
-              FAQ (How it works)
+              FAQ's
             </h2>
             
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -1062,7 +1171,7 @@ export default function hackBhoomi() {
                 {activeSection === "faq2" && (
                   <div className="px-6 pb-4">
                     <p className="text-gray-600 leading-relaxed">
-                      All students from Invertis University can participate. Teams should consist of 4-6 members. 
+                      All students from Invertis University can participate. Teams should consist of 2-6 members. 
                       Students from different branches and years are encouraged to form interdisciplinary teams.
                     </p>
                   </div>
@@ -1090,8 +1199,8 @@ export default function hackBhoomi() {
                 {activeSection === "faq3" && (
                   <div className="px-6 pb-4">
                     <p className="text-gray-600 leading-relaxed">
-                      The hackathon covers five main categories: Ed-Tech, Healthcare, Environment, Finance, and Open Innovation. 
-                      Each category has specific problem statements that teams can choose from.
+                      The hackathon covers SIH 2025 official Themes/Tracks, mentioned above. 
+                      Participants can chose from SIH 2024 problem statements from https://www.sih.gov.in/sih2024PS
                     </p>
                   </div>
                 )}
@@ -1118,8 +1227,9 @@ export default function hackBhoomi() {
                 {activeSection === "faq4" && (
                   <div className="px-6 pb-4">
                     <p className="text-gray-600 leading-relaxed">
-                      The main hacking phase starts on August 25th, 2025 at 10:00 AM. Teams will have 48 hours to develop 
-                      their solutions and present them to the judges.
+                      The main hacking phase starts on August 29th, 2025 at 09:00 AM. 
+                      Although, students can start brainstorming and building their solutions the moment they create their team cna chose their tracks.
+                      Teams will have to finish up their prototypes in the actuaal hackathon day and then pitch it to the Judges panel.
                     </p>
                   </div>
                 )}
@@ -1146,8 +1256,9 @@ export default function hackBhoomi() {
                 {activeSection === "faq5" && (
                   <div className="px-6 pb-4">
                     <p className="text-gray-600 leading-relaxed">
-                      Winners will get the opportunity to represent Invertis University at SIH 2025, where they can win 
-                      cash prizes up to ₹1.5 Lakhs. Additionally, they'll receive certificates and recognition.
+                      Finalists will be recieving certificates and recognizations.
+                      Top Teams will get the opportunity to represent Invertis University at SIH 2025, where they can win 
+                      cash prizes up to ₹1.5 Lakhs. Additionally, they'll receive certificates and National Level recognition.
                     </p>
                   </div>
                 )}
@@ -1174,8 +1285,8 @@ export default function hackBhoomi() {
                 {activeSection === "faq6" && (
                   <div className="px-6 pb-4">
                     <p className="text-gray-600 leading-relaxed">
-                      Team registrations are open from July 18th to July 23rd. Click the Register button above to submit 
-                      your team details. Make sure to include all team member information and your preferred problem statement.
+                      Team registrations are open from 20th Aug to 23rd Aug. Click the Register button above to submit 
+                      your team details. Make sure to include all team member information and your preferred Theme/Track.
                     </p>
                   </div>
                 )}
@@ -1203,7 +1314,7 @@ export default function hackBhoomi() {
                   <div className="px-6 pb-4">
                     <p className="text-gray-600 leading-relaxed">
                       You can use any technology stack of your choice - web technologies, mobile apps, AI/ML, IoT, 
-                      blockchain, or any other emerging technology. The focus is on innovative problem-solving.
+                      blockchain, or any other emerging technology. The focus is on innovative problem-solving based on your chosen Track.
                     </p>
                   </div>
                 )}
@@ -1230,7 +1341,7 @@ export default function hackBhoomi() {
                 {activeSection === "faq8" && (
                   <div className="px-6 pb-4">
                     <p className="text-gray-600 leading-relaxed">
-                      Yes, experienced mentors and industry professionals will be available during the hackathon to guide 
+                      Yes, experienced mentors and industry professionals of Invertis Incubartion Center will be available during the hackathon to guide 
                       teams and provide technical assistance. There will also be orientation sessions before the main event.
                     </p>
                   </div>
