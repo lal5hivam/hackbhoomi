@@ -1089,7 +1089,7 @@ export default function hackBhoomi() {
               {/* Mentors */}
               <div className="text-center bg-orange-500 rounded-lg p-6">
                 <img 
-                  src="/images/itech.png" 
+                  src="/images/itech.PNG" 
                   alt="Technical Club" 
                   className="mx-auto h-20 w-20 rounded-full object-contain mb-4"
                 />
