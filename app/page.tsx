@@ -1094,7 +1094,7 @@ export default function hackBhoomi() {
             {/* Mentors */}
             <div className="text-center bg-transparent rounded-lg p-6 w-64">
               <img 
-                src="/images/akashSir.PNG" 
+                src="/images/akashSir.png" 
                 alt="Technical Club" 
                 className="mx-auto h-20 w-20 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] rounded-full object-contain mb-4"
               />
@@ -1104,7 +1104,7 @@ export default function hackBhoomi() {
 
             <div className="text-center bg-transparent rounded-lg p-6 w-64">
               <img 
-                src="/images/itech.PNG" 
+                src="/images/itech.png" 
                 alt="Technical Club" 
                 className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
               />
@@ -1153,7 +1153,7 @@ export default function hackBhoomi() {
               {/* Mentors */}
               <div className="text-center bg-transparent rounded-lg p-6">
                 <img 
-                  src="/images/aryan.PNG" 
+                  src="/images/aryan.png" 
                   alt="Technical Club" 
                   className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
                 />
