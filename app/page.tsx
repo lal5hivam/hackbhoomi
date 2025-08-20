@@ -22,19 +22,25 @@ const events = [
     },
     {
       title: "Registration Deadline",
-      date: "23 Aug",
+      date: "06 Sept.",
       desc: "Get ready to innovate — Last chance to register!",
       color: "bg-green-200",
     },
     {
+      title: "Idea Submission Deadline",
+      date: "08 Sept.",
+      desc: "Submit your innovative ideas and solutions!",
+      color: "bg-green-200",
+    },
+    {
       title: "Shortlisted Teams Announcement",
-      date: "26 Aug",
+      date: "10 Aug",
       desc: "And the chosen ones are... Meet the finalists!",
       color: "bg-red-200",
     },
     {
       title: "HACKATHON DAY - HackBhoomi 2025",
-      date: "29 Aug",
+      date: "12-13 Sept.",
       desc: "Let the hacking begin! Build, code and create!",
       color: "bg-blue-200",
     },
@@ -226,7 +232,7 @@ export default function hackBhoomi() {
                     <div className="flex items-center ">
                       <Calendar className="w-5 h-5 text-orange-400" />
                       <time dateTime="2025-08-25" className="text-sm">
-                        29th Aug, 2025
+                        12-13th Sept, 2025
                       </time>
                     </div>
                     <Button 
@@ -1051,62 +1057,165 @@ export default function hackBhoomi() {
 
         <section id="team" className="bg-black/80 backdrop-blur-sm py-12" aria-labelledby="support-heading">
           <div className="max-w-6xl mx-auto justify-center px-4">
-            <h2 id="support-heading" className="text-center text-3xl font-extrabold text-white mb-10">
-              Organizing Team
+            <h1 id="support-heading" className="text-7xl  font-bold text-center mb-10 bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">
+              👤 Committee Members 👤
+            </h1>
+
+            <h2 className="text-4xl font-bold text-center mb-10 text-orange-400">
+              Faculty & Staff
             </h2>
 
             {/* Top single card */}
-            <div className="flex justify-center mb-10">
-              <div className="text-center bg-orange-400 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] rounded-lg p-6 w-full md:w-1/2">
+            <div className="flex justify-center  mb-10">
+              <div className="text-center bg-transparent  rounded-lg p-10 w-full md:w-1/2">
                 <img 
                   src="/images/talhaSir.png" 
                   alt="Organizing Committee" 
-                  className="mx-auto h-24 w-24 rounded-full object-contain mb-4"
+                  className="mx-auto h-24 w-24 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] rounded-full object-contain mb-4"
                 />
-                <div className="text-black font-bold text-xl">Mohd Talha Khan</div>
-                <p className="text-black text-sm mt-2">Director, CSED (SPOC)</p>
+                <div className="text-white font-bold text-xl">Mohd Talha Khan</div>
+                <p className="text-white text-sm mt-2">Director, CSED (SPOC)</p>
               </div>
             </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 place-items-center">
+  
+            {/* Technical Team */}
+            <div className="text-center bg-transparent rounded-lg p-6 w-64">
+              <img 
+                src="/images/gaurav.jpg" 
+                alt="Gaurav" 
+                className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
+              />
+              <div className="text-white font-bold text-lg">Gaurav Agarwal</div>
+              <p className="text-white text-sm mt-2">HOD, CSE</p>
+            </div>
+
+            {/* Mentors */}
+            <div className="text-center bg-transparent rounded-lg p-6 w-64">
+              <img 
+                src="/images/akashSir.PNG" 
+                alt="Technical Club" 
+                className="mx-auto h-20 w-20 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] rounded-full object-contain mb-4"
+              />
+              <div className="text-white font-bold text-lg">Akash Sanghai</div>
+              <p className="text-white text-sm mt-2">HOD, Computer Applications</p>
+            </div>
+
+            <div className="text-center bg-transparent rounded-lg p-6 w-64">
+              <img 
+                src="/images/itech.PNG" 
+                alt="Technical Club" 
+                className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
+              />
+              <div className="text-white font-bold text-lg">iTech</div>
+              <p className="text-white text-sm mt-2">The Technical Club, Abhiruchi</p>
+            </div>
+
+          </div>
+          
+          <h2 className="text-4xl font-bold text-center mb-10 text-orange-400">
+              Mentors
+            </h2>
+
+          <div className="flex justify-center mb-10">
+              <div className="text-center bg-transparent  rounded-lg p-6 w-full md:w-1/2">
+                <img 
+                  src="/images/pranav.jpg" 
+                  alt="Pranav Thakur" 
+                  className="mx-auto h-24 w-24 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
+                />
+                <div className="text-white font-bold text-xl">Pranav Thakur</div>
+                <p className="text-white text-sm mt-2">Alumni, Invertis University</p>
+                
+                <p className="text-white text-sm mt-2">Mentorship & Guidance</p>
+              </div>
+            </div>
+
+            <h2 className="text-4xl font-bold text-center mb-10 text-orange-400">
+              Core Members
+            </h2>
 
             {/* Bottom three cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               
               {/* Technical Team */}
-              <div className="text-center bg-orange-500 rounded-lg p-6">
+              <div className="text-center bg-transparent rounded-lg p-6">
                 <img 
                   src="/images/lalshivam.jpg" 
                   alt="Lead Organizer" 
-                  className="mx-auto h-20 w-20 rounded-full object-contain mb-4"
+                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
                 />
-                <div className="text-black font-bold text-lg">Lal Shivam Singh</div>
-                <p className="text-black text-sm mt-2">Lead Organizer</p>
+                <div className="text-white font-bold text-lg">Lal Shivam Singh</div>
+                <p className="text-white text-sm mt-2">[Lead Organizer]</p>
               </div>
               
               {/* Mentors */}
-              <div className="text-center bg-orange-500 rounded-lg p-6">
+              <div className="text-center bg-transparent rounded-lg p-6">
                 <img 
-                  src="/images/itech.PNG" 
+                  src="/images/aryan.PNG" 
                   alt="Technical Club" 
-                  className="mx-auto h-20 w-20 rounded-full object-contain mb-4"
+                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
                 />
-                <div className="text-black font-bold text-lg">iTech</div>
-                <p className="text-black text-sm mt-2">The Technical Club, Abhiruchi</p>
+                <div className="text-white font-bold text-lg">Aryan Singh</div>
               </div>
               
               {/* Sponsors & Partners */}
-              <div className="text-center bg-orange-500 rounded-lg p-6">
+              <div className="text-center bg-transparent rounded-lg p-6">
                 <img 
-                  src="/images/incub.png" 
+                  src="/images/aashish.png" 
                   alt="Incubation Center" 
-                  className="mx-auto h-20 w-20 rounded-full object-contain mb-4"
+                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
                 />
-                <div className="text-black font-bold text-lg">Innovation & Incubation Center</div>
-                <p className="text-black text-sm mt-2">Invertis University</p>
+                <div className="text-black font-bold text-lg">Ashish Kumar</div>
               </div>
 
             </div>
+
+            <h2 className="text-4xl font-bold text-center mb-10 text-lime-400">
+              Community Partners
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              
+              {/* Technical Team */}
+              <div className="text-center bg-transparent rounded-lg p-6">
+                <img 
+                  src="/images/incub.png" 
+                  alt="Lead Organizer" 
+                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
+                />
+                <div className="text-white font-bold text-lg">Incubation and Innovation Center</div>
+                <p className="text-white text-sm mt-2">Invertis University</p>
+              </div>
+              
+              {/* Mentors */}
+              <div className="text-center bg-transparent rounded-lg p-6">
+                <img 
+                  src="/images/itech.PNG" 
+                  alt="Technical Club" 
+                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
+                />
+                <div className="text-white font-bold text-lg">iTech</div>
+                <p className="text-white text-sm mt-2">Abhiruchi</p>
+              </div>
+              
+              {/* Sponsors & Partners */}
+              <div className="text-center bg-transparent rounded-lg p-6">
+                <img 
+                  src="/images/nexus.png" 
+                  alt="Incubation Center" 
+                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
+                />
+                <div className="text-white font-bold text-lg">Nexus</div>
+                <p className="text-white text-sm mt-2">Bridging Opportunities</p>
+              </div>
+
+            </div>
+
           </div>
         </section>
+
 
 
         {/* FAQ Section */}
@@ -1223,7 +1332,7 @@ export default function hackBhoomi() {
                 {activeSection === "faq4" && (
                   <div className="px-6 pb-4">
                     <p className="text-gray-600 leading-relaxed">
-                      The main hacking phase starts on August 29th, 2025 at 09:00 AM. 
+                      The main hacking phase starts on September 12th, 2025 at 09:00 AM. 
                       Although, students can start brainstorming and building their solutions the moment they create their team cna chose their tracks.
                       Teams will have to finish up their prototypes in the actuaal hackathon day and then pitch it to the Judges panel.
                     </p>
