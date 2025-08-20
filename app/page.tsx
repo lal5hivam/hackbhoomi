@@ -1087,7 +1087,7 @@ export default function hackBhoomi() {
                 alt="Gaurav" 
                 className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
               />
-              <div className="text-white font-bold text-lg">Gaurav Agarwal</div>
+              <div className="text-white font-bold text-lg">Dr. Gaurav Agarwal</div>
               <p className="text-white text-sm mt-2">HOD, CSE</p>
             </div>
 
