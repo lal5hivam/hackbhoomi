@@ -237,7 +237,7 @@ export default function hackBhoomi() {
                     </div>
                     <Button 
                       className="bg-orange-500 text-black relative overflow-hidden transition-all duration-300 hover:scale-125 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] group hover:bg-orange-600 px-4 py-2 rounded-lg shadow-md"
-                      onClick={() => window.open("https://forms.cloud.microsoft/r/C3tHRkCuHt", "_blank")}>
+                      onClick={() => window.open("https://forms.gle/fsCyrMx66uLinKU68", "_blank")}>
                       Register
                     </Button>
 
@@ -269,7 +269,7 @@ export default function hackBhoomi() {
 
                   {/* Right: Register */}
                   <Button 
-                    onClick={() => window.open("https://forms.cloud.microsoft/r/C3tHRkCuHt", "_blank")}
+                    onClick={() => window.open("https://forms.gle/fsCyrMx66uLinKU68", "_blank")}
                     className="bg-orange-500 text-black hover:bg-orange-600 px-4 py-2 relative overflow-hidden transition-all duration-300 hover:scale-125 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] group rounded-lg shadow-md">
                     Register
                   </Button>
@@ -317,7 +317,7 @@ export default function hackBhoomi() {
 
             <div className="flex flex-wrap gap-4 justify-center">
               <Button 
-                onClick={() => window.open("https://forms.cloud.microsoft/r/C3tHRkCuHt", "_blank")}
+                onClick={() => window.open("https://forms.gle/fsCyrMx66uLinKU68", "_blank")}
                 className="bg-orange-500  hover:bg-orange-600 text-black font-bold text-2xl px-16 py-10 relative overflow-hidden transition-all duration-300 hover:scale-125 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] group rounded-md">
                 Register
               </Button>
@@ -1078,13 +1078,13 @@ export default function hackBhoomi() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 place-items-center">
-  
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10 place-items-center">
+            
             {/* Technical Team */}
             <div className="text-center bg-transparent rounded-lg p-6 w-64">
               <img 
-                src="/images/gaurav.jpg" 
-                alt="Gaurav" 
+                src="/images/gauravSir.png" 
+                alt="Hod CSE" 
                 className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
               />
               <div className="text-white font-bold text-lg">Dr. Gaurav Agarwal</div>
@@ -1095,24 +1095,37 @@ export default function hackBhoomi() {
             <div className="text-center bg-transparent rounded-lg p-6 w-64">
               <img 
                 src="/images/akashSir.png" 
-                alt="Technical Club" 
+                alt="Hod CA" 
                 className="mx-auto h-20 w-20 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] rounded-full object-contain mb-4"
               />
-              <div className="text-white font-bold text-lg">Akash Sanghai</div>
+              <div className="text-white font-bold text-lg">Dr. Akash Sanghai</div>
               <p className="text-white text-sm mt-2">HOD, Computer Applications</p>
             </div>
 
+            {/* Assistant Prof */}
             <div className="text-center bg-transparent rounded-lg p-6 w-64">
               <img 
-                src="/images/itech.png" 
-                alt="Technical Club" 
+                src="/images/ashishSir.png" 
+                alt="Assistant Prof" 
                 className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
               />
-              <div className="text-white font-bold text-lg">iTech</div>
-              <p className="text-white text-sm mt-2">The Technical Club, Abhiruchi</p>
+              <div className="text-white font-bold text-lg">Dr. Ashish Kumar Sharma</div>
+              <p className="text-white text-sm mt-2">Assistant Prof. CSE</p>
+            </div>
+
+            {/* New Member */}
+            <div className="text-center bg-transparent rounded-lg p-6 w-64">
+              <img 
+                src="/images/kaushalSir.jpg" 
+                alt="New Member" 
+                className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
+              />
+              <div className="text-white font-bold text-lg">Prof. Kaushal Johari</div>
+              <p className="text-white text-sm mt-2">Assistant Prof. Computer Applications</p>
             </div>
 
           </div>
+
           
           <h2 className="text-4xl font-bold text-center mb-10 text-orange-400">
               Mentors
@@ -1137,7 +1150,7 @@ export default function hackBhoomi() {
             </h2>
 
             {/* Bottom three cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               
               {/* Technical Team */}
               <div className="text-center bg-transparent rounded-lg p-6">
@@ -1147,7 +1160,6 @@ export default function hackBhoomi() {
                   className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
                 />
                 <div className="text-white font-bold text-lg">Lal Shivam Singh</div>
-                <p className="text-white text-sm mt-2">[Lead Organizer]</p>
               </div>
               
               {/* Mentors */}
@@ -1163,14 +1175,74 @@ export default function hackBhoomi() {
               {/* Sponsors & Partners */}
               <div className="text-center bg-transparent rounded-lg p-6">
                 <img 
-                  src="/images/aashish.png" 
+                  src="/images/ashish.jpg" 
                   alt="Incubation Center" 
                   className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
                 />
-                <div className="text-black font-bold text-lg">Ashish Kumar</div>
+                <div className="text-white font-bold text-lg">Ashish Kumar</div>
+              </div>
+
+              {/* New Member */}
+              <div className="text-center bg-transparent rounded-lg p-6">
+                <img 
+                  src="/images/ayush.jpg" 
+                  alt="New Member" 
+                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
+                />
+                <div className="text-white font-bold text-lg">Ayush Ranjan</div>
               </div>
 
             </div>
+{/* 
+            <h2 className="text-4xl font-bold text-center mb-10 text-white">
+              Head Volunteers
+            </h2>
+
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              
+              {/* Technical Team */}
+              <div className="text-center bg-transparent rounded-lg p-6">
+                <img 
+                  src="/images/trisha.jpg" 
+                  alt="Lead Organizer" 
+                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
+                />
+                <div className="text-white font-bold text-lg">Trisha Bhardwaj</div>
+              </div>
+              
+              {/* Mentors */}
+              <div className="text-center bg-transparent rounded-lg p-6">
+                <img 
+                  src="/images/aryan.png" 
+                  alt="Technical Club" 
+                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
+                />
+                <div className="text-white font-bold text-lg">Aryan Singh</div>
+              </div>
+              
+              {/* Sponsors & Partners */}
+              <div className="text-center bg-transparent rounded-lg p-6">
+                <img 
+                  src="/images/ashish.jpg" 
+                  alt="Incubation Center" 
+                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
+                />
+                <div className="text-white font-bold text-lg">Shivanshu Singh</div>
+              </div>
+
+              {/* New Member */}
+              <div className="text-center bg-transparent rounded-lg p-6">
+                <img 
+                  src="/images/ayush.jpg" 
+                  alt="New Member" 
+                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
+                />
+                <div className="text-white font-bold text-lg">Ayush Ranjan</div>
+              </div>
+
+            </div> */}
+
 
             <h2 className="text-4xl font-bold text-center mb-10 text-lime-400">
               Community Partners
