@@ -34,7 +34,7 @@ const events = [
     },
     {
       title: "Shortlisted Teams Announcement",
-      date: "10 Aug",
+      date: "10 Sept",
       desc: "And the chosen ones are... Meet the finalists!",
       color: "bg-red-200",
     },
