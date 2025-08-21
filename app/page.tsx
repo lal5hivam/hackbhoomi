@@ -1145,6 +1145,8 @@ export default function hackBhoomi() {
               </div>
             </div>
 
+            
+
             <h2 className="text-4xl font-bold text-center mb-10 text-orange-400">
               Core Members
             </h2>
@@ -1193,7 +1195,54 @@ export default function hackBhoomi() {
               </div>
 
             </div>
+<h2 className="text-4xl font-bold text-center mb-10 text-white">
+              Head Volunteers
+            </h2>
 
+            {/* Bottom three cards */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              
+              {/* Technical Team */}
+              <div className="text-center bg-transparent rounded-lg p-6">
+                <img 
+                  src="/images/trisha.jpg" 
+                  alt="Lead Organizer" 
+                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
+                />
+                <div className="text-white font-bold text-lg">Trisha Bhardwaj</div>
+              </div>
+              
+              {/* Mentors */}
+              <div className="text-center bg-transparent rounded-lg p-6">
+                <img 
+                  src="/images/tarun.jpg" 
+                  alt="Technical Club" 
+                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
+                />
+                <div className="text-white font-bold text-lg">Tarun Maurya</div>
+              </div>
+              
+              {/* Sponsors & Partners */}
+              <div className="text-center bg-transparent rounded-lg p-6">
+                <img 
+                  src="/images/shivanshu.jpg" 
+                  alt="Incubation Center" 
+                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
+                />
+                <div className="text-white font-bold text-lg">Shivanshu Singh</div>
+              </div>
+
+              {/* New Member */}
+              <div className="text-center bg-transparent rounded-lg p-6">
+                <img 
+                  src="/images/arpit.jpg" 
+                  alt="New Member" 
+                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
+                />
+                <div className="text-white font-bold text-lg">Arpit Mathur</div>
+              </div>
+
+            </div>
             <h2 className="text-4xl font-bold text-center mb-10 text-lime-400">
               Community Partners
             </h2>
