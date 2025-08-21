@@ -1193,56 +1193,6 @@ export default function hackBhoomi() {
               </div>
 
             </div>
-{/* 
-            <h2 className="text-4xl font-bold text-center mb-10 text-white">
-              Head Volunteers
-            </h2>
-
-
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              
-              {/* Technical Team */}
-              <div className="text-center bg-transparent rounded-lg p-6">
-                <img 
-                  src="/images/trisha.jpg" 
-                  alt="Lead Organizer" 
-                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
-                />
-                <div className="text-white font-bold text-lg">Trisha Bhardwaj</div>
-              </div>
-              
-              {/* Mentors */}
-              <div className="text-center bg-transparent rounded-lg p-6">
-                <img 
-                  src="/images/aryan.png" 
-                  alt="Technical Club" 
-                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
-                />
-                <div className="text-white font-bold text-lg">Aryan Singh</div>
-              </div>
-              
-              {/* Sponsors & Partners */}
-              <div className="text-center bg-transparent rounded-lg p-6">
-                <img 
-                  src="/images/ashish.jpg" 
-                  alt="Incubation Center" 
-                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
-                />
-                <div className="text-white font-bold text-lg">Shivanshu Singh</div>
-              </div>
-
-              {/* New Member */}
-              <div className="text-center bg-transparent rounded-lg p-6">
-                <img 
-                  src="/images/ayush.jpg" 
-                  alt="New Member" 
-                  className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
-                />
-                <div className="text-white font-bold text-lg">Ayush Ranjan</div>
-              </div>
-
-            </div> */}
-
 
             <h2 className="text-4xl font-bold text-center mb-10 text-lime-400">
               Community Partners
