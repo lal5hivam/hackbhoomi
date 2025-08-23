@@ -1027,33 +1027,7 @@ export default function hackBhoomi() {
         
 
         {/* Next Event CTA */}
-        <section id="neste" className="bg-white/90 backdrop-blur-sm py-16" aria-labelledby="next-event-heading">
-          <div className="max-w-4xl mx-auto text-center px-4">
-            <h2 id="next-event-heading" className="text-4xl font-black text-indigo-900 mb-6">
-              Ready for SIH 2025?
-            </h2>
-            <p className="text-2xl text-gray-600 mb-10">
-            ⚡ Remember: Innovation is not always about complexity — even a simple, usable solution can win!
-            </p>
-            <article className="bg-gray-100 p-8 rounded-lg mb-8">
-              <div className="flex items-center justify-center space-x-2 mb-4">
-                <Calendar className="w-6 h-6 text-indigo-900" aria-hidden="true" />
-                <time dateTime="2025-08-25" className="text-xl font-bold text-indigo-900">
-                  29th AUGUST 2025
-                </time>
-              </div>
-              <h3 className="text-2xl font-bold text-indigo-900 mb-4">HACKBHOOOMI INTERNAL HACKATHON</h3>
-              <p className="text-gray-600 mb-6">
-                Theme: "Innovation for a Smarter India" - Solve real-world problems and make a difference!
-              </p>
-              <Button 
-                onClick={() => window.open("https://forms.cloud.microsoft/r/C3tHRkCuHt", "_blank")}
-                className="bg-orange-500 hover:bg-orange-600 text-black font-bold text-lg px-8 py-3 rounded-md">
-                Register Now
-              </Button>
-            </article>
-          </div>
-        </section>
+        
 
         <section id="team" className="bg-black/80 backdrop-blur-sm py-12" aria-labelledby="support-heading">
           <div className="max-w-6xl mx-auto justify-center px-4">
@@ -1284,6 +1258,34 @@ export default function hackBhoomi() {
 
             </div>
 
+          </div>
+        </section>
+
+        <section id="neste" className="bg-white/90 backdrop-blur-sm py-16" aria-labelledby="next-event-heading">
+          <div className="max-w-4xl mx-auto text-center px-4">
+            <h2 id="next-event-heading" className="text-4xl font-black text-indigo-900 mb-6">
+              Ready for SIH 2025?
+            </h2>
+            <p className="text-2xl text-gray-600 mb-10">
+            ⚡ Remember: Innovation is not always about complexity — even a simple, usable solution can win!
+            </p>
+            <article className="bg-gray-100 p-8 rounded-lg mb-8">
+              <div className="flex items-center justify-center space-x-2 mb-4">
+                <Calendar className="w-6 h-6 text-indigo-900" aria-hidden="true" />
+                <time dateTime="2025-08-25" className="text-xl font-bold text-indigo-900">
+                  12th-13th September 2025
+                </time>
+              </div>
+              <h3 className="text-2xl font-bold text-indigo-900 mb-4">HACKBHOOOMI INTERNAL HACKATHON</h3>
+              <p className="text-gray-600 mb-6">
+                Theme: "Innovation for a Smarter India" - Solve real-world problems and make a difference!
+              </p>
+              <Button 
+                onClick={() => window.open("https://forms.cloud.microsoft/r/C3tHRkCuHt", "_blank")}
+                className="bg-orange-500 hover:bg-orange-600 text-black font-bold text-lg px-8 py-3 rounded-md">
+                Register Now
+              </Button>
+            </article>
           </div>
         </section>
 
