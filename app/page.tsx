@@ -163,10 +163,10 @@ export default function hackBhoomi() {
        <header 
           className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
             isScrolled 
-              ? 'bg-gray-900/80 text-white backdrop-blur-sm shadow-lg py-3' 
-              : 'bg-gray-300 backdrop-blur-lg border border-gray-300/30 shadow-lg rounded-2xl w-[95%] mx-auto mt-3 py-4  '
+              ? 'bg-gray-900/80 text-white backdrop-blur-sm shadow-lg py-1' 
+              : 'bg-yellow-200 backdrop-blur-lg border border-gray-300/30 shadow-lg rounded-2xl w-[95%] mx-auto mt-3 py-1  '
           } text-black`} 
-          // role="banner" 
+          // role="banner"
           // id="header"
         >
           <div className="max-w-7xl mx-auto ">
@@ -178,8 +178,6 @@ export default function hackBhoomi() {
                   {/* Left Section: Hamburger + Logo + Title */}
                   <div className="flex items-center space-x-4">
                     {/* Hamburger */}
-                    
-
                     {/* Logo + Title */}
                     <div className="flex items-center">
                       <h1 className="text-4xl font-bold font-mono">Hack</h1>
@@ -294,36 +292,106 @@ export default function hackBhoomi() {
 
 
 
-        {/* Hero Section - Centered Style */}
-        <section className="relative overflow-hidden h-screen  flex backdrop-blur-sm items-center justify-center" role="main">
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/30 z-10"></div>
+        {/* Hero Section - Battlefield x Hackathon Style */}
+        <section
+          className="relative overflow-hidden h-screen flex items-center justify-center"
+          role="main"
+        >
+          {/* Background Video */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+          >
+            <source src="/hero.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80 z-10"></div>
+
+          {/* New div inserted between header and scroll indicator */}
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center text-center">
+            <span className="text-8xl font-bold drop-shadow-lg">
+              <span className="text-white font-mono">Hack</span>
+              <span className="text-orange-400">भूमि</span>
+            </span>
+          </div>
+
+          {/* Centered text at bottom */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center text-center">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="orange" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce mb-2">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <polyline points="19 12 12 19 5 12" />
+            </svg>
+            <span className="text-white text-lg font-semibold drop-shadow-lg">Scroll down to explore</span>
+          </div>
+        </section>
+
+        <section
+          className="relative overflow-hidden h-screen flex items-center justify-center"
+          role="main"
+        >
+          {/* Background Video */}
           
 
-          <div className="max-w-7xl mx-auto px-4 py-8 relative z-20 h-full flex flex-col items-center justify-center text-center">
-            
-            <p className="text-xl text-white mb-8 max-w-xl">
-              Your CHANCE to represent Invertis University at
+          {/* Dark cinematic overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80 z-10"></div>
+
+          {/* Glowing code rain effect (Matrix style but orange/blue) */}
+          <div className="absolute inset-0 z-20 pointer-events-none">
+            <div className="absolute inset-0 animate-pulse opacity-10 font-mono text-gray-300 text-sm leading-relaxed whitespace-pre">
+              {`<div>\n  warriors = coders;\n  weapons = techStack;\n  mentor = Krishna;\n  dharma = innovation;\n</div>`}
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="max-w-7xl mx-auto px-4 py-8 relative z-30 h-full flex flex-col items-center justify-center text-center">
+            {/* Shloka-style tagline */}
+            <p className="text-2xl text-orange-300 italic font-serif mb-6 animate-fadeIn">
+              “Lift your Gandiva 💻, Sharpen your Shastra 🤖, Aim with precision 🏹🧑‍💻”
             </p>
-            <h2 className="text-8xl font-black leading-none mb-4">
-              <span className="text-blue-500 text-6xl font-sans">SMART INDIA</span>
-              <br />
-              <span className="text-orange-400 font-serif">HACKATHON</span>
-              <br />
-              <span className="text-white font-mono">2025</span>
+
+            <h2 className="text-8xl font-black leading-tight tracking-wide mb-6 drop-shadow-lg">
+              <span className="text-blue-500 text-6xl font-sans block animate-slideDown">
+                SMART INDIA
+              </span>
+              <span className="text-orange-400 font-serif block animate-slideUp">
+                HACKATHON
+              </span>
+              <span className="text-white font-mono block animate-fadeIn">
+                2025
+              </span>
             </h2>
 
-            
+            {/* War cry line */}
+            <p className="text-lg text-gray-200 mb-10 max-w-2xl animate-fadeIn delay-200">
+              Enter the <span className="text-orange-400 font-bold">HackBhoomi</span> — 
+              the Kurukshetra of Innovation.  
+              <br /> Code like Arjuna, Strategize like Krishna, Conquer like Pandavas.
+            </p>
 
+            {/* CTA Button */}
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button 
-                onClick={() => window.open("https://forms.gle/fsCyrMx66uLinKU68", "_blank")}
-                className="bg-orange-500  hover:bg-orange-600 text-black font-bold text-2xl px-16 py-10 relative overflow-hidden transition-all duration-300 hover:scale-125 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] group rounded-md">
-                Register
+              <Button
+                onClick={() =>
+                  window.open("https://forms.gle/fsCyrMx66uLinKU68", "_blank")
+                }
+                className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 
+                          text-white font-bold text-2xl px-16 py-8 relative overflow-hidden 
+                          transition-all duration-500 hover:scale-110 
+                          hover:shadow-[0_0_35px_rgba(255,150,50,0.9)] group rounded-xl"
+              >
+                ⚔️ Join the Battle
               </Button>
             </div>
           </div>
+
+          {/* Conch shell sound on load (optional) */}
         </section>
+
+
 
 
         {/* Event Stats */}
@@ -424,7 +492,7 @@ export default function hackBhoomi() {
         </section>
 
 
-        <section id="program" className="bg-transparent backdrop-blur-md py-12">
+        <section id="program" className="bg-transparent backdrop-blur-sm py-12">
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-center text-5xl font-extrabold text-white mb-12">
               Timeline
@@ -1261,8 +1329,17 @@ export default function hackBhoomi() {
           </div>
         </section>
 
-        <section id="neste" className="bg-white/90 backdrop-blur-sm py-16" aria-labelledby="next-event-heading">
-          <div className="max-w-4xl mx-auto text-center px-4">
+        <section id="neste" style={{
+            backgroundImage: 'url(/mahabharat/krishna.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            borderRadius: '1rem',
+            boxShadow: '0 4px 32px rgba(0,0,0,0.15)'
+          }} className="bg-white/90 backdrop-blur-sm py-16" aria-labelledby="next-event-heading">
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80 z-10"></div>
+
+          <div className="max-w-4xl mx-auto text-center px-4" >
             <h2 id="next-event-heading" className="text-4xl font-black text-indigo-900 mb-6">
               Ready for SIH 2025?
             </h2>

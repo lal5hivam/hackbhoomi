@@ -164,7 +164,7 @@ const TracksSection: React.FC = () => {
   };
 
   return (
-    <section id="problem-statements" className="w-full py-16 bg-transparent backdrop-blur-md text-white flex flex-col items-center">
+    <section id="problem-statements" className="w-full py-16 bg-transparent backdrop-blur-sm text-white flex flex-col items-center">
       <h1 className="text-3xl md:text-6xl font-bold text-center mb-10 bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">
         SIH 2025 
         <span className="text-white"> 🚀</span>
