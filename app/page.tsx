@@ -22,7 +22,7 @@ const events = [
     },
     {
       title: "Registration Deadline",
-      date: "31st Sept.",
+      date: "31st Aug.",
       desc: "Get ready to innovate — Last chance to register!",
       color: "bg-green-200",
     },
