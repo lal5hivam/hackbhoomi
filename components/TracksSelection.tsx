@@ -223,10 +223,10 @@ const TracksSection: React.FC = () => {
             <br />
             <span className="text-purple-400 font-semibold">
                 <a
-                href={"https://www.sih.gov.in/sih2024PS"}
-                className="inline-block mt-4 text-blue-400 underline hover:text-blue-500"
+                href={"https://sih.gov.in/sih2025PS"}
+                className="inline-block mt-4 text-blue-400   hover:text-blue-500"
               >
-                SIH 2024 Problem Statments
+                🚨 SIH 2025 Problem Statments 
               </a>
             </span>
         </p>

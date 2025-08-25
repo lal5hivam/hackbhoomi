@@ -284,6 +284,7 @@ export default function hackBhoomi() {
             <div className="w-full bg-transparent py-2 overflow-hidden">
               <div className="whitespace-nowrap animate-marquee-slow animate-blink font-extrabold text-lg hover:animate-marquee-pause">
                 🚨 The registrations are OPEN, create your team now !! ⚠️ &nbsp;&nbsp;&nbsp; 
+                🚨 SIH 2025 Probelm statements are  OUT! Choose one and start HACKING ⚠️ &nbsp;&nbsp;&nbsp;
               </div>
             </div>
           )}
