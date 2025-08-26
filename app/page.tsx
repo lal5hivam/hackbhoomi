@@ -1249,12 +1249,12 @@ export default function hackBhoomi() {
               {/* Sponsors & Partners */}
               <div className="text-center bg-transparent rounded-lg p-6">
                 <img 
-                  src="/images/nexus.png" 
+                  src="/crewxial.png" 
                   alt="Incubation Center" 
                   className="mx-auto h-20 w-20 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] object-contain mb-4"
                 />
-                <div className="text-white font-bold text-lg">Nexus</div>
-                <p className="text-white text-sm mt-2">Bridging Opportunities</p>
+                <div className="text-white font-bold text-lg">CrewXIAL</div>
+                <p className="text-white text-sm mt-2">Challenges = Opportunities</p>
               </div>
 
             </div>
