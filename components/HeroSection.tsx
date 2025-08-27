@@ -70,24 +70,24 @@ export default function HeroSection() {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 font-semibold"> game-changing solutions</span>
         </p>
 
-        {/* Mobile-Optimized Responsive CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-3 justify-center items-center mb-6 animate-fade-in-up">
+        {/* Perfectly Sized Responsive CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center items-center mb-6 animate-fade-in-up">
           <Button
-            size="sm"
+            size="default"
             onClick={() => window.open("https://forms.gle/fsCyrMx66uLinKU68", "_blank")}
-            className="group relative bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 hover:from-orange-600 hover:via-red-600 hover:to-pink-600 text-white font-medium text-sm sm:text-sm px-6 py-3 sm:px-6 sm:py-3 rounded-lg shadow-lg hover:shadow-orange-500/20 transition-all duration-300 hover:scale-105 transform overflow-hidden border-0 w-full sm:w-auto max-w-xs"
+            className="group relative bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 hover:from-orange-600 hover:via-red-600 hover:to-pink-600 text-white font-medium text-sm sm:text-base px-6 py-3 sm:px-8 sm:py-4 rounded-lg shadow-lg hover:shadow-orange-500/20 transition-all duration-300 hover:scale-105 transform overflow-hidden border-0 w-full sm:w-auto max-w-xs sm:max-w-none"
           >
             <span className="relative z-10 flex items-center justify-center">
               Register Your Team
-              <ArrowRight className="ml-2 w-4 h-4 sm:w-3 sm:h-3 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
           </Button>
           <Button
-            size="sm"
+            size="default"
             variant="outline"
             onClick={() => document.getElementById('SIH')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group border border-white/40 bg-white/5 backdrop-blur-md text-white hover:bg-white/15 hover:border-white/60 font-medium text-sm sm:text-sm px-6 py-3 sm:px-6 sm:py-3 rounded-lg transition-all duration-300 hover:scale-105 shadow-sm w-full sm:w-auto max-w-xs"
+            className="group border border-white/40 bg-white/5 backdrop-blur-md text-white hover:bg-white/15 hover:border-white/60 font-medium text-sm sm:text-base px-6 py-3 sm:px-8 sm:py-4 rounded-lg transition-all duration-300 hover:scale-105 shadow-sm w-full sm:w-auto max-w-xs sm:max-w-none"
           >
             <span className="group-hover:text-orange-300 transition-colors">Explore SIH</span>
           </Button>
