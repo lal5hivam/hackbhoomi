@@ -158,7 +158,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <ScrollProgressBar />
-        <MusicToggle />
+        
         {/* Main content */}
         {children}
       </body>
