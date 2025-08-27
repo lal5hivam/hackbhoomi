@@ -110,13 +110,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                   <Menu className="w-5 h-5 text-gray-700" />
                 </button>
 
-                <Button
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-3 sm:px-4 lg:px-5 py-2 sm:py-2.5 text-sm sm:text-base rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                  onClick={() => window.open("https://forms.gle/fsCyrMx66uLinKU68", "_blank")}
-                >
-                  <span className="hidden sm:inline">Register Now</span>
-                  <span className="sm:hidden">Register</span>
-                </Button>
+                
               </div>
             </>
           )}
@@ -133,7 +127,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                   <h1 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors">Hack</h1>
                   <h1 className="text-xl sm:text-2xl lg:text-2xl text-orange-600 font-bold">भूमि</h1>
                   <div className="w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse ml-1"></div>
-                  <span className="hidden sm:inline text-base lg:text-lg font-semibold text-blue-700">SIH 2025</span>
+                  <span className=" sm:inline text-base lg:text-lg font-bold text-blue-700">SIH 2025</span>
                 </div>
 
                 {/* Partner Logos - Compact for Scrolled State */}
