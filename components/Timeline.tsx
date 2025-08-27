@@ -1,59 +1,85 @@
 "use client"
 
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent } from "@/components/ui/card"
+import { 
+  UserPlus, 
+  Users, 
+  Clock, 
+  FileText, 
+  Trophy, 
+  Rocket,
+  Calendar,
+  Sparkles
+} from "lucide-react"
+
 const events = [
   {
-    title: "Registration Starts",
+    title: "Registration Opens",
     date: "20 Aug",
     desc: "The race begins — Register, Team Up, Get Set & Ideate!",
-    color: "bg-blue-200",
+    icon: UserPlus,
+    color: "bg-blue-500"
   },
   {
     title: "Mentorship Sessions",
-    date: "",
+    date: "Ongoing",
     desc: "Get expert guidance regarding your ideas and solutions!",
-    color: "bg-yellow-200",
+    icon: Users,
+    color: "bg-yellow-500"
   },
   {
     title: "Registration Deadline",
-    date: "31st Aug.",
+    date: "31st Aug",
     desc: "Get ready to innovate — Last chance to register!",
-    color: "bg-green-200",
+    icon: Clock,
+    color: "bg-red-500"
   },
   {
     title: "Idea Submission Deadline",
-    date: "06 Sept.",
+    date: "06 Sept",
     desc: "Submit your innovative ideas and solutions!",
-    color: "bg-green-200",
+    icon: FileText,
+    color: "bg-green-500"
   },
   {
     title: "Shortlisted Teams Announcement",
     date: "10 Sept",
     desc: "And the chosen ones are... Meet the finalists!",
-    color: "bg-red-200",
+    icon: Trophy,
+    color: "bg-purple-500"
   },
   {
     title: "HACKATHON DAY - HackBhoomi 2025",
-    date: "12-13 Sept.",
+    date: "12-13 Sept",
     desc: "Let the hacking begin! Build, code and create!",
-    color: "bg-blue-200",
+    icon: Rocket,
+    color: "bg-orange-500"
   },
 ];
 
 export default function Timeline() {
   return (
-    <section id="program" className="bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-6">
-            Event Timeline
+    <section id="program" className="bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900 py-16 sm:py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Header */}
+        <div className="text-center mb-12 sm:mb-16">
+          <Badge variant="secondary" className="mb-4 bg-blue-500/20 text-blue-300 border-blue-500/30 px-4 py-2">
+            <Sparkles className="w-4 h-4 mr-2" />
+            Event Journey
+          </Badge>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-4 sm:mb-6">
+            HackBhoomi Timeline
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Your journey from registration to representing Invertis University at SIH 2025
+          <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Your complete journey from registration to representing Invertis University at SIH 2025
           </p>
         </div>
-        
-        <div className="relative">
-          {/* Timeline line - hidden on mobile, visible on larger screens */}
+
+        {/* Simple Timeline */}
+        <div className="relative max-w-4xl mx-auto">
+          {/* Timeline line */}
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-orange-500 h-full rounded-full"></div>
           
           <div className="space-y-8 md:space-y-12">
@@ -62,25 +88,33 @@ export default function Timeline() {
                 
                 {/* Content Card */}
                 <div className={`w-full md:w-5/12 ${idx % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-xl sm:text-2xl font-bold text-white">{event.title}</h3>
-                      {event.date && (
-                        <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                          {event.date}
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-gray-300 leading-relaxed">{event.desc}</p>
-                  </div>
+                  <Card className="bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+                    <CardContent className="p-6">
+                      <div className="flex items-center space-x-4 mb-4">
+                        <div className={`w-12 h-12 ${event.color} rounded-xl flex items-center justify-center shadow-lg`}>
+                          <event.icon className="w-6 h-6 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-xl font-bold text-white">{event.title}</h3>
+                          {event.date && (
+                            <Badge variant="secondary" className="mt-1 bg-white/10 text-gray-300 border-white/20">
+                              <Calendar className="w-3 h-3 mr-1" />
+                              {event.date}
+                            </Badge>
+                          )}
+                        </div>
+                      </div>
+                      <p className="text-gray-300 leading-relaxed">{event.desc}</p>
+                    </CardContent>
+                  </Card>
                 </div>
 
                 {/* Timeline dot */}
                 <div className="hidden md:flex w-2/12 justify-center">
-                  <div className="w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full border-4 border-white shadow-lg z-10"></div>
+                  <div className={`w-6 h-6 ${event.color} rounded-full border-4 border-white shadow-lg z-10`}></div>
                 </div>
 
-                {/* Spacer for alternating layout */}
+                {/* Spacer */}
                 <div className="hidden md:block w-5/12"></div>
               </div>
             ))}
