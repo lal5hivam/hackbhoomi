@@ -110,7 +110,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                   <Menu className="w-5 h-5 text-gray-700" />
                 </button>
 
-                
+
               </div>
             </>
           )}
