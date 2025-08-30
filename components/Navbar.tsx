@@ -130,7 +130,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                   <span className=" sm:inline text-base lg:text-lg font-bold text-blue-700">SIH 2025</span>
                 </div>
 
-                {/* Partner Logos - Compact for Scrolled State */}
+              
 
               </div>
 

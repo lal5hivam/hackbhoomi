@@ -9,6 +9,10 @@ import Milestones from "@/components/Milestones"
 import Timeline from "@/components/Timeline"
 import Instructions from "@/components/Instructions"
 import TracksSection from "@/components/TracksSelection"
+import Prizes from "@/components/Prizes"
+import Team from "@/components/Team"
+import FAQ from "@/components/FAQ"
+import Footer from "@/components/Footer"
 
 export default function HackBhoomi() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -53,6 +57,12 @@ export default function HackBhoomi() {
 
         {/* Tracks Section */}
         <TracksSection />
+
+        <Prizes />
+      
+        <Team />
+        <FAQ />
+        <Footer />
       </div>
     </>
   )

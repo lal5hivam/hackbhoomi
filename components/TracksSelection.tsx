@@ -245,9 +245,9 @@ export default function TracksSelection() {
               <Button 
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 shadow-lg hover:shadow-xl transition-all duration-300"
-                onClick={() => window.open("https://www.sih.gov.in/sih2024PS", "_blank")}
+                onClick={() => window.open("https://www.sih.gov.in/sih2025PS", "_blank")}
               >
-                View SIH 2024 Problem Statements
+                View SIH 2025 Problem Statements
                 <ExternalLink className="w-4 h-4 ml-2" />
               </Button>
             </CardContent>
