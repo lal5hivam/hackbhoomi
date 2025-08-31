@@ -5,7 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion, Variants } from "framer-motion";
-import { cn } from "@/lib/utils";
+
 import { HelpCircle, Mail } from "lucide-react";
 
 interface FAQItem {

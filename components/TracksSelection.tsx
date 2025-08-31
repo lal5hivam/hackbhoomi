@@ -36,7 +36,7 @@ import {
 type Track = {
   title: string;
   description: string;
-  icon: any;
+  icon: React.ComponentType<{ className?: string }>;
   color: string;
   category: string;
 };
@@ -204,7 +204,7 @@ export default function TracksSelection() {
             SIH 2025 Tracks
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-blue-200/90 max-w-3xl mx-auto leading-relaxed">
-            Explore diverse innovation tracks, each offering unique challenges and opportunities to create impactful solutions for India's future
+            Explore diverse innovation tracks, each offering unique challenges and opportunities to create impactful solutions for India&apos;s future
           </p>
         </div>
 

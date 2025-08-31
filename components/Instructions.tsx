@@ -230,7 +230,7 @@ export default function Instructions() {
                 <Trophy className="w-8 h-8 sm:w-10 sm:h-10 mx-auto mb-3 text-yellow-300 animate-pulse" />
                 <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Ready to Innovate?</h3>
                 <p className="text-indigo-100/90 mb-4 text-sm leading-relaxed">
-                  Join hundreds of students in solving India's most pressing challenges and represent Invertis University at the national level
+                  Join hundreds of students in solving India&apos;s most pressing challenges and represent Invertis University at the national level
                 </p>
                 <Button 
                   size="default"

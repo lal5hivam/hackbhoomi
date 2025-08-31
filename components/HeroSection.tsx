@@ -66,7 +66,7 @@ export default function HeroSection() {
 
         {/* Compact Professional Subtitle */}
         <p className="text-sm sm:text-base md:text-lg text-white/90 mb-6 max-w-2xl mx-auto leading-relaxed font-normal animate-fade-in-up drop-shadow-sm">
-          Join India's largest innovation ecosystem and transform your ideas into
+          Join India&apos;s largest innovation ecosystem and transform your ideas into
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 font-semibold"> game-changing solutions</span>
         </p>
 
