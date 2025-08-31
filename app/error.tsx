@@ -26,7 +26,7 @@ export default function Error({
           </div>
           <CardTitle className="text-white text-xl">Oops! Something went wrong</CardTitle>
           <CardDescription className="text-gray-300">
-            We encountered an unexpected error while loading HackBhoomi 2025. Don't worry, our team has been notified.
+            We encountered an unexpected error while loading HackBhoomi 2025. Don&apos;t worry, our team has been notified.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
