@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Head from "next/head"
 import Navbar from "@/components/Navbar"
 import HeroSection from "@/components/HeroSection"
 import AboutSIH from "@/components/AboutSIH"
@@ -14,56 +13,50 @@ import Team from "@/components/Team"
 import FAQ from "@/components/FAQ"
 import Footer from "@/components/Footer"
 
-export default function HackBhoomi() {
+export default function Page() {
   const [isScrolled, setIsScrolled] = useState(false)
 
-  // Handle scroll effect for header
+  // Add scroll effect for Navbar background
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY
-      setIsScrolled(scrollTop > 50)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    const handleScroll = () => setIsScrolled(window.scrollY > 50)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
-    <>
-      <Head>
-        {/* Page-specific meta tags */}
-        <link rel="preload" href="/herobg.jpg" as="image" />
-        <link rel="preload" href="/edtech/PS1.png" as="image" />
-      </Head>
+    <div className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed">
+      {/* Navbar */}
+      <Navbar isScrolled={isScrolled} />
 
-      <div className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed">
-        {/* Navigation */}
-        <Navbar isScrolled={isScrolled} />
+      {/* Hero Section */}
+      <HeroSection />
 
-        {/* Hero Section */}
-        <HeroSection />
+      {/* About Hackathon / SIH */}
+      <AboutSIH />
 
-        {/* About SIH Section */}
-        <AboutSIH />
+      {/* Milestones */}
+      <Milestones />
 
-        {/* Milestones Section */}
-        <Milestones />
+      {/* Timeline */}
+      <Timeline />
 
-        {/* Timeline Section */}
-        <Timeline />
+      {/* Instructions */}
+      <Instructions />
 
-        {/* Instructions Section */}
-        <Instructions />
+      {/* Tracks */}
+      <TracksSection />
 
-        {/* Tracks Section */}
-        <TracksSection />
+      {/* Prizes */}
+      <Prizes />
 
-        <Prizes />
-      
-        <Team />
-        <FAQ />
-        <Footer />
-      </div>
-    </>
+      {/* Team */}
+      <Team />
+
+      {/* FAQ */}
+      <FAQ />
+
+      {/* Footer */}
+      <Footer />
+    </div>
   )
 }
