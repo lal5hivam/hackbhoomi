@@ -37,27 +37,27 @@ const FAQ: React.FC = () => {
     {
       question: "What is Hackbhoomi?",
       answer:
-        "Hackbhoomi is an annual hackathon organized by Invertis University, bringing together students, developers, and innovators to solve real-world problems through technology. It fosters creativity, collaboration, and innovation.",
+        "Hackbhoomi is an Internal hackathon organized by Invertis University for SIH 2025, bringing together students, developers, and innovators to solve real-world problems through technology. It fosters creativity, collaboration, and innovation.",
     },
     {
       question: "Who can participate in Hackbhoomi?",
       answer:
-        "Hackbhoomi is open to students, professionals, and tech enthusiasts with a passion for coding and problem-solving. Participants can join as individuals or in teams of up to four members.",
+        "Hackbhoomi is open to all the students of Invertis University, allowing tech entusiasts with multi-disciplinary courses with a passion for coding and problem-solving. Participants can in teams of 6 members(One girl member mandatory).",
     },
     {
       question: "What are the event dates and location?",
       answer:
-        "Hackbhoomi 2025 will take place on [insert dates] at Invertis University, Bareilly, India. Virtual participation options may also be available; check the official website for updates.",
+        "Hackbhoomi 2025 will take place on 12-13th sept, 2025 at Invertis University, Bareilly, India.",
     },
     {
       question: "How can I register for Hackbhoomi?",
       answer:
-        "Registration can be completed through the official Hackbhoomi website. Follow the instructions there to sign up as an individual or with a team. Early registration is recommended due to limited spots.",
+        "Registration can be completed through the official Hackbhoomi website. Follow the instructions there to sign up as a team. Early registration is recommended due to limited spots.",
     },
     {
       question: "Are there any prizes for winners?",
       answer:
-        "Yes, Hackbhoomi offers exciting prizes for top-performing teams, including cash awards, tech gadgets, and internship opportunities. Detailed prize information will be announced closer to the event.",
+        "Yes, Hackbhoomi offers exciting prizes for top-performing teams. Detailed prize information will be announced closer to the event.",
     },
   ];
 
