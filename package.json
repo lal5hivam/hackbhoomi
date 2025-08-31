@@ -1,6 +1,23 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "hackbhoomi-2025",
+  "version": "1.0.0",
+  "description": "HackBhoomi 2025 - Official internal hackathon platform for Invertis University students participating in Smart India Hackathon 2025",
+  "author": "HackBhoomi Team <l.singhshivam1@gmail.com>",
+  "homepage": "https://hackbhoomi.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/hackbhoomi-2025.git"
+  },
+  "keywords": [
+    "hackathon",
+    "smart-india-hackathon",
+    "sih-2025",
+    "invertis-university",
+    "hackbhoomi",
+    "nextjs",
+    "react",
+    "typescript"
+  ],
   "private": true,
   "scripts": {
     "build": "next build",

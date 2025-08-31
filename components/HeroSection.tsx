@@ -3,23 +3,43 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Sparkles } from "lucide-react"
+import { memo, useCallback } from "react"
+import Image from "next/image"
 
-export default function HeroSection() {
+const HeroSection = memo(function HeroSection() {
+  const handleRegisterClick = useCallback(() => {
+    window.open("https://forms.gle/fsCyrMx66uLinKU68", "_blank", "noopener,noreferrer")
+  }, [])
+
+  const handleExploreClick = useCallback(() => {
+    const element = document.getElementById('SIH')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [])
+
   return (
     <section
-      className="relative overflow-hidden min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: "url('/herobg.jpg')"
-      }}
+      className="relative overflow-hidden min-h-screen flex items-center justify-center"
       role="main"
+      aria-labelledby="hero-heading"
     >
-      {/* Background Image Backdrop Blur & Overlay */}
-      <div className="absolute inset-0 backdrop-blur-sm z-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-slate-900/50 to-black/70 z-15"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/30 z-16"></div>
-
-      {/* Professional Background Elements */}
-      <div className="absolute inset-0 z-12">
+      {/* Optimized Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/herobg.jpg"
+          alt="HackBhoomi 2025 background - Innovation and technology theme"
+          fill
+          priority
+          quality={85}
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-slate-900/50 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/30" />
+      </div>
+      {/* Optimized Background Elements */}
+      <div className="absolute inset-0 z-10">
         {/* Elegant floating particles */}
         <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-gradient-to-r from-orange-400 to-red-400 rounded-full animate-float opacity-40 blur-sm"></div>
         <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full animate-float opacity-30 animation-delay-1000 blur-sm"></div>
@@ -49,9 +69,9 @@ export default function HeroSection() {
           </Badge>
         </div>
 
-        {/* Professional Main Heading - Balanced Size */}
+        {/* SEO Optimized Main Heading */}
         <div className="mb-5 animate-fade-in-up">
-          <h1 className="leading-tight">
+          <h1 id="hero-heading" className="leading-tight">
             <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 mb-2 animate-slide-in-left drop-shadow-lg">
               SMART INDIA
             </span>
@@ -70,23 +90,25 @@ export default function HeroSection() {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 font-semibold"> game-changing solutions</span>
         </p>
 
-        {/* Perfectly Sized Responsive CTA Buttons */}
+        {/* Optimized CTA Buttons with proper accessibility */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center items-center mb-6 animate-fade-in-up">
           <Button
             size="default"
-            onClick={() => window.open("https://forms.gle/fsCyrMx66uLinKU68", "_blank")}
+            onClick={handleRegisterClick}
+            aria-label="Register your team for HackBhoomi 2025"
             className="group relative bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 hover:from-orange-600 hover:via-red-600 hover:to-pink-600 text-white font-medium text-sm sm:text-base px-6 py-3 sm:px-8 sm:py-4 rounded-lg shadow-lg hover:shadow-orange-500/20 transition-all duration-300 hover:scale-105 transform overflow-hidden border-0 w-full sm:w-auto max-w-xs sm:max-w-none"
           >
             <span className="relative z-10 flex items-center justify-center">
               Register Your Team
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" aria-hidden="true"></div>
           </Button>
           <Button
             size="default"
             variant="outline"
-            onClick={() => document.getElementById('SIH')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={handleExploreClick}
+            aria-label="Learn more about Smart India Hackathon"
             className="group border border-white/40 bg-white/5 backdrop-blur-md text-white hover:bg-white/15 hover:border-white/60 font-medium text-sm sm:text-base px-6 py-3 sm:px-8 sm:py-4 rounded-lg transition-all duration-300 hover:scale-105 shadow-sm w-full sm:w-auto max-w-xs sm:max-w-none"
           >
             <span className="group-hover:text-orange-300 transition-colors">Explore SIH</span>
@@ -96,4 +118,6 @@ export default function HeroSection() {
       </div>
     </section>
   )
-}
+})
+
+export default HeroSection

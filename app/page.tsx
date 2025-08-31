@@ -12,6 +12,7 @@ import Prizes from "@/components/Prizes"
 import Team from "@/components/Team"
 import FAQ from "@/components/FAQ"
 import Footer from "@/components/Footer"
+import PerformanceMonitor from "@/components/PerformanceMonitor"
 
 export default function Page() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -25,6 +26,9 @@ export default function Page() {
 
   return (
     <div className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed">
+      {/* Performance Monitoring */}
+      <PerformanceMonitor />
+      
       {/* Navbar */}
       <Navbar isScrolled={isScrolled} />
 
