@@ -14,10 +14,14 @@ export default function PerformanceMonitor() {
             console.log('LCP:', entry.startTime)
           }
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime)
+            // Type assertion for PerformanceEventTiming
+            const fidEntry = entry as PerformanceEventTiming
+            console.log('FID:', fidEntry.processingStart - fidEntry.startTime)
           }
           if (entry.entryType === 'layout-shift') {
-            console.log('CLS:', entry.value)
+            // Type assertion for LayoutShift
+            const clsEntry = entry as PerformanceEntry & { value: number }
+            console.log('CLS:', clsEntry.value)
           }
         })
       })
@@ -25,7 +29,7 @@ export default function PerformanceMonitor() {
       // Observe different performance metrics
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support all entry types
         console.log('Performance monitoring not fully supported')
       }
