@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -163,14 +164,32 @@ const tracks: Track[] = [
 ];
 
 export default function TracksSelection() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleViewProblems = () => {
+    setIsLoading(true);
+    // Open in new tab
+    const newWindow = window.open("https://www.sih.gov.in/sih2025PS", "_blank", "noopener,noreferrer");
+    
+    // Reset loading state after a short delay
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    
+    // Fallback if window.open fails
+    if (!newWindow) {
+      window.location.href = "https://www.sih.gov.in/sih2025PS";
+    }
+  };
+
   return (
     <section id="tracks" className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
       
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full blur-3xl animate-pulse animation-delay-2000"></div>
-        <div className="absolute top-1/2 right-1/3 w-28 h-28 bg-gradient-to-r from-orange-400 to-red-400 rounded-full blur-3xl animate-pulse animation-delay-1000"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/2 right-1/3 w-28 h-28 bg-gradient-to-r from-orange-400 to-red-400 rounded-full blur-3xl animate-pulse"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -229,9 +248,9 @@ export default function TracksSelection() {
           </Carousel>
         </div>
 
-        {/* Enhanced Call to Action */}
+        {/* Enhanced Call to Action with Fixed Button */}
         <div className="text-center mt-12 sm:mt-16">
-          <Card className="bg-white/5 backdrop-blur-xl border-white/10 max-w-2xl mx-auto">
+          <Card className="bg-white/5 backdrop-blur-xl border-white/10 max-w-2xl mx-auto overflow-hidden">
             <CardContent className="p-6 sm:p-8">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
@@ -242,14 +261,26 @@ export default function TracksSelection() {
               <p className="text-blue-200/90 mb-6 text-sm sm:text-base leading-relaxed">
                 Dive deeper into specific problem statements and challenges for each track to find the perfect match for your innovation
               </p>
-              <Button 
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 shadow-lg hover:shadow-xl transition-all duration-300"
-                onClick={() => window.open("https://www.sih.gov.in/sih2025PS", "_blank")}
-              >
-                View SIH 2025 Problem Statements
-                <ExternalLink className="w-4 h-4 ml-2" />
-              </Button>
+              <div className="flex justify-center">
+                <Button 
+                  size="lg"
+                  onClick={handleViewProblems}
+                  disabled={isLoading}
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-4 sm:px-6 py-2.5 sm:py-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer w-full sm:w-auto max-w-full"
+                >
+                  {isLoading ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2 flex-shrink-0"></div>
+                      <span className="truncate">Loading...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="truncate">View SIH 2025 Problem Statements</span>
+                      <ExternalLink className="w-4 h-4 ml-2 flex-shrink-0" />
+                    </>
+                  )}
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </div>
