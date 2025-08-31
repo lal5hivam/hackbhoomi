@@ -1,0 +1,86 @@
+{
+  "name": "HackBhoomi 2025 - Invertis University Hackathon",
+  "short_name": "HackBhoomi 2025",
+  "description": "Official internal hackathon platform for Invertis University students participating in Smart India Hackathon 2025",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#3B82F6",
+  "orientation": "portrait-primary",
+  "categories": ["education", "productivity", "utilities"],
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/SIH.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/hackbhoomi-banner.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/hackbhoomi-banner.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "HackBhoomi 2025 Homepage"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Register Team",
+      "short_name": "Register",
+      "description": "Register your team for HackBhoomi 2025",
+      "url": "/#register",
+      "icons": [
+        {
+          "src": "/SIH.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "SIH Tracks",
+      "short_name": "Tracks",
+      "description": "Explore Smart India Hackathon tracks",
+      "url": "/#tracks",
+      "icons": [
+        {
+          "src": "/SIH.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Timeline",
+      "short_name": "Timeline",
+      "description": "View event timeline and important dates",
+      "url": "/#program",
+      "icons": [
+        {
+          "src": "/SIH.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

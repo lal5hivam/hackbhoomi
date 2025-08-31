@@ -1,36 +1,46 @@
 import type { MetadataRoute } from "next"
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://hackbhoomi.vercel.app"
+
 export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date()
+
   return [
     {
-      url: "https://events.elkjop.no/sommerfest-2024",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+      url: siteUrl,
+      lastModified,
+      changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: "https://events.elkjop.no/sommerfest-2024#program",
-      lastModified: new Date(),
+      url: `${siteUrl}#SIH`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${siteUrl}#tracks`,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://events.elkjop.no/sommerfest-2024#bilder",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+      url: `${siteUrl}#program`,
+      lastModified,
+      changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: "https://events.elkjop.no/sommerfest-2024#team",
-      lastModified: new Date(),
+      url: `${siteUrl}#faq`,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: "https://events.elkjop.no/sommerfest-2024#vinnere",
-      lastModified: new Date(),
+      url: `${siteUrl}#team`,
+      lastModified,
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.6,
     },
   ]
 }

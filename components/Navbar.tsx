@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, MapPin, Calendar } from "lucide-react"
+import Image from "next/image"
 
 interface NavbarProps {
   isScrolled: boolean
@@ -58,30 +59,39 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                   onClick={() => window.open("https://www.invertisuniversity.ac.in/", "_blank")}
                   className="group"
                 >
-                  <img
+                  <Image
                     src="/invertis.png"
-                    alt="Invertis University"
+                    alt="Invertis University - Official university logo"
+                    width={120}
+                    height={36}
                     className="h-6 sm:h-8 lg:h-9 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    priority
                   />
                 </button>
                 <button
                   onClick={() => window.open("https://invertisincubation.com/", "_blank")}
                   className="group"
                 >
-                  <img
+                  <Image
                     src="/images/incub.png"
-                    alt="Invertis Incubation Center"
+                    alt="Invertis Incubation Center - Innovation and startup support"
+                    width={120}
+                    height={36}
                     className="h-6 sm:h-8 lg:h-9 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    loading="lazy"
                   />
                 </button>
                 <button
                   onClick={() => window.open("https://www.sih.gov.in", "_blank")}
                   className="group"
                 >
-                  <img
+                  <Image
                     src="/SIH.png"
-                    alt="Smart India Hackathon"
+                    alt="Smart India Hackathon - Official government initiative logo"
+                    width={120}
+                    height={36}
                     className="h-6 sm:h-8 lg:h-9 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    loading="lazy"
                   />
                 </button>
               </div>
@@ -130,7 +140,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                   <span className=" sm:inline text-base lg:text-lg font-bold text-blue-700">SIH 2025</span>
                 </div>
 
-              
+
 
               </div>
 
@@ -161,7 +171,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
                 </a>
                 <a href="#faq" className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
-                  FAQ'S
+                  FAQ&apos;S
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </nav>
@@ -200,7 +210,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
       {isScrolled && (
         <div className="bg-gradient-to-r from-orange-600 via-red-500 to-pink-600 text-white py-2.5 overflow-hidden shadow-lg mt-2">
           <div className="whitespace-nowrap animate-marquee-slow font-bold text-center text-sm sm:text-base tracking-wide">
-            🚨 Registration Open - Form Your Team Now! • Deadline: 31st August • Don't Miss Out! 🚨
+            🚨 Registration Open - Form Your Team Now! • Deadline: 31st August • Don&apos;t Miss Out! 🚨
           </div>
         </div>
       )}
@@ -256,7 +266,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
               className="block py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
               onClick={() => setIsNavOpen(false)}
             >
-              FAQ'S
+              FAQ&apos;S
             </a>
 
             {/* Mobile Event Info - Compact */}

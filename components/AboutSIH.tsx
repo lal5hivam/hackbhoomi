@@ -4,14 +4,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
-import { Trophy, Users, Target, Award, Play, Calendar, MapPin, ExternalLink, Lightbulb, Rocket, Star } from "lucide-react"
+import { Trophy, Users, Target, Award, Play, Calendar, ExternalLink, Lightbulb, Rocket } from "lucide-react"
+import { memo } from "react"
+import Image from "next/image"
 
-export default function AboutSIH() {
+const AboutSIH = memo(function AboutSIH() {
   const features = [
     {
       icon: Trophy,
       title: "What is SIH?",
-      description: "India's largest open innovation model designed to promote problem-solving and product innovation among students nationwide.",
+      description: "India&apos;s largest open innovation model designed to promote problem-solving and product innovation among students nationwide.",
       color: "from-orange-500 to-red-500",
       textColor: "text-orange-400"
     },
@@ -59,7 +61,7 @@ export default function AboutSIH() {
             Smart India Hackathon 2025
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-blue-200/90 max-w-3xl mx-auto leading-relaxed">
-            India's largest open innovation platform connecting young minds with real-world challenges
+            India&apos;s largest open innovation platform connecting young minds with real-world challenges
           </p>
         </div>
 
@@ -112,10 +114,14 @@ export default function AboutSIH() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <img
+                <Image
                   src="/SIH-process.png"
-                  alt="SIH Process Flow showing the complete hackathon journey"
+                  alt="SIH Process Flow showing the complete hackathon journey from registration to final presentation"
+                  width={600}
+                  height={400}
                   className="w-full h-auto rounded-lg shadow-lg"
+                  loading="lazy"
+                  quality={90}
                 />
               </CardContent>
             </Card>
@@ -170,10 +176,14 @@ export default function AboutSIH() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <img
+              <Image
                 src="/timeline.png"
-                alt="SIH 2025 Timeline showing all important dates and milestones"
+                alt="SIH 2025 Timeline showing all important dates and milestones from registration to final event"
+                width={600}
+                height={400}
                 className="w-full h-auto rounded-lg shadow-lg"
+                loading="lazy"
+                quality={90}
               />
             </CardContent>
           </Card>
@@ -181,4 +191,6 @@ export default function AboutSIH() {
       </div>
     </section>
   )
-}
+})
+
+export default AboutSIH

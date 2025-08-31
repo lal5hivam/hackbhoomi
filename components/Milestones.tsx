@@ -52,7 +52,7 @@ export default function Milestones() {
             SIH MILESTONES
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-blue-200/90 max-w-2xl mx-auto">
-            Witness the scale and impact of India's largest innovation platform
+            Witness the scale and impact of India&apos;s largest innovation platform
           </p>
         </div>
 

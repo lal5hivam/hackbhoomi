@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useCallback, memo } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -33,13 +33,13 @@ import {
   Sparkles
 } from "lucide-react"
 
-type Track = {
+interface Track {
   title: string;
   description: string;
-  icon: any;
+  icon: React.ComponentType<{ className?: string }>;
   color: string;
   category: string;
-};
+}
 
 const tracks: Track[] = [
   {
@@ -163,12 +163,12 @@ const tracks: Track[] = [
   }
 ];
 
-export default function TracksSelection() {
+const TracksSelection = memo(function TracksSelection() {
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleViewProblems = () => {
+  const handleViewProblems = useCallback(() => {
     setIsLoading(true);
-    // Open in new tab
+    // Open in new tab with proper security
     const newWindow = window.open("https://www.sih.gov.in/sih2025PS", "_blank", "noopener,noreferrer");
     
     // Reset loading state after a short delay
@@ -180,7 +180,7 @@ export default function TracksSelection() {
     if (!newWindow) {
       window.location.href = "https://www.sih.gov.in/sih2025PS";
     }
-  };
+  }, []);
 
   return (
     <section id="tracks" className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
@@ -204,7 +204,7 @@ export default function TracksSelection() {
             SIH 2025 Tracks
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-blue-200/90 max-w-3xl mx-auto leading-relaxed">
-            Explore diverse innovation tracks, each offering unique challenges and opportunities to create impactful solutions for India's future
+            Explore diverse innovation tracks, each offering unique challenges and opportunities to create impactful solutions for India&apos;s future
           </p>
         </div>
 
@@ -287,4 +287,6 @@ export default function TracksSelection() {
       </div>
     </section>
   )
-}
+})
+
+export default TracksSelection

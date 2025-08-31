@@ -4,7 +4,7 @@ import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { motion, Variants } from "framer-motion";
-import { cn } from "@/lib/utils";
+;
 import { Mail, MapPin, Phone, Github, Twitter, Linkedin } from "lucide-react";
 
 interface FooterLink {
