@@ -12,6 +12,22 @@ interface NavbarProps {
 export default function Navbar({ isScrolled }: NavbarProps) {
   const [isNavOpen, setIsNavOpen] = useState(false)
 
+  // Smooth scroll function with enhanced animation
+  const smoothScrollTo = (elementId: string) => {
+    const element = document.getElementById(elementId)
+    if (element) {
+      const headerOffset = 100 // Account for fixed header
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
+    }
+    setIsNavOpen(false) // Close mobile menu after navigation
+  }
+
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -144,36 +160,36 @@ export default function Navbar({ isScrolled }: NavbarProps) {
 
               </div>
 
-              {/* Center: Enhanced Navigation with All Fields */}
+              {/* Center: Enhanced Navigation with Smooth Scroll */}
               <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6">
-                <a href="#SIH" className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
+                <button onClick={() => smoothScrollTo('SIH')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
                   ABOUT SIH
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#program" className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
+                </button>
+                <button onClick={() => smoothScrollTo('program')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
                   TIMELINE
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#instructions" className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
+                </button>
+                <button onClick={() => smoothScrollTo('instructions')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
                   INSTRUCTIONS
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#problem-statements" className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
-                  PROBLEM STATEMENTS
+                </button>
+                <button onClick={() => smoothScrollTo('tracks')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
+                  TRACKS
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#prizes" className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
+                </button>
+                <button onClick={() => smoothScrollTo('prizes')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
                   PRIZES
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#team" className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
+                </button>
+                <button onClick={() => smoothScrollTo('team')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
                   TEAM
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#faq" className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
+                </button>
+                <button onClick={() => smoothScrollTo('faq')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
                   FAQ&apos;S
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </button>
               </nav>
 
               {/* Right: Enhanced CTA Section */}
@@ -219,55 +235,48 @@ export default function Navbar({ isScrolled }: NavbarProps) {
       {isNavOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-xl border-t border-gray-200/50 z-40 animate-fade-in-up">
           <nav className="px-3 py-4 space-y-1">
-            <a
-              href="#SIH"
-              className="block py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
-              onClick={() => setIsNavOpen(false)}
+            <button
+              onClick={() => smoothScrollTo('SIH')}
+              className="block w-full text-left py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
             >
               ABOUT SIH
-            </a>
-            <a
-              href="#program"
-              className="block py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
-              onClick={() => setIsNavOpen(false)}
+            </button>
+            <button
+              onClick={() => smoothScrollTo('program')}
+              className="block w-full text-left py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
             >
               TIMELINE
-            </a>
-            <a
-              href="#instructions"
-              className="block py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
-              onClick={() => setIsNavOpen(false)}
+            </button>
+            <button
+              onClick={() => smoothScrollTo('instructions')}
+              className="block w-full text-left py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
             >
               INSTRUCTIONS
-            </a>
-            <a
-              href="#problem-statements"
-              className="block py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
-              onClick={() => setIsNavOpen(false)}
+            </button>
+            <button
+              onClick={() => smoothScrollTo('tracks')}
+              className="block w-full text-left py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
             >
-              PROBLEM STATEMENTS
-            </a>
-            <a
-              href="#prizes"
-              className="block py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
-              onClick={() => setIsNavOpen(false)}
+              TRACKS
+            </button>
+            <button
+              onClick={() => smoothScrollTo('prizes')}
+              className="block w-full text-left py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
             >
               PRIZES
-            </a>
-            <a
-              href="#team"
-              className="block py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
-              onClick={() => setIsNavOpen(false)}
+            </button>
+            <button
+              onClick={() => smoothScrollTo('team')}
+              className="block w-full text-left py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
             >
               TEAM
-            </a>
-            <a
-              href="#faq"
-              className="block py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
-              onClick={() => setIsNavOpen(false)}
+            </button>
+            <button
+              onClick={() => smoothScrollTo('faq')}
+              className="block w-full text-left py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
             >
               FAQ&apos;S
-            </a>
+            </button>
 
             {/* Mobile Event Info - Compact */}
             <div className="pt-3 mt-3 border-t border-gray-200">

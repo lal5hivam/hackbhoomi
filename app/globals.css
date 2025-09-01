@@ -9,6 +9,17 @@
 }
 
 @layer base {
+  /* Enhanced smooth scrolling behavior */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Account for fixed header */
+  }
+
+  /* Custom smooth scroll with easing */
+  * {
+    scroll-behavior: smooth;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;

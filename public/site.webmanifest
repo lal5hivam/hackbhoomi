@@ -11,25 +11,25 @@
   "lang": "en-IN",
   "icons": [
     {
-      "src": "/favicon.ico",
+      "src": "/invlogo.png",
       "sizes": "32x32",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
-      "src": "/icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/SIH.png",
+      "src": "/invlogo.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/hackbhoomi-banner.png",
+      "src": "/invlogo.png",
       "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/hackbhoomi-banner.png",
+      "sizes": "1200x630",
       "type": "image/png",
       "purpose": "any"
     }
@@ -51,7 +51,7 @@
       "url": "/#register",
       "icons": [
         {
-          "src": "/SIH.png",
+          "src": "/invlogo.png",
           "sizes": "192x192"
         }
       ]
@@ -63,7 +63,7 @@
       "url": "/#tracks",
       "icons": [
         {
-          "src": "/SIH.png",
+          "src": "/invlogo.png",
           "sizes": "192x192"
         }
       ]
@@ -75,7 +75,7 @@
       "url": "/#program",
       "icons": [
         {
-          "src": "/SIH.png",
+          "src": "/invlogo.png",
           "sizes": "192x192"
         }
       ]

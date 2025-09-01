@@ -1,73 +1,8 @@
-import type { Metadata, Viewport } from "next"
+import type { Viewport } from "next"
 import "./globals.css"
+import { baseMetadata, structuredData } from "@/lib/metadata"
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://hackbhoomi.vercel.app"
-
-export const metadata: Metadata = {
-  title: {
-    default: "HackBhoomi 2025 | Invertis University Hackathon",
-    template: "%s | HackBhoomi 2025"
-  },
-  description: "HackBhoomi 2025 — Invertis University's official internal hackathon for Smart India Hackathon 2025. Join us to innovate, build, and compete with the brightest minds in technology.",
-  keywords: [
-    "HackBhoomi",
-    "HackBhoomi 2025",
-    "Invertis Hackathon",
-    "Smart India Hackathon",
-    "SIH 2025",
-    "Invertis University",
-    "Hackathon Bareilly",
-    "Innovation Competition",
-    "Student Hackathon",
-    "Technology Competition",
-    "Coding Competition",
-    "Programming Contest"
-  ],
-  authors: [{ name: "HackBhoomi Team", url: siteUrl }],
-  creator: "Invertis University",
-  publisher: "Invertis University",
-  metadataBase: new URL(siteUrl),
-  openGraph: {
-    type: "website",
-    locale: "en_IN",
-    url: siteUrl,
-    title: "HackBhoomi 2025 | Invertis University Hackathon",
-    description: "Join India's largest innovation ecosystem at HackBhoomi 2025 - The official Invertis University hackathon for Smart India Hackathon 2025.",
-    siteName: "HackBhoomi 2025",
-    images: [
-      {
-        url: `${siteUrl}/hackbhoomi-banner.png`,
-        width: 1200,
-        height: 630,
-        alt: "HackBhoomi 2025 - Invertis University's gateway to Smart India Hackathon",
-        type: "image/png"
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "HackBhoomi 2025 | Invertis University Hackathon",
-    description: "Join India's largest innovation ecosystem at HackBhoomi 2025",
-    images: [`${siteUrl}/hackbhoomi-banner.png`],
-    creator: "@InvertisUniv"
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  alternates: {
-    canonical: siteUrl,
-  },
-  category: "Education",
-  classification: "Hackathon Event",
-}
+export const metadata = baseMetadata
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -95,105 +30,25 @@ export default function RootLayout({
         <link rel="preconnect" href="https://forms.gle" />
         <link rel="preconnect" href="https://www.sih.gov.in" />
 
-        {/* Favicon + Apple Touch */}
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/SIH.png" />
+        {/* Favicon + Apple Touch - Invertis University Logo */}
+        <link rel="icon" href="/invlogo.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="/invlogo.png" sizes="16x16" type="image/png" />
+        <link rel="apple-touch-icon" href="/invlogo.png" sizes="180x180" />
+        <link rel="apple-touch-icon" href="/invlogo.png" sizes="152x152" />
+        <link rel="apple-touch-icon" href="/invlogo.png" sizes="144x144" />
+        <link rel="apple-touch-icon" href="/invlogo.png" sizes="120x120" />
+        <link rel="apple-touch-icon" href="/invlogo.png" sizes="114x114" />
+        <link rel="apple-touch-icon" href="/invlogo.png" sizes="76x76" />
+        <link rel="apple-touch-icon" href="/invlogo.png" sizes="72x72" />
+        <link rel="apple-touch-icon" href="/invlogo.png" sizes="60x60" />
+        <link rel="apple-touch-icon" href="/invlogo.png" sizes="57x57" />
         <link rel="manifest" href="/site.webmanifest" />
 
-        {/* Enhanced Schema.org structured data */}
+        {/* Comprehensive Schema.org structured data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "Event",
-                  "@id": `${siteUrl}/#event`,
-                  "name": "HackBhoomi 2025",
-                  "description": "Internal hackathon at Invertis University for Smart India Hackathon 2025 selection",
-                  "startDate": "2025-09-12",
-                  "endDate": "2025-09-13",
-                  "eventStatus": "https://schema.org/EventScheduled",
-                  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-                  "location": {
-                    "@type": "Place",
-                    "name": "Invertis University",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "streetAddress": "Delhi Lucknow Highway, NH-24",
-                      "addressLocality": "Bareilly",
-                      "addressRegion": "Uttar Pradesh",
-                      "postalCode": "243123",
-                      "addressCountry": "IN"
-                    }
-                  },
-                  "organizer": {
-                    "@type": "Organization",
-                    "name": "Invertis University",
-                    "url": "https://www.invertisuniversity.ac.in"
-                  },
-                  "offers": {
-                    "@type": "Offer",
-                    "price": "0",
-                    "priceCurrency": "INR",
-                    "availability": "https://schema.org/InStock"
-                  }
-                },
-                {
-                  "@type": "FAQPage",
-                  "@id": `${siteUrl}/#faq`,
-                  "mainEntity": [
-                    {
-                      "@type": "Question",
-                      "name": "Who can participate in HackBhoomi 2025?",
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "HackBhoomi 2025 is open for students of Invertis University who want to participate in Smart India Hackathon 2025. Students can participate individually or in teams of up to 6 members."
-                      }
-                    },
-                    {
-                      "@type": "Question",
-                      "name": "When will HackBhoomi 2025 take place?",
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "HackBhoomi 2025 will be held on 12-13 September 2025 at Invertis University, Bareilly. Registration opens on 20 August 2025."
-                      }
-                    },
-                    {
-                      "@type": "Question",
-                      "name": "What are the prizes for HackBhoomi 2025?",
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Winners of HackBhoomi 2025 will represent Invertis University at Smart India Hackathon 2025, with opportunities to win cash prizes up to ₹1.5 Lakhs at the national level."
-                      }
-                    }
-                  ]
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": `${siteUrl}/#website`,
-                  "url": siteUrl,
-                  "name": "HackBhoomi 2025",
-                  "description": "Official website for HackBhoomi 2025 - Invertis University's internal hackathon",
-                  "publisher": {
-                    "@type": "Organization",
-                    "name": "Invertis University"
-                  },
-                  "potentialAction": [
-                    {
-                      "@type": "SearchAction",
-                      "target": {
-                        "@type": "EntryPoint",
-                        "urlTemplate": `${siteUrl}/?q={search_term_string}`
-                      },
-                      "query-input": "required name=search_term_string"
-                    }
-                  ]
-                }
-              ]
-            })
+            __html: JSON.stringify(structuredData)
           }}
         />
       </head>
