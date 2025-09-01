@@ -12,8 +12,10 @@ export default function robots(): MetadataRoute.Robots {
           "/api/",
           "/_next/",
           "/admin/",
-          "*.pdf$",
+          "/_vercel/",
+          "/private/",
         ],
+        crawlDelay: 1,
       },
       {
         userAgent: "Googlebot",
@@ -21,7 +23,19 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           "/api/",
           "/admin/",
+          "/_vercel/",
         ],
+        crawlDelay: 0,
+      },
+      {
+        userAgent: "Bingbot",
+        allow: "/",
+        disallow: [
+          "/api/",
+          "/admin/",
+          "/_vercel/",
+        ],
+        crawlDelay: 1,
       },
     ],
     sitemap: `${siteUrl}/sitemap.xml`,
