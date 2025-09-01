@@ -140,7 +140,7 @@ const Team: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Mentors
+          Management Head
         </motion.h3>
         <Separator className="mb-10 bg-orange-400/30" />
         <motion.div
@@ -167,7 +167,7 @@ const Team: React.FC = () => {
               <Badge variant="secondary" className="bg-orange-500 text-black font-medium mb-2">
                 Alumni, Invertis University
               </Badge>
-              <p className="text-white/90 text-sm">Mentorship & Guidance</p>
+              <p className="text-white/90 text-sm">Management Head & Mentorship</p>
             </CardContent>
           </Card>
         </motion.div>

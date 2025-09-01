@@ -5,20 +5,29 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { motion, Variants } from "framer-motion";
 ;
-import { Mail, MapPin, Phone, Github, Twitter, Linkedin } from "lucide-react";
+import { Mail, MapPin, Phone, Github } from "lucide-react";
 
 interface FooterLink {
   label: string;
   href: string;
 }
 
-interface SocialLink {
-  label: string;
-  href: string;
-  icon: React.ElementType;
-}
-
 const Footer: React.FC = () => {
+  // Smooth scroll function matching Navbar functionality
+  const smoothScrollTo = (elementId: string) => {
+    const element = document.getElementById(elementId)
+    if (element) {
+      const headerOffset = 100 // Account for fixed header
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
+    }
+  }
+
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -38,12 +47,34 @@ const Footer: React.FC = () => {
     },
   };
 
-  const hackbhoomiLinks: FooterLink[] = [
-    { label: "Home", href: "/" },
-    { label: "About Hackbhoomi", href: "/about" },
-    { label: "Events", href: "/events" },
-    { label: "FAQ", href: "/#faq" },
-    { label: "Register", href: "/register" },
+  // Updated navigation links to match Navbar
+  const navigationLinks = [
+    { label: "About SIH", sectionId: "SIH" },
+    { label: "Timeline", sectionId: "program" },
+    { label: "Instructions", sectionId: "instructions" },
+    { label: "Tracks", sectionId: "tracks" },
+    { label: "Prizes", sectionId: "prizes" },
+    { label: "Team", sectionId: "team" },
+    { label: "FAQ", sectionId: "faq" },
+  ];
+
+  // Quick action links
+  const quickActions = [
+    {
+      label: "Register Team",
+      action: () => window.open("https://forms.gle/fsCyrMx66uLinKU68", "_blank", "noopener,noreferrer"),
+      isExternal: true
+    },
+    {
+      label: "SIH Website",
+      action: () => window.open("https://www.sih.gov.in", "_blank", "noopener,noreferrer"),
+      isExternal: true
+    },
+    {
+      label: "Invertis University",
+      action: () => window.open("https://www.invertisuniversity.ac.in", "_blank", "noopener,noreferrer"),
+      isExternal: true
+    },
   ];
 
   const contactInfo: FooterLink[] = [
@@ -52,11 +83,7 @@ const Footer: React.FC = () => {
     { label: "Invertis University, Bareilly, UP, India", href: "#" },
   ];
 
-  const socialLinks: SocialLink[] = [
-    { label: "GitHub", href: "https://github.com/hackbhoomi", icon: Github },
-    { label: "Twitter", href: "https://twitter.com/hackbhoomi", icon: Twitter },
-    { label: "LinkedIn", href: "https://linkedin.com/company/hackbhoomi", icon: Linkedin },
-  ];
+
 
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -74,7 +101,7 @@ const Footer: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8"
         >
           {/* Branding Section */}
           <motion.div variants={itemVariants} className="sm:col-span-2 lg:col-span-1">
@@ -98,18 +125,40 @@ const Footer: React.FC = () => {
             </p>
           </motion.div>
 
-          {/* Quick Links */}
+          {/* Navigation Links - Matching Navbar */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-base font-semibold text-white mb-3">Quick Links</h3>
+            <h3 className="text-base font-semibold text-white mb-3">Navigation</h3>
             <ul className="space-y-2">
-              {hackbhoomiLinks.map((link) => (
+              {navigationLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-white/80 hover:text-orange-400 transition-colors text-sm"
+                  <button
+                    onClick={() => smoothScrollTo(link.sectionId)}
+                    className="text-white/80 hover:text-orange-400 transition-colors text-sm text-left"
                   >
                     {link.label}
-                  </a>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Quick Actions */}
+          <motion.div variants={itemVariants}>
+            <h3 className="text-base font-semibold text-white mb-3">Quick Actions</h3>
+            <ul className="space-y-2">
+              {quickActions.map((action) => (
+                <li key={action.label}>
+                  <button
+                    onClick={action.action}
+                    className="text-white/80 hover:text-orange-400 transition-colors text-sm text-left flex items-center"
+                  >
+                    {action.label}
+                    {action.isExternal && (
+                      <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    )}
+                  </button>
                 </li>
               ))}
             </ul>
@@ -158,31 +207,35 @@ const Footer: React.FC = () => {
           </motion.div>
         </motion.div>
 
-        {/* Social Media and Copyright */}
+        {/* Copyright and Developer Credit */}
         <motion.div
           className="mt-8 pt-6 border-t border-indigo-800 flex flex-col sm:flex-row justify-between items-center"
           variants={itemVariants}
           initial="hidden"
           animate="visible"
         >
-          <div className="flex space-x-3 mb-4 sm:mb-0">
-            {socialLinks.map((social) => (
-              <Button
-                key={social.label}
-                variant="outline"
-                size="icon"
-                className="bg-transparent border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white transition-colors"
-                asChild
-              >
-                <a href={social.href} aria-label={social.label}>
-                  <social.icon className="w-4 h-4" aria-hidden="true" />
-                </a>
-              </Button>
-            ))}
-          </div>
-          <p className="text-white/80 text-sm">
+          <p className="text-white/80 text-sm mb-4 sm:mb-0">
             © 2025 Hackbhoomi, Invertis University.
           </p>
+          <div className="flex items-center space-x-2">
+            <span className="text-white/80 text-sm">Website developed by</span>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-orange-400 hover:text-orange-300 hover:bg-orange-400/10 transition-colors p-1 h-auto"
+              asChild
+            >
+              <a
+                href="https://github.com/ahqafcoder"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-1"
+              >
+                <Github className="w-4 h-4" />
+                <span className="font-medium">ahqafcoder</span>
+              </a>
+            </Button>
+          </div>
         </motion.div>
       </div>
     </footer>
