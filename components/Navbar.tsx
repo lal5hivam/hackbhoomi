@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, MapPin, Calendar } from "lucide-react"
+import { Menu, MapPin, Calendar, Clock, AlertCircle } from "lucide-react"
 import Image from "next/image"
 
 interface NavbarProps {
@@ -49,7 +49,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-in-out ${isScrolled
-        ? 'bg-white shadow-2xl border-b border-gray-200/30 py-5'
+        ? 'bg-white shadow-2xl border-b border-gray-200/30 py-3 sm:py-5'
         : 'bg-white shadow-xl border border-gray-200/50 rounded-3xl w-[98%] sm:w-[97%] mx-auto mt-2 sm:mt-4 py-4 sm:py-5'
         }`}
     >
@@ -135,8 +135,6 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                 >
                   <Menu className="w-5 h-5 text-gray-700" />
                 </button>
-
-
               </div>
             </>
           )}
@@ -153,11 +151,8 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                   <h1 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors">Hack</h1>
                   <h1 className="text-xl sm:text-2xl lg:text-2xl text-orange-600 font-bold">भूमि</h1>
                   <div className="w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse ml-1"></div>
-                  <span className=" sm:inline text-base lg:text-lg font-bold text-blue-700">SIH 2025</span>
+                  <span className="sm:inline text-base lg:text-lg font-bold text-blue-700">SIH 2025</span>
                 </div>
-
-
-
               </div>
 
               {/* Center: Enhanced Navigation with Smooth Scroll */}
@@ -214,19 +209,51 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                 >
                   <Menu className="w-5 h-5 text-gray-700" />
                 </button>
-
-
               </div>
             </>
           )}
         </div>
       </div>
 
-      {/* Enhanced Announcement Banner */}
-      {isScrolled && (
-        <div className="bg-gradient-to-r from-orange-600 via-red-500 to-pink-600 text-white py-2.5 overflow-hidden shadow-lg mt-2">
-          <div className="whitespace-nowrap animate-marquee-slow font-bold text-center text-sm sm:text-base tracking-wide">
-            🚨 Registration Open - Form Your Team Now! • Deadline: 31st August • Don&apos;t Miss Out! 🚨
+      {/* Enhanced Professional Registration Extension Banner - Only show when scrolled and NOT in mobile menu */}
+      {isScrolled && !isNavOpen && (
+        <div className="bg-gradient-to-r from-orange-600 via-red-500 to-pink-600 text-white shadow-lg overflow-hidden">
+          <div className="px-3 py-2 sm:py-2.5">
+            {/* Mobile-optimized responsive design */}
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-1 sm:space-y-0 sm:space-x-3 text-center">
+              {/* First line: Icon + Main title */}
+              <div className="flex items-center space-x-2">
+                <div className="relative">
+                  <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-white animate-pulse" />
+                  <div className="absolute inset-0 w-4 h-4 sm:w-5 sm:h-5 bg-white/20 rounded-full animate-ping"></div>
+                </div>
+                <span className="font-bold text-sm sm:text-base tracking-wide">
+                  REGISTRATION EXTENDED
+                </span>
+              </div>
+              
+              {/* Separator dot - hidden on mobile */}
+              <div className="hidden sm:block w-2 h-2 bg-white/60 rounded-full"></div>
+              
+              {/* Second line: Message + Button side by side on mobile, separate on desktop */}
+              <div className="flex items-center justify-center space-x-2 sm:space-x-2">
+                {/* Main message */}
+                <div className="flex items-center space-x-1">
+                  <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-orange-200" />
+                  <span className="font-medium text-xs sm:text-sm">
+                    Register Fast!
+                  </span>
+                </div>
+
+                {/* Call to action button */}
+                <button
+                  onClick={() => window.open("https://forms.gle/fsCyrMx66uLinKU68", "_blank")}
+                  className="bg-white text-orange-700 px-2.5 py-0.5 sm:px-4 sm:py-1.5 rounded-full text-xs font-bold hover:bg-orange-50 transition-all duration-300 shadow-sm hover:shadow-md transform hover:scale-105"
+                >
+                  REGISTER
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -234,6 +261,15 @@ export default function Navbar({ isScrolled }: NavbarProps) {
       {/* Enhanced Mobile Navigation Menu - Complete */}
       {isNavOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-xl border-t border-gray-200/50 z-40 animate-fade-in-up">
+          {/* Registration Extension Notice for Mobile */}
+          <div className="bg-gradient-to-r from-orange-600 via-red-500 to-pink-600 text-white px-4 py-3 text-center">
+            <div className="flex items-center justify-center space-x-2">
+              <AlertCircle className="w-4 h-4 animate-pulse" />
+              <span className="font-bold text-sm">REGISTRATION EXTENDED</span>
+            </div>
+            <p className="text-xs mt-1 text-orange-100">Register your team now - Don't miss out!</p>
+          </div>
+
           <nav className="px-3 py-4 space-y-1">
             <button
               onClick={() => smoothScrollTo('SIH')}
@@ -296,9 +332,9 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                     window.open("https://forms.gle/fsCyrMx66uLinKU68", "_blank");
                     setIsNavOpen(false);
                   }}
-                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-2.5 text-sm rounded-lg shadow-lg transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-2.5 text-sm rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105"
                 >
-                  Register Your Team
+                  Register Your Team Now
                 </Button>
               </div>
             </div>
