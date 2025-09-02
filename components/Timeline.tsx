@@ -16,7 +16,7 @@ import {
 const events = [
   {
     title: "Registration Opens",
-    date: "20 Aug",
+    date: "20th Aug",
     desc: "The race begins — Register, Team Up, Get Set & Ideate!",
     icon: UserPlus,
     color: "bg-blue-500"
@@ -30,28 +30,28 @@ const events = [
   },
   {
     title: "Registration Deadline",
-    date: "03rd Sept",
+    date: "7th Sept",
     desc: "Get ready to innovate — Last chance to register!",
     icon: Clock,
     color: "bg-red-500"
   },
   {
     title: "Idea Submission Deadline",
-    date: "06 Sept",
+    date: "8th Sept",
     desc: "Submit your innovative ideas and solutions!",
     icon: FileText,
     color: "bg-green-500"
   },
   {
     title: "Shortlisted Teams Announcement",
-    date: "10 Sept",
+    date: "10th Sept",
     desc: "And the chosen ones are... Meet the finalists!",
     icon: Trophy,
     color: "bg-purple-500"
   },
   {
     title: "HACKATHON DAY - HackBhoomi 2025",
-    date: "12-13 Sept",
+    date: "12th-13th Sept",
     desc: "Let the hacking begin! Build, code and create!",
     icon: Rocket,
     color: "bg-orange-500"
