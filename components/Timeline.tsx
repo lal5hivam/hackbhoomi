@@ -30,21 +30,21 @@ const events = [
   },
   {
     title: "Registration Deadline",
-    date: "6th Sept",
+    date: "5th Sept",
     desc: "Get ready to innovate — Last chance to register!",
     icon: Clock,
     color: "bg-red-500"
   },
   {
     title: "Idea Submission Deadline",
-    date: "7th Sept",
+    date: "6th Sept",
     desc: "Submit your innovative ideas and solutions!",
     icon: FileText,
     color: "bg-green-500"
   },
   {
     title: "Shortlisted Teams Announcement",
-    date: "10th Sept",
+    date: "8th Sept",
     desc: "And the chosen ones are... Meet the finalists!",
     icon: Trophy,
     color: "bg-purple-500"
