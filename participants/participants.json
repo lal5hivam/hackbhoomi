@@ -636,7 +636,7 @@
         ]
     },
     {
-        "sn": 55,
+        "sn": 54,
         "teamName": "Hacknova ",
         "teamLeader": "Agrima Saxena ",
         "teamMembers": [
@@ -648,7 +648,7 @@
         ]
     },
     {
-        "sn": 56,
+        "sn": 55,
         "teamName": "HACKAHOLICS",
         "teamLeader": "Prateek Shankdhar",
         "teamMembers": [
@@ -660,7 +660,7 @@
         ]
     },
     {
-        "sn": 57,
+        "sn": 56,
         "teamName": "CODE WITH PUMPKIN",
         "teamLeader": "MAYANK VERMA",
         "teamMembers": [
@@ -672,7 +672,7 @@
         ]
     },
     {
-        "sn": 58,
+        "sn": 57,
         "teamName": "Algorithm team",
         "teamLeader": "Abhishek kumar",
         "teamMembers": [
@@ -684,7 +684,7 @@
         ]
     },
     {
-        "sn": 59,
+        "sn": 58,
         "teamName": "Cyber serpents ",
         "teamLeader": "Shriyansh saxena ",
         "teamMembers": [
@@ -696,7 +696,7 @@
         ]
     },
     {
-        "sn": 60,
+        "sn": 59,
         "teamName": "Neo Tech Shutras",
         "teamLeader": "Pawan",
         "teamMembers": [
@@ -708,7 +708,7 @@
         ]
     },
     {
-        "sn": 61,
+        "sn": 60,
         "teamName": "Algo warriors ",
         "teamLeader": "Pratham Raghuwanshi ",
         "teamMembers": [
@@ -720,7 +720,7 @@
         ]
     },
     {
-        "sn": 62,
+        "sn": 61,
         "teamName": "Quantifyx",
         "teamLeader": "Ravi Gupta",
         "teamMembers": [
@@ -732,7 +732,7 @@
         ]
     },
     {
-        "sn": 63,
+        "sn": 62,
         "teamName": "TechKranti \u2013 The Spark of Innovation",
         "teamLeader": "SHEKHAR KANAUJIYA",
         "teamMembers": [
@@ -744,7 +744,7 @@
         ]
     },
     {
-        "sn": 64,
+        "sn": 63,
         "teamName": "Team Unstoppable ",
         "teamLeader": "Owais",
         "teamMembers": [
@@ -756,7 +756,7 @@
         ]
     },
     {
-        "sn": 65,
+        "sn": 64,
         "teamName": "The innovators",
         "teamLeader": "abhay pratap singh ",
         "teamMembers": [
@@ -768,7 +768,7 @@
         ]
     },
     {
-        "sn": 66,
+        "sn": 65,
         "teamName": "Error 404 !",
         "teamLeader": "Pranav mishra ",
         "teamMembers": [
@@ -780,7 +780,7 @@
         ]
     },
     {
-        "sn": 67,
+        "sn": 66,
         "teamName": "Cyber squad ",
         "teamLeader": "Aman Singh",
         "teamMembers": [
@@ -788,7 +788,55 @@
             "Alok Chaurasiya",
             "Abhishek Sharma",
             "Richa Gupta",
-            "Gargi kushwaha "
+            "Gargi kushwah "
+        ]
+    },
+    {
+        "sn": 67,
+        "teamName": "Young Vission ",
+        "teamLeader": "Lakshya Agrawal ",
+        "teamMembers": [
+            "Anurag Sharma ",
+            "Amrit Varshney",
+            "Pavni Khandelwal",
+            "Amoli",
+            "Rounak "
+        ]
+    },
+    {
+        "sn": 68,
+        "teamName": "Tech Titans",
+        "teamLeader": "VishalGill ",
+        "teamMembers": [
+            "Manish Gautam ",
+            "Harjot singh ",
+            "Rishab yadav ",
+            "Vedika pathak",
+            "Harsh kashyap "
+        ]
+    },
+    {
+        "sn": 69,
+        "teamName": "Crash Coderz",
+        "teamLeader": "Himanshu",
+        "teamMembers": [
+            "Ishika kakkar ",
+            "Komal Prajapati ",
+            "Urooj Fatima ",
+            "Priyanshu",
+            "Manish maurya"
+        ]
+    },
+    {
+        "sn": 70,
+        "teamName": "LogicLarq",
+        "teamLeader": "Nitish Harbola",
+        "teamMembers": [
+            "Pawni Dixit",
+            "Nikhil Khandelwal",
+            "Nikhil Kumar",
+            "Ashish Kumar",
+            "Lal Shivam Singh"
         ]
     }
 ]
