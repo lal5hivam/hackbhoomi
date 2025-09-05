@@ -1,0 +1,806 @@
+[
+    {
+        "sn": 1,
+        "teamName": "Team nitro",
+        "teamLeader": "Samarth pratap singh ",
+        "teamMembers": [
+            "Aditi sharma",
+            "Vivan patel",
+            "Harsh awasthi",
+            "Hareshwar mishra",
+            "Sofia riyasat"
+        ]
+    },
+    {
+        "sn": 2,
+        "teamName": "TECHNOVA",
+        "teamLeader": "Amandeep Shukla",
+        "teamMembers": [
+            "Deependra soni ",
+            "Kartikey srivastav ",
+            "Sakshee singh",
+            "Tanishka mishra",
+            "Abhishek maheshwari "
+        ]
+    },
+    {
+        "sn": 3,
+        "teamName": "Tech Hunters",
+        "teamLeader": "Ankur Pratap Singh ",
+        "teamMembers": [
+            "Dev Saraswat ",
+            "Ayush",
+            "Honey Verma",
+            "Divyanshi ",
+            "Dhriti Dixit"
+        ]
+    },
+    {
+        "sn": 4,
+        "teamName": "Ever Rise",
+        "teamLeader": "Shivam Maurya",
+        "teamMembers": [
+            "Dharmesh Kushwaha",
+            "Nitin Verma",
+            "Kabir Mohsin",
+            "Abhishek Verma",
+            "Ayushi Koharwal"
+        ]
+    },
+    {
+        "sn": 5,
+        "teamName": "Circuit Breakers",
+        "teamLeader": "Palak Kumari",
+        "teamMembers": [
+            "Anushka Tandon ",
+            "Rudransh Dwivedi ",
+            "Sarthak Gupta ",
+            "Aryan Srivastava ",
+            "Ajay Dev"
+        ]
+    },
+    {
+        "sn": 6,
+        "teamName": "Tech Heal",
+        "teamLeader": "Shraddha Agarwal",
+        "teamMembers": [
+            "Shan Ali Hashmi",
+            "Anushka Rajput",
+            "Mohammad Maaz",
+            "Hardik Pandey",
+            "Hammad Jalal "
+        ]
+    },
+    {
+        "sn": 7,
+        "teamName": "Kasukaabe defence group",
+        "teamLeader": "Zaib ilahi shamsi ",
+        "teamMembers": [
+            "Faiz raza khan",
+            "Mohammad hammas ansari",
+            "Amman vitthal chaube",
+            "Ajay gangwar",
+            "Deepika"
+        ]
+    },
+    {
+        "sn": 8,
+        "teamName": "Smart Innovators ",
+        "teamLeader": "Yash Sharma ",
+        "teamMembers": [
+            "Parth vaish",
+            "Manthan yadav ",
+            "Alok verma ",
+            "Srashti Rastogi ",
+            "Shivam kumar"
+        ]
+    },
+    {
+        "sn": 9,
+        "teamName": "Reincarnated Coders",
+        "teamLeader": "Sushant Gupta",
+        "teamMembers": [
+            "Ashish Gupta",
+            "Aditya Gangwar",
+            "Abhishek Yadav",
+            "Charanjeet Kaur Randhawa",
+            "Utkarsh Saxena"
+        ]
+    },
+    {
+        "sn": 10,
+        "teamName": "Quantum Coders",
+        "teamLeader": "Vatsal Agarwal",
+        "teamMembers": [
+            "Aayushi Mishra",
+            "Pintu kumar",
+            "Sambhav Pandey",
+            "Ankit Kumar",
+            "Abhishek Anand"
+        ]
+    },
+    {
+        "sn": 11,
+        "teamName": "NeuroSpartans",
+        "teamLeader": "Rohan Keshri",
+        "teamMembers": [
+            "Chetan thakur",
+            "Ashmit Singh",
+            "Ansh Sharma",
+            "Riddhi Arora ",
+            "Atharva Srivastava "
+        ]
+    },
+    {
+        "sn": 12,
+        "teamName": "Technical spark",
+        "teamLeader": "Aayush Yadav",
+        "teamMembers": [
+            "Ravi singh Bora",
+            "Sachin Kumar ",
+            "Kashifa Fatima",
+            "Prayag Rastogi ",
+            "Sambhav Parashar"
+        ]
+    },
+    {
+        "sn": 13,
+        "teamName": "RuralMedix",
+        "teamLeader": "Kakul Kshatriya ",
+        "teamMembers": [
+            "Aryan singh chauhan ",
+            "Kanika Agarwal ",
+            "Anushka Maheswari",
+            "Govind Gupta",
+            "Yash Singh"
+        ]
+    },
+    {
+        "sn": 14,
+        "teamName": "The Data Doctor's ",
+        "teamLeader": "Shivam Gangwar ",
+        "teamMembers": [
+            "Aryan Yaduvanshi ",
+            "Nisha Ranjan ",
+            "Divyam Gupta ",
+            "Aditya Kumar Mishra ",
+            "Arpit Gupta "
+        ]
+    },
+    {
+        "sn": 15,
+        "teamName": "CodeWarriors",
+        "teamLeader": "Angel Samuel",
+        "teamMembers": [
+            "Omji Dubey",
+            "Prince Barnwal",
+            "Satyam Gupta ",
+            "Kirti Singh",
+            "Karan "
+        ]
+    },
+    {
+        "sn": 16,
+        "teamName": "Cyber Pulse",
+        "teamLeader": "SHOBHIT SAXENA",
+        "teamMembers": [
+            "RIDHIMA",
+            "VISHISHT PURI",
+            "UTKARSH MISHRA",
+            "VIVEK SHARMA",
+            "SNEHA GADE"
+        ]
+    },
+    {
+        "sn": 17,
+        "teamName": "Misfits",
+        "teamLeader": "Vaishnavi Jaiswal ",
+        "teamMembers": [
+            "Ankit kumar",
+            "Abhishek Kumar ",
+            "Pankaj Kumar ",
+            "Shashank Gupta ",
+            "Kushesh Gangwar "
+        ]
+    },
+    {
+        "sn": 18,
+        "teamName": "HackHawks",
+        "teamLeader": "Nitin Mishra ",
+        "teamMembers": [
+            "Utkarsh vikram singh ",
+            "Keshav Saxena",
+            "Fatima Rizwan ",
+            "Samiksha ",
+            "Faijan Hasan"
+        ]
+    },
+    {
+        "sn": 19,
+        "teamName": "CYBERBULLS",
+        "teamLeader": "AHQAF ALI",
+        "teamMembers": [
+            "PRATYAKSH PARASHARI",
+            "Vivek Vishwakarma ",
+            "BADAL SAXENA ",
+            "Palak Deval",
+            "Simran Kumari"
+        ]
+    },
+    {
+        "sn": 20,
+        "teamName": "Eco Trackers",
+        "teamLeader": "Saurabh Yadav",
+        "teamMembers": [
+            "Arpit Gangwar",
+            "Sachin Saxena ",
+            " Deebu Gangwar",
+            "Vikas Kumar",
+            " Radhika Gupta"
+        ]
+    },
+    {
+        "sn": 21,
+        "teamName": "MedEmo",
+        "teamLeader": "Khushi Yadav ",
+        "teamMembers": [
+            "Kush kumar",
+            "Khushi gupta",
+            "Palak yadav",
+            "Muskan Saxena",
+            "Kaushal "
+        ]
+    },
+    {
+        "sn": 22,
+        "teamName": "Dreamm\u039ers",
+        "teamLeader": "Ayush Gangwar",
+        "teamMembers": [
+            "Subodh Singh",
+            "Rinku Gangwar",
+            "Jatin Sharma",
+            "Anshika triphati",
+            "Neha gangwar"
+        ]
+    },
+    {
+        "sn": 23,
+        "teamName": "AGROVISION",
+        "teamLeader": "MOHD SHAQIB",
+        "teamMembers": [
+            "UMRA MIRZA",
+            "MANSI RAWAT",
+            "NITESH MADDHESHIYA",
+            "ISHANI PATHAK",
+            "BABY INSHA"
+        ]
+    },
+    {
+        "sn": 24,
+        "teamName": "HelixRockers",
+        "teamLeader": "Faiz Ali Chishti",
+        "teamMembers": [
+            "Shakir Hussain ",
+            "Aniruddha Kushwaha",
+            "Nitin Singh",
+            "Trisha Bhardwaj",
+            "Rohit Agrawal"
+        ]
+    },
+    {
+        "sn": 25,
+        "teamName": "ResQron",
+        "teamLeader": "Vaishnavi Chakraborty",
+        "teamMembers": [
+            "Sneha Sharma ",
+            "Reshekaa Saxena",
+            "Krishna Gupta ",
+            "Raghav Gaur",
+            "Aryan Singh"
+        ]
+    },
+    {
+        "sn": 26,
+        "teamName": "DYNAMITES",
+        "teamLeader": "DEEPA KUMARI MAURYA",
+        "teamMembers": [
+            "PRIYANSHU SHUKLA",
+            "NITIN DALAKOTI",
+            "GAURAV TAPALI",
+            "YASH PRATAP SINGH",
+            "VISHAL VERMA"
+        ]
+    },
+    {
+        "sn": 27,
+        "teamName": "Innovators ",
+        "teamLeader": "Chandan Verma ",
+        "teamMembers": [
+            "Utkarsh yadav ",
+            "Pragya ",
+            "Harsh narayan singh",
+            "Krishna Yadav",
+            "Priyanshi Sharma"
+        ]
+    },
+    {
+        "sn": 28,
+        "teamName": "HackerMon 404",
+        "teamLeader": "Aishwarey Maheshwari",
+        "teamMembers": [
+            "Aman ",
+            "Mayank Chaudhary",
+            "Vansh Chitransh",
+            "Kavya Saxena",
+            "Shrishti Patel"
+        ]
+    },
+    {
+        "sn": 29,
+        "teamName": "BITbyBit",
+        "teamLeader": "Vivek Yadav",
+        "teamMembers": [
+            "Aditya",
+            "Neha Singh",
+            "Akash Giri",
+            "Anuj Kumar",
+            " Mohd Abdullah Akhtar "
+        ]
+    },
+    {
+        "sn": 30,
+        "teamName": "Technovengers",
+        "teamLeader": "Adnan Saifi",
+        "teamMembers": [
+            "Mohd Sheeban Khan",
+            "Avi Singh",
+            "Taiyyaba Khanam",
+            "Arham Ahmad Khan",
+            "Sarthak Gupta "
+        ]
+    },
+    {
+        "sn": 31,
+        "teamName": "Bug-Busters ",
+        "teamLeader": "ADEEM AHMAD KHAN ",
+        "teamMembers": [
+            "Singhal Singh",
+            "Ravi Mohan ",
+            "Sakhi Anand ",
+            "Akash Tiwari ",
+            "Vansh Khurana"
+        ]
+    },
+    {
+        "sn": 32,
+        "teamName": "Code Warriors ",
+        "teamLeader": "Arpit Mathur",
+        "teamMembers": [
+            "Tarun Maurya",
+            "Jasreman Kaur",
+            "Shiza Habib ",
+            "Deepu Kashyap",
+            "Aditya Tiwari"
+        ]
+    },
+    {
+        "sn": 33,
+        "teamName": "NovaStack",
+        "teamLeader": "Om Saxena",
+        "teamMembers": [
+            "Pari Kanchan",
+            "Ashley Raghuwanshi",
+            "Anshuman Dixit",
+            "Rohit Gupta",
+            "Harshit Saxena"
+        ]
+    },
+    {
+        "sn": 34,
+        "teamName": "C4 Coder ",
+        "teamLeader": "Himanshu Singh",
+        "teamMembers": [
+            "Harmandeep kaur",
+            "Harmandeep Singh ",
+            "Harpal Singh ",
+            "Vinay Pratap Singh ",
+            "Sumit Sagar"
+        ]
+    },
+    {
+        "sn": 35,
+        "teamName": "CODE ELITE",
+        "teamLeader": "Shruti Mishra ",
+        "teamMembers": [
+            "Manoj ",
+            "Shahil Gangwar ",
+            "Shubham Raghav ",
+            "ARYAN GUPTA",
+            "Mohd Saqlain Hussain"
+        ]
+    },
+    {
+        "sn": 36,
+        "teamName": "Innovatrix",
+        "teamLeader": "Jahanvi Singh",
+        "teamMembers": [
+            "Pavani Gupta ",
+            "Anamika ",
+            "Rifa Bee",
+            "Nisha Pandey ",
+            "Sonam Yadav "
+        ]
+    },
+    {
+        "sn": 37,
+        "teamName": "Kernel panics",
+        "teamLeader": "Shaurya Veer Singh",
+        "teamMembers": [
+            "Aditya shukla ",
+            "Ashray bhasin",
+            "Nandan batra",
+            "Siddhi mishra",
+            "Adamya agarwal"
+        ]
+    },
+    {
+        "sn": 38,
+        "teamName": "Sky Hack",
+        "teamLeader": "Chandrabhan ",
+        "teamMembers": [
+            "Vinamra gupta",
+            "Ankit kumar",
+            "Maneesh",
+            "Pratistha",
+            "Abhay"
+        ]
+    },
+    {
+        "sn": 39,
+        "teamName": "QuantumForge",
+        "teamLeader": "Pritam Kumar",
+        "teamMembers": [
+            "Om gyan",
+            "Rajvansh sonkar",
+            "Alok chaubey",
+            "Krishu Kumar",
+            "Khusi Chauhan"
+        ]
+    },
+    {
+        "sn": 40,
+        "teamName": "CodeXcalibur",
+        "teamLeader": "Vishal Kumar",
+        "teamMembers": [
+            "Zarmeena Faheem",
+            "Madhuram maheshwari",
+            "Vedansh Sharma",
+            "Prakhar singh",
+            "Vimlesh Yadav"
+        ]
+    },
+    {
+        "sn": 41,
+        "teamName": "Innovators United ",
+        "teamLeader": "Sanskriti Bajpai",
+        "teamMembers": [
+            "Pragya",
+            "Bhawika Jaitley ",
+            "Shagun Chaudhary ",
+            "Kanishka Gupta ",
+            "SAYEDA MAHAK MUSAWWIR "
+        ]
+    },
+    {
+        "sn": 42,
+        "teamName": "Hack Titans",
+        "teamLeader": "Syeda Aneeqa Adil ",
+        "teamMembers": [
+            "Inderveer Kaur",
+            "Nikhil Dixit ",
+            "Mohammad Abdul Qadir ",
+            "Junaid Khan ",
+            "Amarnath Rastogi "
+        ]
+    },
+    {
+        "sn": 43,
+        "teamName": "Hackastra",
+        "teamLeader": "Sankalp gangwar ",
+        "teamMembers": [
+            "Shiv Pratap Rathore ",
+            "Vipul Kumar Sahu",
+            "Nitya Sharma",
+            "Saksham singh",
+            "Harshita Saxena"
+        ]
+    },
+    {
+        "sn": 44,
+        "teamName": "Binary brains",
+        "teamLeader": "Tanishka yadav",
+        "teamMembers": [
+            "Shiva yadav",
+            "Ritika Saxena",
+            "Ambika yadav",
+            "Sumit",
+            "Yogesh babu"
+        ]
+    },
+    {
+        "sn": 45,
+        "teamName": "CodeStormers\u26a1\ud83d\ude80",
+        "teamLeader": "Aryan",
+        "teamMembers": [
+            "Ankit Kumar ",
+            "Anshika Tripathi ",
+            "Fazeela khan",
+            "Pratiksha Saxena",
+            "Chanchal gangwar "
+        ]
+    },
+    {
+        "sn": 46,
+        "teamName": "ApexCoders",
+        "teamLeader": "Mohammad Altamash Zia ",
+        "teamMembers": [
+            "Hemant Rathore ",
+            "Anubhav Kumar",
+            "Aastha Anand",
+            "Mohit Kumar Singh",
+            "Mohd Fardeen "
+        ]
+    },
+    {
+        "sn": 47,
+        "teamName": "Teamcoders",
+        "teamLeader": "Adesh ",
+        "teamMembers": [
+            "Pradeepti",
+            "Ramandeep Kaur ",
+            "Gaurav",
+            "Vishal yadav ",
+            "Gufran Ahmad "
+        ]
+    },
+    {
+        "sn": 48,
+        "teamName": "Team flux ",
+        "teamLeader": "Deepanshu mandal",
+        "teamMembers": [
+            "Vaibhav singh",
+            "Khushi",
+            "Himanshu  Kumar",
+            "Abhishek Mourya",
+            "Anuj kumar"
+        ]
+    },
+    {
+        "sn": 49,
+        "teamName": "PHANTOM SIX",
+        "teamLeader": "Anshul Sharma ",
+        "teamMembers": [
+            "Vanshikaverma ",
+            "Shruti kumari",
+            "Piyush Gupta",
+            "Sandeep yadav ",
+            "Sabiya khanam"
+        ]
+    },
+    {
+        "sn": 50,
+        "teamName": "FutureMinds",
+        "teamLeader": "Arbaz Khan ",
+        "teamMembers": [
+            "Badre Kamil",
+            "Tanveer Khan ",
+            "Suryaman Yadav",
+            "Roshni Singh",
+            "Taufeeq"
+        ]
+    },
+    {
+        "sn": 51,
+        "teamName": "Hack Orbit",
+        "teamLeader": "ABHISHEK VERMA",
+        "teamMembers": [
+            "UMESH PAL",
+            "KHUSHBU GANGWAR",
+            "ABHAY VISHWAKARMA",
+            "MRADUL SHARMA",
+            "ABHANSH KUMAR"
+        ]
+    },
+    {
+        "sn": 52,
+        "teamName": "Team Zoron",
+        "teamLeader": "Aarna Jaiswal ",
+        "teamMembers": [
+            "Hardik Gautam ",
+            "Shivang Patel",
+            "Prakhar Saxena ",
+            "Shagun Aditya Bajpai",
+            "Rajan Sharma"
+        ]
+    },
+    {
+        "sn": 53,
+        "teamName": "Gandharvas ",
+        "teamLeader": "Sarthak maurya ",
+        "teamMembers": [
+            "Aadya Saraswat ",
+            "Sumit sharma ",
+            "Shourya Singh",
+            "Vansh bajpai",
+            "Anchal Gupta"
+        ]
+    },
+    {
+        "sn": 54,
+        "teamName": "Nexus",
+        "teamLeader": "Akshit kumar",
+        "teamMembers": [
+            "Devansh Kapoor",
+            "Vibhor Saini ",
+            "Gurmeet singh ",
+            "Sonam Yadav",
+            "Mohammad Arham "
+        ]
+    },
+    {
+        "sn": 55,
+        "teamName": "Hacknova ",
+        "teamLeader": "Agrima Saxena ",
+        "teamMembers": [
+            "Muskan Gupta ",
+            "Sakshi Sharma ",
+            "Aman singh",
+            "Aniket Rajput",
+            "Ayush Singh"
+        ]
+    },
+    {
+        "sn": 56,
+        "teamName": "HACKAHOLICS",
+        "teamLeader": "Prateek Shankdhar",
+        "teamMembers": [
+            "Shivam kumar",
+            "Harsh Kumar",
+            "Hardik Lalwani",
+            "Kritika",
+            "Kanishka Singh"
+        ]
+    },
+    {
+        "sn": 57,
+        "teamName": "CODE WITH PUMPKIN",
+        "teamLeader": "MAYANK VERMA",
+        "teamMembers": [
+            "TAYYAB KHAN",
+            "MEHANDI HASAN ANSARI",
+            "ZUNAIRA KHALID ",
+            "DIVYANSHI ASTHANA ",
+            "DIVYANSHU VERMA"
+        ]
+    },
+    {
+        "sn": 58,
+        "teamName": "Algorithm team",
+        "teamLeader": "Abhishek kumar",
+        "teamMembers": [
+            "Ali abbas zaidi ",
+            "Sahiba noor",
+            "Imran khan",
+            "Shafia quresh",
+            "Priyanka Singh"
+        ]
+    },
+    {
+        "sn": 59,
+        "teamName": "Cyber serpents ",
+        "teamLeader": "Shriyansh saxena ",
+        "teamMembers": [
+            "Kanchan kashyap",
+            "Tanishka Yadav ",
+            "Vishal gangwar",
+            "Angrim Tiwari",
+            "Nirbhay Yadav "
+        ]
+    },
+    {
+        "sn": 60,
+        "teamName": "Neo Tech Shutras",
+        "teamLeader": "Pawan",
+        "teamMembers": [
+            "Shailesh Sharma ",
+            "Om rajput ",
+            "Riya",
+            "Vaibhav thappa ",
+            "Prakhar Saxena "
+        ]
+    },
+    {
+        "sn": 61,
+        "teamName": "Algo warriors ",
+        "teamLeader": "Pratham Raghuwanshi ",
+        "teamMembers": [
+            "Subhash Thakur ",
+            "Abhijeet Pathak ",
+            "Daksh Thakur ",
+            "Saniya Ansari",
+            "Fazeela Khan"
+        ]
+    },
+    {
+        "sn": 62,
+        "teamName": "Quantifyx",
+        "teamLeader": "Ravi Gupta",
+        "teamMembers": [
+            "Ashutosh Gupta ",
+            "Tannu Priya",
+            "Anusha ",
+            "Kratika Bajpai ",
+            "Vinayak Singh "
+        ]
+    },
+    {
+        "sn": 63,
+        "teamName": "TechKranti \u2013 The Spark of Innovation",
+        "teamLeader": "SHEKHAR KANAUJIYA",
+        "teamMembers": [
+            "VIPIN GANGWAR",
+            "SIMARJEET KAUR",
+            "KRISHNA KUMAR",
+            "AMIT SHARMA",
+            "MOHAMMAD UMAIR"
+        ]
+    },
+    {
+        "sn": 64,
+        "teamName": "Team Unstoppable ",
+        "teamLeader": "Owais",
+        "teamMembers": [
+            "Arpit Singh",
+            "Abhay Pratap Singh ",
+            "Ayush Deval",
+            "Om Gupta",
+            "Shreya Mishra"
+        ]
+    },
+    {
+        "sn": 65,
+        "teamName": "The innovators",
+        "teamLeader": "abhay pratap singh ",
+        "teamMembers": [
+            "Ramsha afroz",
+            "Anushka pandit",
+            "Naman Katiyar",
+            "Abhay chaurasiya",
+            "Anshul"
+        ]
+    },
+    {
+        "sn": 66,
+        "teamName": "Error 404 !",
+        "teamLeader": "Pranav mishra ",
+        "teamMembers": [
+            "Anshit bhisht ",
+            "Shubh singh",
+            "Ramsha masroor",
+            "Ashara Ansari ",
+            "Akash "
+        ]
+    },
+    {
+        "sn": 67,
+        "teamName": "Cyber squad ",
+        "teamLeader": "Aman Singh",
+        "teamMembers": [
+            "Himanshu singh",
+            "Alok Chaurasiya",
+            "Abhishek Sharma",
+            "Richa Gupta",
+            "Gargi kushwaha "
+        ]
+    }
+]

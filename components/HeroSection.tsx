@@ -5,18 +5,18 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Sparkles } from "lucide-react"
 import { memo, useCallback } from "react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 const HeroSection = memo(function HeroSection() {
   const handleRegisterClick = useCallback(() => {
     window.open("https://forms.gle/fsCyrMx66uLinKU68", "_blank", "noopener,noreferrer")
   }, [])
 
+  const router = useRouter()
+  
   const handleExploreClick = useCallback(() => {
-    const element = document.getElementById('SIH')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-  }, [])
+    router.push('/teams')
+  }, [router])
 
   return (
     <section
@@ -111,7 +111,7 @@ const HeroSection = memo(function HeroSection() {
             aria-label="Learn more about Smart India Hackathon"
             className="group border border-white/40 bg-white/5 backdrop-blur-md text-white hover:bg-white/15 hover:border-white/60 font-medium text-sm sm:text-base px-6 py-3 sm:px-8 sm:py-4 rounded-lg transition-all duration-300 hover:scale-105 shadow-sm w-full sm:w-auto max-w-xs sm:max-w-none"
           >
-            <span className="group-hover:text-orange-300 transition-colors">Explore SIH</span>
+            <span className="group-hover:text-orange-300 transition-colors">Teams Status</span>
           </Button>
         </div>
 
