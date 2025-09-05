@@ -838,5 +838,77 @@
             "Ashish Kumar",
             "Lal Shivam Singh"
         ]
+    },
+    {
+        "sn": 71,
+        "teamName": "HackSmiths",
+        "teamLeader": "Mohd Shadaan",
+        "teamMembers": [
+            "Devyansh Arya",
+            "Lalit Bhardwaj",
+            "Sparsh Jaiswal",
+            "Aviral Saraswat",
+            "Vartika"
+        ]
+    },
+    {
+        "sn": 72,
+        "teamName": "Cyber ninja",
+        "teamLeader": "Utkarsh Agarwal ",
+        "teamMembers": [
+            "Sparsh saxena",
+            "Aavy mishra",
+            "Ansh pratap shrivastav ",
+            "Anuraag yadav",
+            "Kashish singh"
+        ]
+    },
+    {
+        "sn": 73,
+        "teamName": "Tech Boom",
+        "teamLeader": "Vanisha Mittal",
+        "teamMembers": [
+            "Rishabh Patel",
+            "Kajal Singhal",
+            "Arpit Kumar ",
+            "Piyush Gangwar",
+            "Abhyansh Sharma"
+        ]
+    },
+    {
+        "sn": 74,
+        "teamName": "Infinity coders",
+        "teamLeader": "Ansh Singh",
+        "teamMembers": [
+            "Aditya singh",
+            "Maneesha kumari",
+            "Ashna Kumari",
+            "RUDRA PRATAP SINGH",
+            "Deepansh Saxena"
+        ]
+    },
+    {
+        "sn": 75,
+        "teamName": "TEAM SCHOLAR",
+        "teamLeader": "SACHIN GANGWAR",
+        "teamMembers": [
+            "TANU GANGWAR",
+            "TANISH GUPTA",
+            "NAITIK SHUKLA",
+            "SHIVAM YADAV",
+            "IRFA KHAN"
+        ]
+    },
+    {
+        "sn": 76,
+        "teamName": "Health AI Innovators",
+        "teamLeader": "Abika Sharma",
+        "teamMembers": [
+            "Akshat Saxena",
+            "Riya Chaudhary ",
+            "Dhruv Agrawal ",
+            "Sujal Kaushal",
+            "Eshan Singh"
+        ]
     }
 ]
