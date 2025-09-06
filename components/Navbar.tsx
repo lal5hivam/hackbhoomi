@@ -247,10 +247,10 @@ export default function Navbar({ isScrolled }: NavbarProps) {
 
                 {/* Call to action button */}
                 <button
-                  onClick={() => window.open("https://forms.gle/fsCyrMx66uLinKU68", "_blank")}
-                  className="bg-white text-orange-700 px-2.5 py-0.5 sm:px-4 sm:py-1.5 rounded-full text-xs font-bold hover:bg-orange-50 transition-all duration-300 shadow-sm hover:shadow-md transform hover:scale-105"
+                  disabled
+                  className="bg-red-100 text-red-700 px-2.5 py-0.5 sm:px-4 sm:py-1.5 rounded-full text-xs font-bold cursor-not-allowed opacity-80"
                 >
-                  REGISTER
+                  CLOSED
                 </button>
               </div>
             </div>
@@ -261,13 +261,13 @@ export default function Navbar({ isScrolled }: NavbarProps) {
       {/* Enhanced Mobile Navigation Menu - Complete */}
       {isNavOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-xl border-t border-gray-200/50 z-40 animate-fade-in-up">
-          {/* Registration Extension Notice for Mobile */}
-          <div className="bg-gradient-to-r from-orange-600 via-red-500 to-pink-600 text-white px-4 py-3 text-center">
+          {/* Registration Closed Notice for Mobile */}
+          <div className="bg-gradient-to-r from-red-800 via-red-700 to-red-800 text-white px-4 py-3 text-center">
             <div className="flex items-center justify-center space-x-2">
-              <AlertCircle className="w-4 h-4 animate-pulse" />
-              <span className="font-bold text-sm">REGISTRATION EXTENDED</span>
+              <AlertCircle className="w-4 h-4" />
+              <span className="font-bold text-sm text-white/90">REGISTRATION CLOSED</span>
             </div>
-            <p className="text-xs mt-1 text-orange-100">Register your team now - Don't miss out!</p>
+            <p className="text-xs mt-1 text-red-200/70">Registration period has ended</p>
           </div>
 
           <nav className="px-3 py-4 space-y-1">
@@ -328,13 +328,10 @@ export default function Navbar({ isScrolled }: NavbarProps) {
               {/* Mobile CTA Button */}
               <div className="px-3 pt-3">
                 <Button
-                  onClick={() => {
-                    window.open("https://forms.gle/fsCyrMx66uLinKU68", "_blank");
-                    setIsNavOpen(false);
-                  }}
-                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-2.5 text-sm rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105"
+                  disabled
+                  className="w-full bg-gradient-to-r from-red-700 to-red-800 text-white/80 font-semibold py-2.5 text-sm rounded-lg opacity-80 cursor-not-allowed"
                 >
-                  Register Your Team Now
+                  Registration Closed
                 </Button>
               </div>
             </div>
