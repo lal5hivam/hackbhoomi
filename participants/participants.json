@@ -910,5 +910,53 @@
             "Sujal Kaushal",
             "Eshan Singh"
         ]
+    },
+    {
+        "sn": 77,
+        "teamName": "IndoHackSquad ",
+        "teamLeader": "Aastha Saxena ",
+        "teamMembers": [
+            "Gulam Gaush",
+            "Shaurya Saxena ",
+            "Mayank Gangwar ",
+            "Aryan Gupta ",
+            "Rani Maurya "
+        ]
+    },
+    {
+        "sn": 78,
+        "teamName": "Runtime terrors",
+        "teamLeader": "kafil vara",
+        "teamMembers": [
+            "Umra malik",
+            "Arsh",
+            "Narender",
+            "Anushka soni",
+            "prashant kumar gautam"
+        ]
+    },
+    {
+        "sn": 79,
+        "teamName": "IndoHackSquad",
+        "teamLeader": "Aastha Saxena ",
+        "teamMembers": [
+            "Gulam Gaush",
+            "Shaurya Saxena ",
+            "Mayank Gangwar ",
+            "Aryan Gupta ",
+            "Rani maurya "
+        ]
+    },
+    {
+        "sn": 80,
+        "teamName": "CODE CADETS",
+        "teamLeader": "DEV PRATAP SINGH",
+        "teamMembers": [
+            "SHIVAM DHAR DUBEY",
+            "Rishabh Gautam",
+            "Anshika Yadav ",
+            "Syed Saood Mian",
+            "Archita Dev"
+        ]
     }
 ]
