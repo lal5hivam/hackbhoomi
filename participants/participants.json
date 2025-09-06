@@ -708,7 +708,7 @@
         ]
     },
     {
-        "sn": 61,
+        "sn": 60,
         "teamName": "Quantifyx",
         "teamLeader": "Ravi Gupta",
         "teamMembers": [
@@ -720,7 +720,7 @@
         ]
     },
     {
-        "sn": 62,
+        "sn": 61,
         "teamName": "TechKranti \u2013 The Spark of Innovation",
         "teamLeader": "SHEKHAR KANAUJIYA",
         "teamMembers": [
@@ -732,7 +732,7 @@
         ]
     },
     {
-        "sn": 63,
+        "sn": 62,
         "teamName": "Team Unstoppable ",
         "teamLeader": "Owais",
         "teamMembers": [
@@ -744,7 +744,7 @@
         ]
     },
     {
-        "sn": 64,
+        "sn": 63,
         "teamName": "The innovators",
         "teamLeader": "abhay pratap singh ",
         "teamMembers": [
@@ -756,7 +756,7 @@
         ]
     },
     {
-        "sn": 65,
+        "sn": 64,
         "teamName": "Error 404 !",
         "teamLeader": "Pranav mishra ",
         "teamMembers": [
@@ -768,7 +768,7 @@
         ]
     },
     {
-        "sn": 66,
+        "sn": 65,
         "teamName": "Cyber squad ",
         "teamLeader": "Aman Singh",
         "teamMembers": [
@@ -780,7 +780,7 @@
         ]
     },
     {
-        "sn": 67,
+        "sn": 66,
         "teamName": "Young Vission ",
         "teamLeader": "Lakshya Agrawal ",
         "teamMembers": [
@@ -792,7 +792,7 @@
         ]
     },
     {
-        "sn": 68,
+        "sn": 67,
         "teamName": "Tech Titans",
         "teamLeader": "VishalGill ",
         "teamMembers": [
@@ -804,7 +804,7 @@
         ]
     },
     {
-        "sn": 69,
+        "sn": 68,
         "teamName": "Crash Coderz",
         "teamLeader": "Himanshu",
         "teamMembers": [
@@ -816,7 +816,7 @@
         ]
     },
     {
-        "sn": 70,
+        "sn": 69,
         "teamName": "LogicLarq",
         "teamLeader": "Nitish Harbola",
         "teamMembers": [
@@ -828,7 +828,7 @@
         ]
     },
     {
-        "sn": 71,
+        "sn": 70,
         "teamName": "HackSmiths",
         "teamLeader": "Mohd Shadaan",
         "teamMembers": [
@@ -840,7 +840,7 @@
         ]
     },
     {
-        "sn": 72,
+        "sn": 71,
         "teamName": "Cyber ninja",
         "teamLeader": "Utkarsh Agarwal ",
         "teamMembers": [
@@ -852,7 +852,7 @@
         ]
     },
     {
-        "sn": 73,
+        "sn": 72,
         "teamName": "Tech Boom",
         "teamLeader": "Vanisha Mittal",
         "teamMembers": [
@@ -864,7 +864,7 @@
         ]
     },
     {
-        "sn": 74,
+        "sn": 73,
         "teamName": "Infinity coders",
         "teamLeader": "Ansh Singh",
         "teamMembers": [
@@ -876,7 +876,7 @@
         ]
     },
     {
-        "sn": 75,
+        "sn": 74,
         "teamName": "TEAM SCHOLAR",
         "teamLeader": "SACHIN GANGWAR",
         "teamMembers": [
@@ -888,7 +888,7 @@
         ]
     },
     {
-        "sn": 76,
+        "sn": 75,
         "teamName": "Health AI Innovators",
         "teamLeader": "Abika Sharma",
         "teamMembers": [
@@ -900,7 +900,7 @@
         ]
     },
     {
-        "sn": 77,
+        "sn": 76,
         "teamName": "IndoHackSquad ",
         "teamLeader": "Aastha Saxena ",
         "teamMembers": [
@@ -912,7 +912,7 @@
         ]
     },
     {
-        "sn": 78,
+        "sn": 77,
         "teamName": "Runtime terrors",
         "teamLeader": "kafil vara",
         "teamMembers": [
@@ -924,7 +924,7 @@
         ]
     },
     {
-        "sn": 79,
+        "sn": 78,
         "teamName": "IndoHackSquad",
         "teamLeader": "Aastha Saxena ",
         "teamMembers": [
@@ -936,7 +936,7 @@
         ]
     },
     {
-        "sn": 80,
+        "sn": 79,
         "teamName": "CODE CADETS",
         "teamLeader": "DEV PRATAP SINGH",
         "teamMembers": [
@@ -945,6 +945,18 @@
             "Anshika Yadav ",
             "Syed Saood Mian",
             "Archita Dev"
+        ]
+    },
+    {
+        "sn": 80,
+        "teamName": "Cure Ops",
+        "teamLeader": "Mohd Mustafa",
+        "teamMembers": [
+            "Kashif Ansari",
+            "Saksham Pratap Singh ",
+            "Vasu Singh",
+            "Shreyansh Kumar ",
+            "Pragati Yadav"
         ]
     }
 ]
