@@ -901,18 +901,6 @@
     },
     {
         "sn": 76,
-        "teamName": "IndoHackSquad ",
-        "teamLeader": "Aastha Saxena ",
-        "teamMembers": [
-            "Gulam Gaush",
-            "Shaurya Saxena ",
-            "Mayank Gangwar ",
-            "Aryan Gupta ",
-            "Rani Maurya "
-        ]
-    },
-    {
-        "sn": 77,
         "teamName": "Runtime terrors",
         "teamLeader": "kafil vara",
         "teamMembers": [
@@ -924,7 +912,7 @@
         ]
     },
     {
-        "sn": 78,
+        "sn": 77,
         "teamName": "IndoHackSquad",
         "teamLeader": "Aastha Saxena ",
         "teamMembers": [
@@ -936,7 +924,7 @@
         ]
     },
     {
-        "sn": 79,
+        "sn": 78,
         "teamName": "CODE CADETS",
         "teamLeader": "DEV PRATAP SINGH",
         "teamMembers": [
@@ -948,7 +936,7 @@
         ]
     },
     {
-        "sn": 80,
+        "sn": 79,
         "teamName": "Cure Ops",
         "teamLeader": "Mohd Mustafa",
         "teamMembers": [
@@ -957,6 +945,30 @@
             "Vasu Singh",
             "Shreyansh Kumar ",
             "Pragati Yadav"
+        ]
+    },
+    {
+        "sn": 80,
+        "teamName": "Reapers",
+        "teamLeader": "Shivansh Malik",
+        "teamMembers": [
+            "Sameeksha Gangwar",
+            "Saksham Singh",
+            "Abhijeet Pathak",
+            "Raghav Chawla",
+            "Daksh Thakur"
+        ]
+    },
+    {
+        "sn": 81,
+        "teamName": "NeuroAttend",
+        "teamLeader": "Aastik Mishra ",
+        "teamMembers": [
+            "Harshita Chand",
+            "Amisha Chand ",
+            "Chahna Chand ",
+            "Kushagra Gangwar ",
+            "Harshit Mishra "
         ]
     }
 ]
