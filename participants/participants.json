@@ -782,7 +782,7 @@
     {
         "sn": 66,
         "teamName": "Young Vission ",
-        "teamLeader": "Lakshya Agrawal ",
+        "teamLeader": "Lakshya Agarwal ",
         "teamMembers": [
             "Anurag Sharma ",
             "Amrit Varshney",
@@ -969,6 +969,42 @@
             "Chahna Chand ",
             "Kushagra Gangwar ",
             "Harshit Mishra "
+        ]
+    },
+    {
+        "sn": 82,
+        "teamName": "Team AlgoStorm",
+        "teamLeader": "Shekhar Singh",
+        "teamMembers": [
+            "Abhinav Srivastava",
+            "Tanishka Agarwal",
+            "Ritu Kushwaha",
+            "Alisha Saifi",
+            "Mahak Singh"
+        ]
+    },
+    {
+        "sn": 83,
+        "teamName": "HexaTech Minds",
+        "teamLeader": "Pratham Kumar",
+        "teamMembers": [
+            "Harshwardhan",
+            "Pallavi Kumari",
+            "Aryan Upadhyay",
+            "Sukhvinder Yadav",
+            "Kunal Gupta"
+        ]
+    },
+    {
+        "sn": 84,
+        "teamName": "EcoCoders \u2013 Innovating for a greener tomorrow.",
+        "teamLeader": "Alok Yadav ",
+        "teamMembers": [
+            "Rishabh pal",
+            "Anjali Sharma",
+            "Shivam Prajapati",
+            "Siddhartha Singh",
+            "Syed Tanzim Wajih"
         ]
     }
 ]
