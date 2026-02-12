@@ -65,29 +65,31 @@ const HeroSection = memo(function HeroSection() {
             className="inline-flex items-center px-4 py-2 rounded-full bg-transaparent backdrop-blur-md border border-orange-400/30 text-white shadow-lg hover:shadow-orange-500/20 transition-all duration-300 hover:scale-105 text-xs sm:text-sm font-medium"
           >
             <Sparkles className="w-3 h-3 mr-2 text-orange-300 animate-pulse" />
-            🎯 Your Gateway to National Recognition
+            🎯 Inter-College Competition
           </Badge>
         </div>
 
         {/* SEO Optimized Main Heading */}
         <div className="mb-5 animate-fade-in-up">
           <h1 id="hero-heading" className="leading-tight">
-            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 mb-2 animate-slide-in-left drop-shadow-lg">
-              SMART INDIA
-            </span>
+            
             <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 mb-2 animate-pulse-glow drop-shadow-lg">
-              HACKATHON
+              INVERTHON 2.0
             </span>
             <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-mono text-white animate-slide-in-right drop-shadow-lg">
-              2025
+              2026
             </span>
           </h1>
         </div>
 
-        {/* Compact Professional Subtitle */}
-        <p className="text-sm sm:text-base md:text-lg text-white/90 mb-6 max-w-2xl mx-auto leading-relaxed font-normal animate-fade-in-up drop-shadow-sm">
-          Join India&apos;s largest innovation ecosystem and transform your ideas into
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 font-semibold"> game-changing solutions</span>
+        {/* Primary Subtitle */}
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white font-semibold mb-4 max-w-2xl mx-auto leading-relaxed animate-fade-in-up drop-shadow-md">
+          The Ultimate Innovation Challenge for Tech Enthusiastic 
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 font-bold"> INVERTIANS</span>
+        </p>
+        {/* Secondary Subtitle */}
+        <p className="text-xs sm:text-sm md:text-base text-white/70 mb-6 max-w-xl mx-auto leading-relaxed font-normal animate-fade-in-up drop-shadow-sm">
+          Showcase your skills, compete with the best minds, and win exciting prizes in this thrilling inter-college competition
         </p>
 
         {/* Optimized CTA Buttons with proper accessibility */}

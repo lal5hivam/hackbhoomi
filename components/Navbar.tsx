@@ -62,10 +62,10 @@ export default function Navbar({ isScrolled }: NavbarProps) {
               {/* Left Section: Enhanced Brand */}
               <div className="flex items-center space-x-3 sm:space-x-5">
                 <div className="flex items-center space-x-2 sm:space-x-3">
-                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 transition-all duration-300">Hack</h1>
-                  <h1 className="text-2xl sm:text-3xl lg:text-4xl text-orange-600 font-bold transition-all duration-300">भूमि</h1>
+                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-700 transition-all duration-300">INVER</h1>
+                  <h1 className="text-2xl sm:text-3xl lg:text-4xl text-orange-600 font-bold transition-all duration-300">THON</h1>
                   <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-orange-500 rounded-full animate-pulse ml-2"></div>
-                  <span className="text-lg sm:text-xl lg:text-2xl font-semibold text-blue-700 transition-all duration-300">SIH 2025</span>
+                  <span className="text-lg sm:text-xl lg:text-4xl font-bold text-gray-900 transition-all duration-300">2.0</span>
                 </div>
               </div>
 
@@ -98,11 +98,11 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                   />
                 </button>
                 <button
-                  onClick={() => window.open("https://www.sih.gov.in", "_blank")}
+                  onClick={() => window.open("https://startinup.up.gov.in/", "_blank")}
                   className="group"
                 >
                   <Image
-                    src="/SIH.png"
+                    src="/StartInUP.png"
                     alt="Smart India Hackathon - Official government initiative logo"
                     width={120}
                     height={36}
@@ -121,8 +121,8 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                   </div>
                   <div className="flex items-center space-x-1 text-gray-600 mt-0.5">
                     <Calendar className="w-3 h-3 text-orange-500" />
-                    <time dateTime="2025-09-12" className="text-xs font-medium">
-                      12-13th Sept, 2025
+                    <time dateTime="2026-03-14" className="text-xs font-medium">
+                      14-15th March, 2026
                     </time>
                   </div>
                 </div>
@@ -148,10 +148,10 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                   className="flex items-center space-x-1 sm:space-x-2 cursor-pointer group"
                   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 >
-                  <h1 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors">Hack</h1>
-                  <h1 className="text-xl sm:text-2xl lg:text-2xl text-orange-600 font-bold">भूमि</h1>
+                  <h1 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors">INVER</h1>
+                  <h1 className="text-xl sm:text-2xl lg:text-2xl text-orange-600 font-bold">THON</h1>
                   <div className="w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse ml-1"></div>
-                  <span className="sm:inline text-base lg:text-lg font-bold text-blue-700">SIH 2025</span>
+                  <span className="sm:inline text-base lg:text-lg font-bold text-blue-700">2.0</span>
                 </div>
               </div>
 
@@ -197,7 +197,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                   </div>
                   <div className="flex items-center space-x-1 text-gray-600">
                     <Calendar className="w-3 h-3 text-orange-500" />
-                    <span className="text-xs font-medium">12-13 Sept</span>
+                    <span className="text-xs font-medium">14-15 March</span>
                   </div>
                 </div>
 
@@ -215,9 +215,9 @@ export default function Navbar({ isScrolled }: NavbarProps) {
         </div>
       </div>
 
-      {/* Enhanced Professional Registration Extension Banner - Only show when scrolled and NOT in mobile menu */}
+      {/* Enhanced Professional Registration Open Banner - Only show when scrolled and NOT in mobile menu */}
       {isScrolled && !isNavOpen && (
-        <div className="bg-gradient-to-r from-orange-600 via-red-500 to-pink-600 text-white shadow-lg overflow-hidden">
+        <div className="bg-gradient-to-r from-emerald-500 via-green-500 to-teal-500 text-white shadow-lg overflow-hidden">
           <div className="px-3 py-2 sm:py-2.5">
             {/* Mobile-optimized responsive design */}
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-1 sm:space-y-0 sm:space-x-3 text-center">
@@ -228,7 +228,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                   <div className="absolute inset-0 w-4 h-4 sm:w-5 sm:h-5 bg-white/20 rounded-full animate-ping"></div>
                 </div>
                 <span className="font-bold text-sm sm:text-base tracking-wide">
-                  REGISTRATION EXTENDED
+                  REGISTRATION OPEN
                 </span>
               </div>
               
@@ -239,18 +239,18 @@ export default function Navbar({ isScrolled }: NavbarProps) {
               <div className="flex items-center justify-center space-x-2 sm:space-x-2">
                 {/* Main message */}
                 <div className="flex items-center space-x-1">
-                  <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-orange-200" />
+                  <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-emerald-200" />
                   <span className="font-medium text-xs sm:text-sm">
-                    Register Fast!
+                    Limited Spots Available!
                   </span>
                 </div>
 
                 {/* Call to action button */}
                 <button
-                  disabled
-                  className="bg-red-100 text-red-700 px-2.5 py-0.5 sm:px-4 sm:py-1.5 rounded-full text-xs font-bold cursor-not-allowed opacity-80"
+                  onClick={() => window.open('https://example.com/register', '_blank')}
+                  className="bg-white text-emerald-600 px-2.5 py-0.5 sm:px-4 sm:py-1.5 rounded-full text-xs font-bold hover:bg-emerald-50 transition-all duration-300 shadow-md hover:shadow-lg"
                 >
-                  CLOSED
+                  REGISTER NOW
                 </button>
               </div>
             </div>
@@ -261,13 +261,13 @@ export default function Navbar({ isScrolled }: NavbarProps) {
       {/* Enhanced Mobile Navigation Menu - Complete */}
       {isNavOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-xl border-t border-gray-200/50 z-40 animate-fade-in-up">
-          {/* Registration Closed Notice for Mobile */}
-          <div className="bg-gradient-to-r from-red-800 via-red-700 to-red-800 text-white px-4 py-3 text-center">
+          {/* Registration Open Notice for Mobile */}
+          <div className="bg-gradient-to-r from-emerald-600 via-green-500 to-teal-500 text-white px-4 py-3 text-center">
             <div className="flex items-center justify-center space-x-2">
-              <AlertCircle className="w-4 h-4" />
-              <span className="font-bold text-sm text-white/90">REGISTRATION CLOSED</span>
+              <AlertCircle className="w-4 h-4 animate-pulse" />
+              <span className="font-bold text-sm text-white">REGISTRATION OPEN</span>
             </div>
-            <p className="text-xs mt-1 text-red-200/70">Registration period has ended</p>
+            <p className="text-xs mt-1 text-emerald-100">Limited spots available - Register now!</p>
           </div>
 
           <nav className="px-3 py-4 space-y-1">
@@ -322,16 +322,16 @@ export default function Navbar({ isScrolled }: NavbarProps) {
               </div>
               <div className="flex items-center space-x-2 text-gray-600 px-3 py-1.5">
                 <Calendar className="w-3.5 h-3.5 text-orange-500 flex-shrink-0" />
-                <span className="text-xs">12-13th Sept, 2025</span>
+                <span className="text-xs">14-15th March, 2026</span>
               </div>
 
               {/* Mobile CTA Button */}
               <div className="px-3 pt-3">
                 <Button
-                  disabled
-                  className="w-full bg-gradient-to-r from-red-700 to-red-800 text-white/80 font-semibold py-2.5 text-sm rounded-lg opacity-80 cursor-not-allowed"
+                  onClick={() => window.open('https://example.com/register', '_blank')}
+                  className="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold py-2.5 text-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  Registration Closed
+                  Register Now
                 </Button>
               </div>
             </div>

@@ -36,7 +36,7 @@ export default function Page() {
       <HeroSection />
 
       {/* About Hackathon / SIH */}
-      <AboutSIH />
+      {/* <AboutSIH /> */}
 
       {/* Milestones */}
       <Milestones />
