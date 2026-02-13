@@ -1,15 +1,15 @@
 import type { Metadata } from "next"
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://hackbhoomi.vercel.app"
-const siteName = "HackBhoomi 2025"
-const siteDescription = "HackBhoomi 2025 — Invertis University's official internal hackathon for Smart India Hackathon 2025. Join us to innovate, build, and compete with the brightest minds in technology."
+const siteName = "Inverthon 2.0"
+const siteDescription = "Inverthon 2.0 — Invertis University's official internal hackathon. Join us to innovate, build, and compete with the brightest minds in technology."
 
 // Base metadata configuration
 export const baseMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${siteName} | Invertis University Hackathon`,
-    template: `%s | ${siteName}`
+    default: `Inverthon 2.0 - Invertis University`,
+    template: `%s | Inverthon 2.0`
   },
   description: siteDescription,
   keywords: [
@@ -71,7 +71,7 @@ export const baseMetadata: Metadata = {
     locale: "en_IN",
     url: siteUrl,
     siteName,
-    title: `${siteName} | Invertis University Hackathon`,
+    title: `Inverthon 2.0 - Invertis University`,
     description: siteDescription,
     images: [
       {
@@ -87,7 +87,7 @@ export const baseMetadata: Metadata = {
   // Twitter
   twitter: {
     card: "summary_large_image",
-    title: `${siteName} | Invertis University Hackathon`,
+    title: `Inverthon 2.0 - Invertis University`,
     description: siteDescription,
     images: [`${siteUrl}/Inverthon.png`],
     creator: "@InvertisUniv",
@@ -126,7 +126,7 @@ export const structuredData = {
     {
       "@type": "Event",
       "@id": `${siteUrl}/#event`,
-      "name": "HackBhoomi 2025",
+      "name": "Inverthon 2.0",
       "alternateName": "Invertis University Internal Hackathon",
       "description": "Inter-College hackathon at Invertis University. Students compete to represent their Innovative and Problem Solving Skills",
       "startDate": "2025-09-12T09:00:00+05:30",

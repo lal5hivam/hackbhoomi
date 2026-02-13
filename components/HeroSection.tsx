@@ -109,7 +109,7 @@ const HeroSection = memo(function HeroSection() {
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" aria-hidden="true"></div>
           </Button>
-          <Button
+          {/* <Button
             size="default"
             variant="outline"
             onClick={handleExploreClick}
@@ -117,7 +117,7 @@ const HeroSection = memo(function HeroSection() {
             className="group border border-white/40 bg-white/5 backdrop-blur-md text-white hover:bg-white/15 hover:border-white/60 font-medium text-sm sm:text-base px-6 py-3 sm:px-8 sm:py-4 rounded-lg transition-all duration-300 hover:scale-105 shadow-sm w-full sm:w-auto max-w-xs sm:max-w-none"
           >
             <span className="group-hover:text-orange-300 transition-colors">Teams Status</span>
-          </Button>
+          </Button> */}
         </div>
 
       </div>
