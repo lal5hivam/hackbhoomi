@@ -9,7 +9,7 @@ export default function Loading() {
         </div>
         
         {/* Loading Text */}
-        <h2 className="text-2xl font-bold text-white mb-2">HackBhoomi 2025</h2>
+        <h2 className="text-2xl font-bold text-white mb-2">Inverthon 2025</h2>
         <p className="text-blue-200/80 text-sm">Loading your innovation journey...</p>
         
         {/* Progress Bar */}
