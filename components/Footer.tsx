@@ -12,7 +12,11 @@ interface FooterLink {
   href: string;
 }
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  onRegisterClick: () => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ onRegisterClick }) => {
   // Smooth scroll function matching Navbar functionality
   const smoothScrollTo = (elementId: string) => {
     const element = document.getElementById(elementId)
@@ -61,8 +65,8 @@ const Footer: React.FC = () => {
   const quickActions = [
     {
       label: "Register Team",
-      action: () => window.open("https://forms.gle/fsCyrMx66uLinKU68", "_blank", "noopener,noreferrer"),
-      isExternal: true
+      action: onRegisterClick,
+      isExternal: false
     },
     {
       label: "Incubation Center",

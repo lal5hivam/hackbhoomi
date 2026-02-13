@@ -35,6 +35,10 @@ type Category = "open-innovation" | "robowars"
 type OpenInnovationTrack = "software" | "hardware"
 type RoboWarsCompetition = "balloon-pop" | "obstacle-path"
 
+interface InstructionsProps {
+  onRegisterClick: () => void;
+}
+
 // Open Innovation Data
 const openInnovationTracks = {
   software: {
@@ -112,7 +116,7 @@ const roboWarsCompetitions = {
     instructions: [
       "Build a robocar with balloon mount attachment at the rear and a spike in front",
       "Each robot will have a balloon mounted on a designated spot ",
-      "% Robots will be fighting in a particular round",
+      "5 Robots will be fighting in a particular round",
       "The objective is to pop opponents' balloons using your robot and defend yours",
       "Robot whose balloon gets popped is eliminated from the round",
       "Last robot standing with intact balloon wins the round",
@@ -173,7 +177,7 @@ const roboWarsCompetitions = {
   }
 }
 
-export default function Instructions() {
+export default function Instructions({ onRegisterClick }: InstructionsProps) {
   const [activeCategory, setActiveCategory] = useState<Category>("open-innovation")
   const [activeOpenTrack, setActiveOpenTrack] = useState<OpenInnovationTrack>("software")
   const [activeRoboWars, setActiveRoboWars] = useState<RoboWarsCompetition>("balloon-pop")
@@ -587,7 +591,7 @@ export default function Instructions() {
                 <Button 
                   size="default"
                   className="bg-white/90 backdrop-blur-sm text-indigo-600 hover:bg-white hover:shadow-lg font-semibold px-5 sm:px-6 py-2.5 sm:py-3 border border-white/20 transition-all duration-300 hover:scale-105"
-                  onClick={() => window.open("https://forms.gle/fsCyrMx66uLinKU68", "_blank")}
+                  onClick={onRegisterClick}
                 >
                   Register Now
                   <ArrowRight className="w-3.5 h-3.5 ml-1.5" />

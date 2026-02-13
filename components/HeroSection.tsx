@@ -3,18 +3,15 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Sparkles } from "lucide-react"
-import { memo, useCallback, useState } from "react"
+import { memo, useCallback } from "react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
-import RegistrationForm from "@/components/RegistrationForm"
 
-const HeroSection = memo(function HeroSection() {
-  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false)
+interface HeroSectionProps {
+  onRegisterClick: () => void;
+}
 
-  const handleRegisterClick = useCallback(() => {
-    setIsRegistrationOpen(true)
-  }, [])
-
+const HeroSection = memo(function HeroSection({ onRegisterClick }: HeroSectionProps) {
   const router = useRouter()
   
   const handleExploreClick = useCallback(() => {
@@ -99,7 +96,7 @@ const HeroSection = memo(function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center items-center mb-6 animate-fade-in-up">
           <Button
             size="default"
-            onClick={handleRegisterClick}
+            onClick={onRegisterClick}
             aria-label="Register for HackBhoomi 2025"
             className="group relative bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 hover:from-orange-600 hover:via-red-600 hover:to-pink-600 text-white font-bold text-sm sm:text-base px-6 py-3 sm:px-8 sm:py-4 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden border-0 w-full sm:w-auto max-w-xs sm:max-w-none"
           >
@@ -121,12 +118,6 @@ const HeroSection = memo(function HeroSection() {
         </div>
 
       </div>
-
-      {/* Registration Form Modal */}
-      <RegistrationForm 
-        isOpen={isRegistrationOpen} 
-        onClose={() => setIsRegistrationOpen(false)} 
-      />
     </section>
   )
 })

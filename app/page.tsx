@@ -13,9 +13,11 @@ import Team from "@/components/Team"
 import FAQ from "@/components/FAQ"
 import Footer from "@/components/Footer"
 import PerformanceMonitor from "@/components/PerformanceMonitor"
+import RegistrationForm from "@/components/RegistrationForm"
 
 export default function Page() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false)
 
   // Add scroll effect for Navbar background
   useEffect(() => {
@@ -30,10 +32,10 @@ export default function Page() {
       <PerformanceMonitor />
       
       {/* Navbar */}
-      <Navbar isScrolled={isScrolled} />
+      <Navbar isScrolled={isScrolled} onRegisterClick={() => setIsRegistrationOpen(true)} />
 
       {/* Hero Section */}
-      <HeroSection />
+      <HeroSection onRegisterClick={() => setIsRegistrationOpen(true)} />
 
       {/* About Hackathon / SIH */}
       {/* <AboutSIH /> */}
@@ -45,7 +47,7 @@ export default function Page() {
       <Timeline />
 
       {/* Instructions */}
-      <Instructions />
+      <Instructions onRegisterClick={() => setIsRegistrationOpen(true)} />
 
       {/* Tracks */}
       {/* <TracksSection /> */}
@@ -60,7 +62,13 @@ export default function Page() {
       {/* <FAQ /> */}
 
       {/* Footer */}
-      <Footer />
+      <Footer onRegisterClick={() => setIsRegistrationOpen(true)} />
+
+      {/* Registration Form Modal */}
+      <RegistrationForm 
+        isOpen={isRegistrationOpen} 
+        onClose={() => setIsRegistrationOpen(false)} 
+      />
     </div>
   )
 }

@@ -6,10 +6,11 @@ import { Menu, MapPin, Calendar, Clock, AlertCircle } from "lucide-react"
 import Image from "next/image"
 
 interface NavbarProps {
-  isScrolled: boolean
+  isScrolled: boolean;
+  onRegisterClick: () => void;
 }
 
-export default function Navbar({ isScrolled }: NavbarProps) {
+export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
   const [isNavOpen, setIsNavOpen] = useState(false)
 
   // Smooth scroll function with enhanced animation
@@ -247,7 +248,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
 
                 {/* Call to action button */}
                 <button
-                  onClick={() => window.open('https://example.com/register', '_blank')}
+                  onClick={onRegisterClick}
                   className="bg-white text-emerald-600 px-2.5 py-0.5 sm:px-4 sm:py-1.5 rounded-full text-xs font-bold hover:bg-emerald-50 transition-all duration-300 shadow-md hover:shadow-lg"
                 >
                   REGISTER NOW
@@ -328,7 +329,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
               {/* Mobile CTA Button */}
               <div className="px-3 pt-3">
                 <Button
-                  onClick={() => window.open('https://example.com/register', '_blank')}
+                  onClick={onRegisterClick}
                   className="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold py-2.5 text-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   Register Now
