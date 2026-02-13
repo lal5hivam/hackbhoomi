@@ -34,32 +34,48 @@ const FAQ: React.FC = () => {
   };
 
   const faqs: FAQItem[] = [
-    {
-      question: "What is Hackbhoomi?",
-      answer:
-        "Hackbhoomi is an Internal hackathon organized by Invertis University for SIH 2025, bringing together students, developers, and innovators to solve real-world problems through technology. It fosters creativity, collaboration, and innovation.",
-    },
-    {
-      question: "Who can participate in Hackbhoomi?",
-      answer:
-        "Hackbhoomi is open to all the students of Invertis University, allowing tech entusiasts with multi-disciplinary courses with a passion for coding and problem-solving. Participants can in teams of 6 members(One girl member mandatory).",
-    },
-    {
-      question: "What are the event dates and location?",
-      answer:
-        "Hackbhoomi 2025 will take place on 12-13th sept, 2025 at Invertis University, Bareilly, India.",
-    },
-    {
-      question: "How can I register for Hackbhoomi?",
-      answer:
-        "Registration can be completed through the official Hackbhoomi website. Follow the instructions there to sign up as a team. Early registration is recommended due to limited spots.",
-    },
-    {
-      question: "Are there any prizes for winners?",
-      answer:
-        "Yes, Hackbhoomi offers exciting prizes for top-performing teams. Detailed prize information will be announced closer to the event.",
-    },
-  ];
+  {
+    question: "What is Hackbhoomi?",
+    answer:
+      "Hackbhoomi is an internal hackathon organized by Invertis University for SIH 2025. It brings together innovative minds to solve real-world problems through technology, creativity, and competitive engineering.",
+  },
+  {
+    question: "What are the categories in Hackbhoomi?",
+    answer:
+      "Hackbhoomi consists of two main categories: Open Innovation and RoboWars. Participants can choose the category that best matches their skills and interests.",
+  },
+  {
+    question: "What tracks are available under Open Innovation?",
+    answer:
+      "The Open Innovation category has two tracks: Software and Hardware. Teams can build software-based solutions such as apps, platforms, or AI tools, or hardware-based solutions involving electronics, IoT, embedded systems, or smart devices.",
+  },
+  {
+    question: "What competitions are included in RoboWars?",
+    answer:
+      "RoboWars includes two exciting competitions: Balloon Popping RoboWar and Obstacle Path Challenge, both designed to test robotic design, control, and strategy.",
+  },
+  {
+    question: "How does the Balloon Popping RoboWar work?",
+    answer:
+      "In this competition, each robo car will have a balloon mounted behind it. The objective is to pop the opponent’s balloon. Once a robot’s balloon is popped, it is immediately eliminated from the match.",
+  },
+  {
+    question: "What is the Obstacle Path Challenge?",
+    answer:
+      "In the Obstacle Path Challenge, the robo car must reach the destination by successfully passing through a series of tough obstacles. The robot’s control, stability, and design play a crucial role in completing the course.",
+  },
+  {
+    question: "Who can participate and what is the team size?",
+    answer:
+      "Hackbhoomi is open to all students of Invertis University. Teams can have up to 6 members, and having at least one female team member is mandatory.",
+  },
+  {
+    question: "When and where will Hackbhoomi take place?",
+    answer:
+      "Hackbhoomi 2025 will be held on 12–13 September 2025 at Invertis University, Bareilly, India.",
+  },
+];
+
 
   return (
     <section

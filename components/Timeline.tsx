@@ -16,42 +16,42 @@ import {
 const events = [
   {
     title: "Registration Opens",
-    date: "20th Aug",
+    date: "Coming Soon.....",
     desc: "The race begins — Register, Team Up, Get Set & Ideate!",
     icon: UserPlus,
     color: "bg-blue-500"
   },
   {
     title: "Mentorship Sessions",
-    date: "Ongoing",
+    date: "Coming Soon.....",
     desc: "Get expert guidance regarding your ideas and solutions!",
     icon: Users,
     color: "bg-yellow-500"
   },
   {
     title: "Registration Deadline",
-    date: "5th Sept",
+    date: "Coming Soon.....",
     desc: "Get ready to innovate — Last chance to register!",
     icon: Clock,
     color: "bg-red-500"
   },
   {
     title: "Idea Submission Deadline",
-    date: "6th Sept",
+    date: "Coming Soon.....",
     desc: "Submit your innovative ideas and solutions!",
     icon: FileText,
     color: "bg-green-500"
   },
   {
     title: "Shortlisted Teams Announcement",
-    date: "8th Sept",
+    date: "Coming Soon.....",
     desc: "And the chosen ones are... Meet the finalists!",
     icon: Trophy,
     color: "bg-purple-500"
   },
   {
-    title: "HACKATHON DAY - HackBhoomi 2025",
-    date: "12th-13th Sept",
+    title: "HACKATHON DAY - INVERTHON 2.0",
+    date: "14-14th March",
     desc: "Let the hacking begin! Build, code and create!",
     icon: Rocket,
     color: "bg-orange-500"
@@ -70,10 +70,10 @@ export default function Timeline() {
             Event Journey
           </Badge>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-4 sm:mb-6">
-            HackBhoomi Timeline
+            Event Timeline
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Your complete journey from registration to representing Invertis University at SIH 2025
+            Your complete journey from registration to Innovate and Win
           </p>
         </div>
 

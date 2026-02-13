@@ -48,16 +48,16 @@ export default function Page() {
       <Instructions />
 
       {/* Tracks */}
-      <TracksSection />
+      {/* <TracksSection /> */}
 
       {/* Prizes */}
       <Prizes />
 
       {/* Team */}
-      <Team />
+      {/* <Team /> */}
 
       {/* FAQ */}
-      <FAQ />
+      {/* <FAQ /> */}
 
       {/* Footer */}
       <Footer />

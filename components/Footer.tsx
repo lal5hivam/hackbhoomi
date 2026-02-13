@@ -47,14 +47,13 @@ const Footer: React.FC = () => {
     },
   };
 
-  // Updated navigation links to match Navbar
+  // Updated navigation links to match active sections
   const navigationLinks = [
-    { label: "About SIH", sectionId: "SIH" },
+    { label: "Home", sectionId: "hero" },
+    { label: "Milestones", sectionId: "milestones" },
     { label: "Timeline", sectionId: "program" },
     { label: "Instructions", sectionId: "instructions" },
-    { label: "Tracks", sectionId: "tracks" },
     { label: "Prizes", sectionId: "prizes" },
-    { label: "Team", sectionId: "team" },
     { label: "FAQ", sectionId: "faq" },
   ];
 
@@ -66,13 +65,18 @@ const Footer: React.FC = () => {
       isExternal: true
     },
     {
-      label: "SIH Website",
-      action: () => window.open("https://www.sih.gov.in", "_blank", "noopener,noreferrer"),
+      label: "Incubation Center",
+      action: () => window.open("https://invertisincubation.com/", "_blank", "noopener,noreferrer"),
       isExternal: true
     },
     {
       label: "Invertis University",
       action: () => window.open("https://www.invertisuniversity.ac.in", "_blank", "noopener,noreferrer"),
+      isExternal: true
+    },
+    {
+      label: "Start In UP",
+      action: () => window.open("https://startinup.up.gov.in/", "_blank", "noopener,noreferrer"),
       isExternal: true
     },
   ];
@@ -111,13 +115,13 @@ const Footer: React.FC = () => {
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 <h1 className="text-xl sm:text-2xl font-bold text-white group-hover:text-orange-400 transition-colors">
-                  Hackभूमि
+                  InverThon
                 </h1>
                 <div
                   className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-b-[12px] border-b-orange-500 rotate-90"
                   aria-hidden="true"
                 ></div>
-                <span className="text-lg font-medium text-orange-400">SIH 2025</span>
+                <span className="text-lg font-medium text-orange-400">2.0</span>
               </div>
             </div>
             <p className="text-white/80 text-sm max-w-xs">
@@ -188,7 +192,7 @@ const Footer: React.FC = () => {
           <motion.div variants={itemVariants}>
             <h3 className="text-base font-semibold text-white mb-3">Stay Updated</h3>
             <p className="text-white/80 text-sm mb-3">
-              Subscribe for Hackbhoomi updates and event news.
+              Subscribe for Inverthon updates and event news.
             </p>
             <form onSubmit={handleNewsletterSubmit} className="flex space-x-2">
               <Input
@@ -215,9 +219,9 @@ const Footer: React.FC = () => {
           animate="visible"
         >
           <p className="text-white/80 text-sm mb-4 sm:mb-0">
-            © 2025 Hackbhoomi, Invertis University.
+            © 2026 Inverthon2.0, Invertis University.
           </p>
-          <div className="flex items-center space-x-2">
+          {/* <div className="flex items-center space-x-2">
             <span className="text-white/80 text-sm">Website developed by</span>
             <Button
               variant="ghost"
@@ -235,7 +239,7 @@ const Footer: React.FC = () => {
                 <span className="font-medium">ahqafcoder</span>
               </a>
             </Button>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </footer>

@@ -157,8 +157,8 @@ export default function Navbar({ isScrolled }: NavbarProps) {
 
               {/* Center: Enhanced Navigation with Smooth Scroll */}
               <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6">
-                <button onClick={() => smoothScrollTo('SIH')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
-                  ABOUT SIH
+                <button onClick={() => smoothScrollTo('Milestones')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
+                  ABOUT
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
                 </button>
                 <button onClick={() => smoothScrollTo('program')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
@@ -169,18 +169,18 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                   INSTRUCTIONS
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
                 </button>
-                <button onClick={() => smoothScrollTo('tracks')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
+                {/* <button onClick={() => smoothScrollTo('tracks')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
                   TRACKS
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-                </button>
+                </button> */}
                 <button onClick={() => smoothScrollTo('prizes')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
                   PRIZES
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
                 </button>
-                <button onClick={() => smoothScrollTo('team')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
+                {/* <button onClick={() => smoothScrollTo('team')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
                   TEAM
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-                </button>
+                </button> */}
                 <button onClick={() => smoothScrollTo('faq')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
                   FAQ&apos;S
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
