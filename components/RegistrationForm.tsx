@@ -15,7 +15,8 @@ interface TeamMember {
 interface FormData {
   track: 'open-innovation' | 'robowars' | 'both' | '';
   category: 'hardware' | 'software' | '';
-  problemStatement: string;
+  problemStatement: string[];
+  teamName: string;
   teamLead: TeamMember;
   members: TeamMember[];
 }
@@ -27,28 +28,50 @@ interface RegistrationFormProps {
 
 const problemStatements = {
   hardware: [
-    'IoT-based Smart Agriculture System',
-    'Renewable Energy Monitoring Device',
-    'Healthcare Wearable Technology',
-    'Disaster Management Hardware Solution',
-    'Smart Home Automation System',
+    'SIH25014 – Waste Segregation Monitoring',
+    'SIH25015 – Intelligent Pesticide Sprinkler',
+    'SIH25020 – Contactless Track Monitoring',
+    'SIH25021 – Laser QR Marking System',
+    'SIH25025 – E-tongue Sensor Device',
+    'SIH25051 – Renewable Energy Monitor',
+    'SIH25053 – Onion Storage Improvement System',
+    'SIH25054 – MCB Short-Circuit Tester',
+    'SIH25055 – Cable Prep Automation',
+    'SIH25056 – Gold Testing Alternative System',
+    'SIH25057 – Metrology Compliance Checker',
+    'SIH25058 – Tamper Detection in Instruments',
+    'SIH25062 – Smart Hilly Agriculture System',
+    'SIH25063 – Break Detection in AC Lines',
+    'SIH25064 – Grid Renewable Hosting Analyzer',
   ],
   software: [
-    'AI-powered Education Platform',
-    'Blockchain-based Supply Chain',
-    'Mental Health Support Application',
-    'Smart City Management System',
-    'Fintech Innovation Solution',
+    'SIH25008 – Disaster Preparedness Education Platform',
+    'SIH25009 – Gamified Environmental Education',
+    'SIH25010 – Smart Crop Advisory App',
+    'SIH25011 – Attendance & Activity App',
+    'SIH25012 – Rural School Attendance System',
+    'SIH25013 – Real-Time Public Transport Tracker',
+    'SIH25016 – Attendance Analytics Dashboard',
+    'SIH25017 – Alumni Engagement Portal',
+    'SIH25018 – Telemedicine Access Portal',
+    'SIH25019 – Rural Learning Platform',
+    'SIH25028 – Smart Classroom Scheduler',
+    'SIH25029 – Academia Validator',
+    'SIH25031 – Civic Issue Reporting Tool',
+    'SIH25026 – EMR API Integration',
+    'SIH25027 – Botanical Traceability Dashboard',
   ],
 };
 
 const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [showWarning, setShowWarning] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const [formData, setFormData] = useState<FormData>({
     track: '',
     category: '',
-    problemStatement: '',
+    problemStatement: [],
+    teamName: '',
     teamLead: { name: '', studentId: '', mobile: '', github: '', email: '' },
     members: Array(4).fill({ name: '', studentId: '', mobile: '', github: '', email: '' }),
   });
@@ -65,7 +88,8 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
     setFormData({
       track: '',
       category: '',
-      problemStatement: '',
+      problemStatement: [],
+      teamName: '',
       teamLead: { name: '', studentId: '', mobile: '', github: '', email: '' },
       members: Array(4).fill({ name: '', studentId: '', mobile: '', github: '', email: '' }),
     });
@@ -77,6 +101,70 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
   };
 
   const handleNext = () => {
+    // Clear previous errors
+    setErrors({});
+    
+    // Validate current step
+    const newErrors: Record<string, string> = {};
+    
+    if (currentStep === 1) {
+      // Step 1 validation
+      if (!formData.track) {
+        newErrors.track = 'Please select a track';
+      }
+      if (!formData.teamName.trim()) {
+        newErrors.teamName = 'Team name is required';
+      }
+      if (!formData.teamLead.name.trim()) {
+        newErrors.teamLeadName = 'Team lead name is required';
+      }
+      if (!formData.teamLead.studentId.trim()) {
+        newErrors.teamLeadStudentId = 'Student ID is required';
+      }
+      if (!formData.teamLead.mobile.trim()) {
+        newErrors.teamLeadMobile = 'Mobile number is required';
+      }
+      if (!formData.teamLead.email.trim()) {
+        newErrors.teamLeadEmail = 'Email is required';
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.teamLead.email)) {
+        newErrors.teamLeadEmail = 'Please enter a valid email';
+      }
+    } else if (currentStep === 2 && (formData.track === 'open-innovation' || formData.track === 'both')) {
+      // Step 2 validation for Open Innovation/Both
+      if (!formData.category) {
+        newErrors.category = 'Please select a category';
+      }
+      if (formData.problemStatement.length !== 3) {
+        newErrors.problemStatement = 'Please select exactly 3 problem statements';
+      }
+    } else if (currentStep >= (formData.track === 'open-innovation' || formData.track === 'both' ? 3 : 2)) {
+      // Team member validation
+      const memberIndex = formData.track === 'open-innovation' || formData.track === 'both' ? currentStep - 3 : currentStep - 2;
+      const member = formData.members[memberIndex];
+      
+      if (!member.name.trim()) {
+        newErrors[`member${memberIndex}Name`] = 'Name is required';
+      }
+      if (!member.studentId.trim()) {
+        newErrors[`member${memberIndex}StudentId`] = 'Student ID is required';
+      }
+      if (!member.mobile.trim()) {
+        newErrors[`member${memberIndex}Mobile`] = 'Mobile number is required';
+      }
+      if (!member.email.trim()) {
+        newErrors[`member${memberIndex}Email`] = 'Email is required';
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(member.email)) {
+        newErrors[`member${memberIndex}Email`] = 'Please enter a valid email';
+      }
+    }
+    
+    // If there are errors, don't proceed
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+    
+    // Proceed to next step
     if (currentStep < totalSteps) {
       setCurrentStep(currentStep + 1);
     }
@@ -84,14 +172,92 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
 
   const handlePrevious = () => {
     if (currentStep > 1) {
+      setErrors({}); // Clear errors when going back
       setCurrentStep(currentStep - 1);
     }
   };
 
-  const handleSubmit = () => {
-    console.log('Form submitted:', formData);
-    // TODO: Add submission logic
-    alert('Form submission functionality to be implemented');
+  const handleSubmit = async () => {
+    // Validate all fields one last time
+    const newErrors: Record<string, string> = {};
+    
+    // Check if all team members are filled
+    const memberIndex = formData.track === 'open-innovation' || formData.track === 'both' ? currentStep - 3 : currentStep - 2;
+    const member = formData.members[memberIndex];
+    
+    if (!member.name.trim()) newErrors[`member${memberIndex}Name`] = 'Name is required';
+    if (!member.studentId.trim()) newErrors[`member${memberIndex}StudentId`] = 'Student ID is required';
+    if (!member.mobile.trim()) newErrors[`member${memberIndex}Mobile`] = 'Mobile number is required';
+    if (!member.email.trim()) {
+      newErrors[`member${memberIndex}Email`] = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(member.email)) {
+      newErrors[`member${memberIndex}Email`] = 'Please enter a valid email';
+    }
+    
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    // Show loading state
+    const submitButton = document.querySelector('button[type="submit"]') as HTMLButtonElement;
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Submitting...';
+    }
+
+    try {
+      // Import the submission service
+      const { submitToGoogleSheets } = await import('@/lib/googleSheets');
+      
+      // Prepare data for submission
+      const submissionData = {
+        teamName: formData.teamName,
+        track: formData.track,
+        category: formData.category,
+        problemStatements: formData.problemStatement,
+        teamLead: formData.teamLead,
+        members: formData.members,
+        timestamp: new Date().toLocaleString('en-IN', { 
+          timeZone: 'Asia/Kolkata',
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        }),
+      };
+
+      // Submit to Google Sheets
+      const result = await submitToGoogleSheets(submissionData);
+
+      if (result.success) {
+        // Success - show success message
+        alert('🎉 Registration Successful!\n\nYour team has been registered for Inverthon 2.0. You will receive a confirmation email shortly.');
+        
+        // Reset form and close
+        confirmClose();
+      } else {
+        // Error - show error message
+        alert('❌ Submission Failed\n\n' + result.message + '\n\nPlease try again or contact support.');
+        
+        // Re-enable button
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = 'Submit Registration';
+        }
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('❌ An unexpected error occurred\n\nPlease check your internet connection and try again.');
+      
+      // Re-enable button
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Submit Registration';
+      }
+    }
   };
 
   const updateTeamLead = (field: keyof TeamMember, value: string) => {
@@ -134,7 +300,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
             >
               <X className="w-6 h-6" />
             </button>
-            <h2 className="text-3xl font-bold text-white mb-2">Hackbhoomi Registration</h2>
+            <h2 className="text-3xl font-bold text-white mb-2">Inverthon Registration</h2>
             <p className="text-indigo-100">Join the innovation revolution</p>
             
             {/* Progress Bar */}
@@ -177,10 +343,15 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
                         ].map((track) => (
                           <button
                             key={track.value}
-                            onClick={() => setFormData({ ...formData, track: track.value as any })}
+                            onClick={() => {
+                              setFormData({ ...formData, track: track.value as any });
+                              setErrors({ ...errors, track: '' });
+                            }}
                             className={`p-4 rounded-xl border-2 transition-all ${
                               formData.track === track.value
                                 ? 'border-indigo-600 bg-indigo-50 shadow-lg scale-105'
+                                : errors.track
+                                ? 'border-red-300 hover:border-red-400'
                                 : 'border-gray-200 hover:border-indigo-300 hover:bg-gray-50'
                             }`}
                           >
@@ -189,7 +360,29 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
                           </button>
                         ))}
                       </div>
+                      {errors.track && (
+                        <p className="mt-2 text-sm text-red-600 flex items-center">
+                          <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                          </svg>
+                          {errors.track}
+                        </p>
+                      )}
                     </div>
+
+                    {/* Team Name */}
+                    <InputField
+                      icon={<User />}
+                      label="Team Name"
+                      required
+                      value={formData.teamName}
+                      onChange={(e) => {
+                        setFormData({ ...formData, teamName: e.target.value });
+                        setErrors({ ...errors, teamName: '' });
+                      }}
+                      placeholder="Enter your team name"
+                      error={errors.teamName}
+                    />
 
                     {/* Team Lead Details */}
                     <div className="space-y-4">
@@ -198,16 +391,24 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
                         label="Team Lead Name"
                         required
                         value={formData.teamLead.name}
-                        onChange={(e) => updateTeamLead('name', e.target.value)}
+                        onChange={(e) => {
+                          updateTeamLead('name', e.target.value);
+                          setErrors({ ...errors, teamLeadName: '' });
+                        }}
                         placeholder="Enter full name"
+                        error={errors.teamLeadName}
                       />
                       <InputField
                         icon={<Hash />}
                         label="Student ID"
                         required
                         value={formData.teamLead.studentId}
-                        onChange={(e) => updateTeamLead('studentId', e.target.value)}
+                        onChange={(e) => {
+                          updateTeamLead('studentId', e.target.value);
+                          setErrors({ ...errors, teamLeadStudentId: '' });
+                        }}
                         placeholder="Enter student ID"
+                        error={errors.teamLeadStudentId}
                       />
                       <InputField
                         icon={<Phone />}
@@ -215,8 +416,12 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
                         required
                         type="tel"
                         value={formData.teamLead.mobile}
-                        onChange={(e) => updateTeamLead('mobile', e.target.value)}
+                        onChange={(e) => {
+                          updateTeamLead('mobile', e.target.value);
+                          setErrors({ ...errors, teamLeadMobile: '' });
+                        }}
                         placeholder="+91 XXXXX XXXXX"
+                        error={errors.teamLeadMobile}
                       />
                       <InputField
                         icon={<Mail />}
@@ -224,8 +429,12 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
                         required
                         type="email"
                         value={formData.teamLead.email}
-                        onChange={(e) => updateTeamLead('email', e.target.value)}
+                        onChange={(e) => {
+                          updateTeamLead('email', e.target.value);
+                          setErrors({ ...errors, teamLeadEmail: '' });
+                        }}
                         placeholder="email@example.com"
+                        error={errors.teamLeadEmail}
                       />
                       <InputField
                         icon={<Github />}
@@ -255,7 +464,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
                         ].map((cat) => (
                           <button
                             key={cat.value}
-                            onClick={() => setFormData({ ...formData, category: cat.value as any, problemStatement: '' })}
+                            onClick={() => setFormData({ ...formData, category: cat.value as any, problemStatement: [] })}
                             className={`p-6 rounded-xl border-2 transition-all ${
                               formData.category === cat.value
                                 ? 'border-purple-600 bg-purple-50 shadow-lg scale-105'
@@ -275,32 +484,59 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                       >
-                        <label className="block text-sm font-semibold text-gray-700 mb-3">
-                          Choose Problem Statement <span className="text-red-500">*</span>
-                        </label>
+                        <div className="mb-3">
+                          <label className="block text-sm font-semibold text-gray-700 mb-1">
+                            Choose any THREE Problem Statements <span className="text-red-500">*</span>
+                          </label>
+                          <p className="text-xs text-gray-500">
+                            Selected: {formData.problemStatement.length} / 3
+                          </p>
+                        </div>
                         <div className="space-y-2">
-                          {problemStatements[formData.category].map((ps, index) => (
-                            <button
-                              key={index}
-                              onClick={() => setFormData({ ...formData, problemStatement: ps })}
-                              className={`w-full p-4 rounded-lg border-2 text-left transition-all ${
-                                formData.problemStatement === ps
-                                  ? 'border-indigo-600 bg-indigo-50 shadow-md'
-                                  : 'border-gray-200 hover:border-indigo-300 hover:bg-gray-50'
-                              }`}
-                            >
-                              <div className="flex items-center">
-                                <div className={`w-5 h-5 rounded-full border-2 mr-3 flex items-center justify-center ${
-                                  formData.problemStatement === ps ? 'border-indigo-600 bg-indigo-600' : 'border-gray-300'
-                                }`}>
-                                  {formData.problemStatement === ps && (
-                                    <div className="w-2 h-2 bg-white rounded-full" />
-                                  )}
+                          {problemStatements[formData.category].map((ps, index) => {
+                            const isSelected = formData.problemStatement.includes(ps);
+                            const canSelect = formData.problemStatement.length < 3 || isSelected;
+                            
+                            return (
+                              <button
+                                key={index}
+                                onClick={() => {
+                                  if (isSelected) {
+                                    setFormData({
+                                      ...formData,
+                                      problemStatement: formData.problemStatement.filter(p => p !== ps)
+                                    });
+                                  } else if (formData.problemStatement.length < 3) {
+                                    setFormData({
+                                      ...formData,
+                                      problemStatement: [...formData.problemStatement, ps]
+                                    });
+                                  }
+                                }}
+                                disabled={!canSelect}
+                                className={`w-full p-4 rounded-lg border-2 text-left transition-all ${
+                                  isSelected
+                                    ? 'border-indigo-600 bg-indigo-50 shadow-md'
+                                    : canSelect
+                                    ? 'border-gray-200 hover:border-indigo-300 hover:bg-gray-50'
+                                    : 'border-gray-200 bg-gray-100 opacity-50 cursor-not-allowed'
+                                }`}
+                              >
+                                <div className="flex items-center">
+                                  <div className={`w-5 h-5 rounded border-2 mr-3 flex items-center justify-center flex-shrink-0 ${
+                                    isSelected ? 'border-indigo-600 bg-indigo-600' : 'border-gray-300'
+                                  }`}>
+                                    {isSelected && (
+                                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                      </svg>
+                                    )}
+                                  </div>
+                                  <span className="font-medium text-gray-800">{ps}</span>
                                 </div>
-                                <span className="font-medium text-gray-800">{ps}</span>
-                              </div>
-                            </button>
-                          ))}
+                              </button>
+                            );
+                          })}
                         </div>
                       </motion.div>
                     )}
@@ -324,7 +560,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
                         ].map((cat) => (
                           <button
                             key={cat.value}
-                            onClick={() => setFormData({ ...formData, category: cat.value as any, problemStatement: '' })}
+                            onClick={() => setFormData({ ...formData, category: cat.value as any, problemStatement: [] })}
                             className={`p-6 rounded-xl border-2 transition-all ${
                               formData.category === cat.value
                                 ? 'border-purple-600 bg-purple-50 shadow-lg scale-105'
@@ -344,32 +580,59 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                       >
-                        <label className="block text-sm font-semibold text-gray-700 mb-3">
-                          Choose Problem Statement <span className="text-red-500">*</span>
-                        </label>
+                        <div className="mb-3">
+                          <label className="block text-sm font-semibold text-gray-700 mb-1">
+                            Choose any THREE Problem Statements <span className="text-red-500">*</span>
+                          </label>
+                          <p className="text-xs text-gray-500">
+                            Selected: {formData.problemStatement.length} / 3
+                          </p>
+                        </div>
                         <div className="space-y-2">
-                          {problemStatements[formData.category].map((ps, index) => (
-                            <button
-                              key={index}
-                              onClick={() => setFormData({ ...formData, problemStatement: ps })}
-                              className={`w-full p-4 rounded-lg border-2 text-left transition-all ${
-                                formData.problemStatement === ps
-                                  ? 'border-indigo-600 bg-indigo-50 shadow-md'
-                                  : 'border-gray-200 hover:border-indigo-300 hover:bg-gray-50'
-                              }`}
-                            >
-                              <div className="flex items-center">
-                                <div className={`w-5 h-5 rounded-full border-2 mr-3 flex items-center justify-center ${
-                                  formData.problemStatement === ps ? 'border-indigo-600 bg-indigo-600' : 'border-gray-300'
-                                }`}>
-                                  {formData.problemStatement === ps && (
-                                    <div className="w-2 h-2 bg-white rounded-full" />
-                                  )}
+                          {problemStatements[formData.category].map((ps, index) => {
+                            const isSelected = formData.problemStatement.includes(ps);
+                            const canSelect = formData.problemStatement.length < 3 || isSelected;
+                            
+                            return (
+                              <button
+                                key={index}
+                                onClick={() => {
+                                  if (isSelected) {
+                                    setFormData({
+                                      ...formData,
+                                      problemStatement: formData.problemStatement.filter(p => p !== ps)
+                                    });
+                                  } else if (formData.problemStatement.length < 3) {
+                                    setFormData({
+                                      ...formData,
+                                      problemStatement: [...formData.problemStatement, ps]
+                                    });
+                                  }
+                                }}
+                                disabled={!canSelect}
+                                className={`w-full p-4 rounded-lg border-2 text-left transition-all ${
+                                  isSelected
+                                    ? 'border-indigo-600 bg-indigo-50 shadow-md'
+                                    : canSelect
+                                    ? 'border-gray-200 hover:border-indigo-300 hover:bg-gray-50'
+                                    : 'border-gray-200 bg-gray-100 opacity-50 cursor-not-allowed'
+                                }`}
+                              >
+                                <div className="flex items-center">
+                                  <div className={`w-5 h-5 rounded border-2 mr-3 flex items-center justify-center flex-shrink-0 ${
+                                    isSelected ? 'border-indigo-600 bg-indigo-600' : 'border-gray-300'
+                                  }`}>
+                                    {isSelected && (
+                                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                      </svg>
+                                    )}
+                                  </div>
+                                  <span className="font-medium text-gray-800">{ps}</span>
                                 </div>
-                                <span className="font-medium text-gray-800">{ps}</span>
-                              </div>
-                            </button>
-                          ))}
+                              </button>
+                            );
+                          })}
                         </div>
                       </motion.div>
                     )}
@@ -530,6 +793,7 @@ interface InputFieldProps {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder: string;
+  error?: string;
 }
 
 const InputField: React.FC<InputFieldProps> = ({
@@ -540,6 +804,7 @@ const InputField: React.FC<InputFieldProps> = ({
   value,
   onChange,
   placeholder,
+  error,
 }) => {
   return (
     <div>
@@ -555,10 +820,22 @@ const InputField: React.FC<InputFieldProps> = ({
           value={value}
           onChange={onChange}
           placeholder={placeholder}
-          className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all"
+          className={`w-full pl-10 pr-4 py-3 border-2 rounded-lg focus:ring-2 outline-none transition-all ${
+            error
+              ? 'border-red-500 focus:border-red-500 focus:ring-red-200'
+              : 'border-gray-200 focus:border-indigo-500 focus:ring-indigo-200'
+          }`}
           required={required}
         />
       </div>
+      {error && (
+        <p className="mt-1 text-sm text-red-600 flex items-center">
+          <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+          </svg>
+          {error}
+        </p>
+      )}
     </div>
   );
 };

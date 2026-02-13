@@ -45,16 +45,15 @@ const openInnovationTracks = {
     description: "Build innovative software solutions using cutting-edge technologies to solve real-world problems",
     highlights: [
       { icon: Code, label: "Tech Stack", value: "Any Technology", color: "text-blue-600" },
-      { icon: Users, label: "Team Size", value: "3-6 Members", color: "text-purple-600" },
+      { icon: Users, label: "Team Size", value: "5 Members", color: "text-purple-600" },
       { icon: Clock, label: "Duration", value: "24 Hours", color: "text-green-600" },
       { icon: Award, label: "Prizes", value: "₹25K+", color: "text-orange-600" }
     ],
     instructions: [
-      "Form a team of 3-6 members with diverse skills (developers, designers, presenters)",
-      "Browse and select a problem statement from the past year SIH problem statements",
-      "Choose your preferred technology stack (Web, Mobile, AI/ML, Blockchain, etc.)",
+      "Form a team of 5 members with diverse skills (developers, designers, presenters)",
+      "Browse and select a problem statement from the mentioned SIH problem statements",
       "Prepare your development environment and required tools before the event",
-      "Build a working prototype/MVP within the 24-hour hackathon duration",
+      "Build a working prototype/MVP prior to the hackathon day",
       "Create a compelling pitch deck explaining your solution's impact and feasibility",
       "Present your solution to judges with a live demo"
     ],
@@ -74,13 +73,13 @@ const openInnovationTracks = {
     description: "Design and build hardware prototypes combining electronics, IoT, and embedded systems",
     highlights: [
       { icon: Wrench, label: "Components", value: "Provided", color: "text-orange-600" },
-      { icon: Users, label: "Team Size", value: "3-6 Members", color: "text-purple-600" },
+      { icon: Users, label: "Team Size", value: "5 Members", color: "text-purple-600" },
       { icon: Clock, label: "Duration", value: "24 Hours", color: "text-green-600" },
       { icon: Award, label: "Prizes", value: "₹25K+", color: "text-red-600" }
     ],
     instructions: [
-      "Form a team of 3-6 members with hardware and software expertise",
-      "Select a hardware-focused problem statement from past SIH challenges",
+      "Form a team of 5 members with hardware and software expertise",
+      "Select a hardware-focused problem statement from mentioned SIH challenges",
       "Plan your prototype using Arduino, Raspberry Pi, ESP32, or similar platforms",
       "Bring your own basic components; additional components will be available",
       "Integrate sensors, actuators, and IoT connectivity as needed",
@@ -105,27 +104,26 @@ const roboWarsCompetitions = {
     glowColor: "shadow-red-500/25",
     description: "An intense battle where robocars compete to pop opponents' balloons while protecting their own",
     highlights: [
-      { icon: Bot, label: "Robot Type", value: "Wired/Wireless", color: "text-red-600" },
-      { icon: Users, label: "Team Size", value: "2-4 Members", color: "text-purple-600" },
+      { icon: Bot, label: "Robot Type", value: "Wireless", color: "text-red-600" },
+      { icon: Users, label: "Team Size", value: "5 Members", color: "text-purple-600" },
       { icon: Zap, label: "Arena", value: "Battle Zone", color: "text-yellow-600" },
       { icon: Trophy, label: "Format", value: "Elimination", color: "text-green-600" }
     ],
     instructions: [
-      "Build a robocar with balloon mount attachment at the rear",
-      "Each robot will have a balloon mounted on a designated spot",
-      "Robots compete in 1v1 or multi-robot battle rounds",
-      "The objective is to pop opponents' balloons using your robot",
+      "Build a robocar with balloon mount attachment at the rear and a spike in front",
+      "Each robot will have a balloon mounted on a designated spot ",
+      "% Robots will be fighting in a particular round",
+      "The objective is to pop opponents' balloons using your robot and defend yours",
       "Robot whose balloon gets popped is eliminated from the round",
       "Last robot standing with intact balloon wins the round",
+      "No robots will be qualified in case of multiple robots after the deadline (5 minutes)",
       "Finals will be a knockout tournament format"
     ],
     rules: [
       "Robot dimensions: Max 30cm x 30cm x 30cm (excluding balloon mount)",
       "Weight limit: Maximum 3kg including all attachments",
       "Balloon position and mount specifications will be standardized",
-      "No sharp/dangerous weapons - only pushing/bumping mechanisms allowed",
-      "Remote control must be wired or wireless (2.4GHz)",
-      "Battery voltage must not exceed 24V DC",
+      "Remote control must be wireless",
       "Intentional damage to arena or safety violations = disqualification"
     ],
     specifications: [
@@ -143,7 +141,7 @@ const roboWarsCompetitions = {
     description: "Navigate your robocar through a challenging obstacle course to reach the destination in minimum time",
     highlights: [
       { icon: Bot, label: "Robot Type", value: "Autonomous/Manual", color: "text-green-600" },
-      { icon: Users, label: "Team Size", value: "2-4 Members", color: "text-purple-600" },
+      { icon: Users, label: "Team Size", value: "5 Members", color: "text-purple-600" },
       { icon: Route, label: "Course", value: "Multi-Level", color: "text-blue-600" },
       { icon: Clock, label: "Format", value: "Time Trial", color: "text-orange-600" }
     ],
@@ -523,6 +521,55 @@ export default function Instructions() {
                 </div>
               </CardContent>
             </Card>
+
+            {/* Reference Images - Only for Balloon Pop */}
+            {activeRoboWars === "balloon-pop" && (
+              <Card className="bg-white/40 backdrop-blur-xl border-white/30 overflow-hidden">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-lg sm:text-xl text-gray-900 flex items-center gap-2">
+                    <Target className="w-5 h-5 text-indigo-600" />
+                    Reference Images
+                  </CardTitle>
+                  <p className="text-sm text-gray-600 mt-1">Visual guide for balloon mounting and robot setup</p>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="relative group">
+                      <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-pink-500/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                      <div className="relative bg-white/60 backdrop-blur-sm rounded-lg overflow-hidden border-2 border-white/40 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <img 
+                          src="/balloon-pop/1.jpg" 
+                          alt="Balloon Pop Reference 1 - Robot setup with balloon mount"
+                          className="w-full h-auto object-cover"
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                          <p className="text-white text-sm font-medium">Reference Setup 1</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="relative group">
+                      <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-pink-500/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                      <div className="relative bg-white/60 backdrop-blur-sm rounded-lg overflow-hidden border-2 border-white/40 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <img 
+                          src="/balloon-pop/2.jpg" 
+                          alt="Balloon Pop Reference 2 - Arena and competition setup"
+                          className="w-full h-auto object-cover"
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                          <p className="text-white text-sm font-medium">Reference Setup 2</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-4 p-3 bg-blue-50/50 backdrop-blur-sm border border-blue-100/50 rounded-lg">
+                    <p className="text-sm text-gray-700 flex items-start gap-2">
+                      <Sparkles className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span>These images show example setups. Your robot design may vary, but must follow the specified dimensions and rules.</span>
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
           </div>
         )}
 

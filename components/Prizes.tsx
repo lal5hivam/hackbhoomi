@@ -12,24 +12,24 @@ const Prizes: React.FC = () => {
       title: 'Software Track',
       prizes: [
         { place: '1st Place', amount: '₹15,000', label: 'WINNER', color: 'yellow' },
-        { place: '2nd Place', amount: '₹5,000', label: 'RUNNER-UP', color: 'gray' },
-        { place: '3rd Place', amount: '₹2,000', label: '2ND RUNNER-UP', color: 'orange' },
+        { place: '2nd Place', amount: '₹5,100', label: 'RUNNER-UP', color: 'gray' },
+        { place: '3rd Place', amount: '₹2,100', label: '2ND RUNNER-UP', color: 'orange' },
       ],
     },
     hardware: {
       title: 'Hardware Track',
       prizes: [
         { place: '1st Place', amount: '₹15,000', label: 'WINNER', color: 'yellow' },
-        { place: '2nd Place', amount: '₹5,000', label: 'RUNNER-UP', color: 'gray' },
-        { place: '3rd Place', amount: '₹2,000', label: '2ND RUNNER-UP', color: 'orange' },
+        { place: '2nd Place', amount: '₹5,100', label: 'RUNNER-UP', color: 'gray' },
+        { place: '3rd Place', amount: '₹2,100', label: '2ND RUNNER-UP', color: 'orange' },
       ],
     },
     robowars: {
       title: 'RoboWars Track',
       prizes: [
         { place: '1st Place', amount: '₹15,000', label: 'WINNER', color: 'yellow' },
-        { place: '2nd Place', amount: '₹5,000', label: 'RUNNER-UP', color: 'gray' },
-        { place: '3rd Place', amount: '₹2,000', label: '2ND RUNNER-UP', color: 'orange' },
+        { place: '2nd Place', amount: '₹5,100', label: 'RUNNER-UP', color: 'gray' },
+        { place: '3rd Place', amount: '₹2,100', label: '2ND RUNNER-UP', color: 'orange' },
       ],
     },
   };
