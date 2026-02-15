@@ -193,7 +193,7 @@ const Footer: React.FC<FooterProps> = ({ onRegisterClick }) => {
           </motion.div>
 
           {/* Newsletter Signup */}
-          <motion.div variants={itemVariants}>
+          {/* <motion.div variants={itemVariants}>
             <h3 className="text-base font-semibold text-white mb-3">Stay Updated</h3>
             <p className="text-white/80 text-sm mb-3">
               Subscribe for Inverthon updates and event news.
@@ -212,7 +212,7 @@ const Footer: React.FC<FooterProps> = ({ onRegisterClick }) => {
                 Subscribe
               </Button>
             </form>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
         {/* Copyright and Developer Credit */}

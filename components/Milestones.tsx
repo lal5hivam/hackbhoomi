@@ -96,7 +96,7 @@ export default function Milestones() {
               </p>
               
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
-                Over the course of <span className="font-semibold text-orange-400">2-Days</span>, teams will conceptualize, design, and develop solutions to challenging problems. Whether you&apos;re into software development, hardware hacking, design, or entrepreneurship, Inverthon has something for everyone.
+                Over the course of <span className="font-semibold text-orange-400">3-Days</span>, teams will conceptualize, design, and develop solutions to challenging problems. Whether you&apos;re into software development, hardware hacking, design, or entrepreneurship, Inverthon has something for everyone.
               </p>
               
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
@@ -110,7 +110,7 @@ export default function Milestones() {
                 <div className="flex items-center justify-center mb-2">
                   <Clock className="w-5 h-5 text-orange-400" />
                 </div>
-                <div className="text-xl sm:text-2xl font-bold text-white">2-Day</div>
+                <div className="text-xl sm:text-2xl font-bold text-white">3-Days</div>
                 <div className="text-xs sm:text-sm text-blue-200/70">Non-Stop Hacking</div>
               </div>
               <div className="text-center">

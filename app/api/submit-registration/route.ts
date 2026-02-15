@@ -52,18 +52,13 @@ export async function POST(request: NextRequest) {
       data.member4Mobile,
       data.member4Email,
       data.member4Github,
-      data.member5Name,
-      data.member5StudentId,
-      data.member5Mobile,
-      data.member5Email,
-      data.member5Github,
       data.timestamp,
     ];
 
     // Append data to sheet
     await sheets.spreadsheets.values.append({
       spreadsheetId: SPREADSHEET_ID,
-      range: `${SHEET_NAME}!A:AF`,
+      range: `${SHEET_NAME}!A:AA`,
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [rowData],

@@ -64,13 +64,6 @@ export async function submitToGoogleSheets(data: RegistrationData): Promise<{ su
       member4Email: data.members[2]?.email || 'N/A',
       member4Github: data.members[2]?.github || 'N/A',
       
-      // Member 5
-      member5Name: data.members[3]?.name || 'N/A',
-      member5StudentId: data.members[3]?.studentId || 'N/A',
-      member5Mobile: data.members[3]?.mobile || 'N/A',
-      member5Email: data.members[3]?.email || 'N/A',
-      member5Github: data.members[3]?.github || 'N/A',
-      
       // Metadata
       timestamp: data.timestamp,
     };

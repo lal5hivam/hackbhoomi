@@ -16,24 +16,31 @@ import {
 const events = [
   {
     title: "Registration Opens",
-    date: "Coming Soon.....",
+    date: "16th Feb",
     desc: "The race begins — Register, Team Up, Get Set & Ideate!",
     icon: UserPlus,
     color: "bg-blue-500"
   },
   {
     title: "Mentorship Sessions",
-    date: "Coming Soon.....",
+    date: "Ungoing",
     desc: "Get expert guidance regarding your ideas and solutions!",
     icon: Users,
     color: "bg-yellow-500"
   },
   {
     title: "Registration Deadline",
-    date: "Coming Soon.....",
+    date: "25th Feb",
     desc: "Get ready to innovate — Last chance to register!",
     icon: Clock,
     color: "bg-red-500"
+  },
+  {
+    title: "Problem Statement Allotment",
+    date: "Coming Soon.....",
+    desc: "Prepare your Idea PPT on the alloted PS!",
+    icon: Trophy,
+    color: "bg-purple-500"
   },
   {
     title: "Idea Submission Deadline",
@@ -43,15 +50,8 @@ const events = [
     color: "bg-green-500"
   },
   {
-    title: "Shortlisted Teams Announcement",
-    date: "Coming Soon.....",
-    desc: "And the chosen ones are... Meet the finalists!",
-    icon: Trophy,
-    color: "bg-purple-500"
-  },
-  {
     title: "HACKATHON DAY - INVERTHON 2.0",
-    date: "14-14th March",
+    date: "14-16th March",
     desc: "Let the hacking begin! Build, code and create!",
     icon: Rocket,
     color: "bg-orange-500"
@@ -103,7 +103,7 @@ export default function Timeline() {
                             </Badge>
                           )}
                         </div>
-                      </div>
+                      </div> 
                       <p className="text-gray-300 leading-relaxed">{event.desc}</p>
                     </CardContent>
                   </Card>

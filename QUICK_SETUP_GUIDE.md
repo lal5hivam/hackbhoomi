@@ -12,7 +12,7 @@ npm install googleapis
 **Copy the template headers to your Google Sheet:**
 
 ```
-Team Name | Track | Category | Problem Statement 1 | Problem Statement 2 | Problem Statement 3 | Team Lead Name | Team Lead Student ID | Team Lead Mobile | Team Lead Email | Team Lead GitHub | Member 2 Name | Member 2 Student ID | Member 2 Mobile | Member 2 Email | Member 2 GitHub | Member 3 Name | Member 3 Student ID | Member 3 Mobile | Member 3 Email | Member 3 GitHub | Member 4 Name | Member 4 Student ID | Member 4 Mobile | Member 4 Email | Member 4 GitHub | Member 5 Name | Member 5 Student ID | Member 5 Mobile | Member 5 Email | Member 5 GitHub | Timestamp
+Team Name | Track | Category | Problem Statement 1 | Problem Statement 2 | Problem Statement 3 | Team Lead Name | Team Lead Student ID | Team Lead Mobile | Team Lead Email | Team Lead GitHub | Member 2 Name | Member 2 Student ID | Member 2 Mobile | Member 2 Email | Member 2 GitHub | Member 3 Name | Member 3 Student ID | Member 3 Mobile | Member 3 Email | Member 3 GitHub | Member 4 Name | Member 4 Student ID | Member 4 Mobile | Member 4 Email | Member 4 GitHub | Timestamp
 ```
 
 Or import the `GOOGLE_SHEETS_TEMPLATE.csv` file into your Google Sheet.

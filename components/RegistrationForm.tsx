@@ -66,6 +66,10 @@ const problemStatements = {
 const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [showWarning, setShowWarning] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [showErrorModal, setShowErrorModal] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [formData, setFormData] = useState<FormData>({
     track: '',
@@ -73,10 +77,10 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
     problemStatement: [],
     teamName: '',
     teamLead: { name: '', studentId: '', mobile: '', github: '', email: '' },
-    members: Array(4).fill({ name: '', studentId: '', mobile: '', github: '', email: '' }),
+    members: Array(3).fill({ name: '', studentId: '', mobile: '', github: '', email: '' }),
   });
 
-  const totalSteps = formData.track === 'open-innovation' ? 7 : formData.track === 'robowars' ? 6 : formData.track === 'both' ? 7 : 1;
+  const totalSteps = formData.track === 'open-innovation' ? 6 : formData.track === 'robowars' ? 5 : formData.track === 'both' ? 6 : 1;
 
   const handleClose = () => {
     setShowWarning(true);
@@ -91,7 +95,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
       problemStatement: [],
       teamName: '',
       teamLead: { name: '', studentId: '', mobile: '', github: '', email: '' },
-      members: Array(4).fill({ name: '', studentId: '', mobile: '', github: '', email: '' }),
+      members: Array(3).fill({ name: '', studentId: '', mobile: '', github: '', email: '' }),
     });
     onClose();
   };
@@ -200,11 +204,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
     }
 
     // Show loading state
-    const submitButton = document.querySelector('button[type="submit"]') as HTMLButtonElement;
-    if (submitButton) {
-      submitButton.disabled = true;
-      submitButton.textContent = 'Submitting...';
-    }
+    setIsSubmitting(true);
 
     try {
       // Import the submission service
@@ -232,32 +232,31 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
       // Submit to Google Sheets
       const result = await submitToGoogleSheets(submissionData);
 
+      setIsSubmitting(false);
+
       if (result.success) {
-        // Success - show success message
-        alert('🎉 Registration Successful!\n\nYour team has been registered for Inverthon 2.0. You will receive a confirmation email shortly.');
-        
-        // Reset form and close
-        confirmClose();
+        // Show success modal
+        setShowSuccessModal(true);
       } else {
-        // Error - show error message
-        alert('❌ Submission Failed\n\n' + result.message + '\n\nPlease try again or contact support.');
-        
-        // Re-enable button
-        if (submitButton) {
-          submitButton.disabled = false;
-          submitButton.textContent = 'Submit Registration';
-        }
+        // Show error modal
+        setErrorMessage(result.message);
+        setShowErrorModal(true);
       }
     } catch (error) {
       console.error('Submission error:', error);
-      alert('❌ An unexpected error occurred\n\nPlease check your internet connection and try again.');
-      
-      // Re-enable button
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.textContent = 'Submit Registration';
-      }
+      setIsSubmitting(false);
+      setErrorMessage('An unexpected error occurred. Please check your internet connection and try again.');
+      setShowErrorModal(true);
     }
+  };
+
+  const handleSuccessClose = () => {
+    setShowSuccessModal(false);
+    confirmClose();
+  };
+
+  const handleErrorClose = () => {
+    setShowErrorModal(false);
   };
 
   const updateTeamLead = (field: keyof TeamMember, value: string) => {
@@ -727,13 +726,154 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
             ) : (
               <button
                 onClick={handleSubmit}
-                className="px-8 py-3 rounded-lg font-semibold bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl"
+                disabled={isSubmitting}
+                className={`px-8 py-3 rounded-lg font-semibold transition-all shadow-lg ${
+                  isSubmitting
+                    ? 'bg-gray-400 text-gray-200 cursor-not-allowed'
+                    : 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 hover:shadow-xl'
+                }`}
               >
-                Submit Registration
+                {isSubmitting ? 'Submitting...' : 'Submit Registration'}
               </button>
             )}
           </div>
         </motion.div>
+
+        {/* Loading Overlay */}
+        <AnimatePresence>
+          {isSubmitting && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 rounded-2xl"
+            >
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                className="bg-white rounded-2xl p-8 shadow-2xl text-center max-w-sm"
+              >
+                <div className="relative w-20 h-20 mx-auto mb-4">
+                  <motion.div
+                    className="absolute inset-0 border-4 border-indigo-200 rounded-full"
+                  />
+                  <motion.div
+                    className="absolute inset-0 border-4 border-indigo-600 rounded-full border-t-transparent"
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Submitting Registration</h3>
+                <p className="text-gray-600">Please wait while we process your registration...</p>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Success Modal */}
+        <AnimatePresence>
+          {showSuccessModal && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-black/70 flex items-center justify-center p-4 z-50 rounded-2xl"
+              onClick={handleSuccessClose}
+            >
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0, y: 20 }}
+                animate={{ scale: 1, opacity: 1, y: 0 }}
+                exit={{ scale: 0.8, opacity: 0, y: 20 }}
+                transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                className="bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="text-center">
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
+                    className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+                  >
+                    <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <motion.path
+                        initial={{ pathLength: 0 }}
+                        animate={{ pathLength: 1 }}
+                        transition={{ delay: 0.3, duration: 0.5 }}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </motion.div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Registration Successful! 🎉</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Your team has been successfully registered for Inverthon 2.0. 
+                    You will receive a confirmation email shortly with further details.
+                  </p>
+                  <button
+                    onClick={handleSuccessClose}
+                    className="w-full px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl"
+                  >
+                    Close
+                  </button>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Error Modal */}
+        <AnimatePresence>
+          {showErrorModal && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-black/70 flex items-center justify-center p-4 z-50 rounded-2xl"
+              onClick={handleErrorClose}
+            >
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0, y: 20 }}
+                animate={{ scale: 1, opacity: 1, y: 0 }}
+                exit={{ scale: 0.8, opacity: 0, y: 20 }}
+                transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                className="bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Submission Failed</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    {errorMessage}
+                  </p>
+                  <div className="flex gap-3">
+                    <button
+                      onClick={handleErrorClose}
+                      className="flex-1 px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-300 transition-colors"
+                    >
+                      Close
+                    </button>
+                    <button
+                      onClick={() => {
+                        handleErrorClose();
+                        handleSubmit();
+                      }}
+                      className="flex-1 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg"
+                    >
+                      Try Again
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Warning Modal */}
         <AnimatePresence>

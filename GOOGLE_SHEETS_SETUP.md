@@ -34,12 +34,7 @@ Create a new Google Sheet or use your existing "Inverthon" sheet and add the fol
 | X | Member 4 Mobile | Phone number |
 | Y | Member 4 Email | Email address |
 | Z | Member 4 GitHub | GitHub username |
-| AA | Member 5 Name | Full name |
-| AB | Member 5 Student ID | Student ID |
-| AC | Member 5 Mobile | Phone number |
-| AD | Member 5 Email | Email address |
-| AE | Member 5 GitHub | GitHub username |
-| AF | Timestamp | Submission date/time |
+| AA | Timestamp | Submission date/time |
 
 ## Step 2: Create Google Cloud Project & Service Account
 
