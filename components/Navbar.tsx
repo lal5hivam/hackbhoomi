@@ -60,94 +60,97 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
           {/* Desktop Layout (when NOT scrolled) - Enhanced */}
           {!isScrolled && (
             <>
-              {/* Left Section: Empty spacer for balance */}
-              <div className="flex-1"></div>
-
-              {/* Center Section: Partner Logos */}
-              <div className="flex items-center justify-center space-x-4 lg:space-x-6">
-                
-                <button
-                  onClick={() => window.open("https://invertisincubation.com/", "_blank")}
-                  className="group"
+              {/* Left Section: Logo and University Name */}
+              <div className="flex items-center space-x-3 sm:space-x-4">
+                <Image
+                  src="/invert.png"
+                  alt="Inverthon Logo"
+                  width={40}
+                  height={40}
+                  className="h-8 w-auto sm:h-10"
+                  priority
+                />
+                <div
+                  className="flex items-center space-x-1 sm:space-x-2 cursor-pointer group"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 >
-                  <Image
-                    src="/images/abhiruchi.png"
-                    alt="Abhiruchi Incubation Center - Innovation and startup support"
-                    width={120}
-                    height={36}
-                    className="h-6 sm:h-8 lg:h-9 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
-                    priority
-                  />
-                </button>
-                <button
-                  onClick={() => window.open("https://invertisincubation.com/", "_blank")}
-                  className="group"
-                >
-                  <Image
-                    src="/itech-club.png"
-                    alt="iTech - The technical club of Invertis University, fostering innovation and technical skills"
-                    width={120}
-                    height={36}
-                    className="h-6 sm:h-8 lg:h-9 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
-                    priority
-                  />
-                </button>
-                <button
-                  onClick={() => window.open("https://www.invertisuniversity.ac.in/", "_blank")}
-                  className="group"
-                >
-                  <Image
-                    src="/invertis-logo.png"
-                    alt="Invertis University - Official university logo"
-                    width={180}
-                    height={54}
-                    className="h-12 sm:h-15 lg:h-16 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
-                    priority
-                  />
-                </button>
-                <button
-                  onClick={() => window.open("https://invertisincubation.com/", "_blank")}
-                  className="group"
-                >
-                  <Image
-                    src="/images/incub.png"
-                    alt="Incubation Center - Innovation and startup support"
-                    width={120}
-                    height={36}
-                    className="h-6 sm:h-8 lg:h-9 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
-                    priority
-                  />
-                </button>
-                
-                <button
-                  onClick={() => window.open("https://startinup.up.gov.in/", "_blank")}
-                  className="group"
-                >
-                  <Image
-                    src="/StartInUP.png"
-                    alt="Smart India Hackathon - Official government initiative logo"
-                    width={120}
-                    height={36}
-                    className="h-6 sm:h-8 lg:h-9 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
-                    loading="lazy"
-                  />
-                </button>
+                  <h1 className="text-sm sm:text-xl lg:text-2xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors">INVERTIS UNIVERSITY</h1>
+                  {/* <h1 className="text-xl sm:text-2xl lg:text-2xl text-orange-600 font-bold">THON</h1> */}
+                  {/* <div className="w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse ml-1"></div>
+                  <span className="sm:inline text-base lg:text-lg font-bold text-blue-700">2.0</span> */}
+                </div>
               </div>
 
-              {/* Right Section: Event Info & CTA - More Compact */}
-              <div className="flex-1 flex items-center justify-end space-x-2 sm:space-x-3 lg:space-x-4">
-                {/* <div className="hidden lg:flex flex-col items-end text-right">
-                  <div className="flex items-center space-x-1 text-gray-600">
-                    <MapPin className="w-3 h-3 text-orange-500" />
-                    <span className="text-xs font-medium">Invertis University, Bareilly</span>
-                  </div>
-                  <div className="flex items-center space-x-1 text-gray-600 mt-0.5">
-                    <Calendar className="w-3 h-3 text-orange-500" />
-                    <time dateTime="2026-03-14" className="text-xs font-medium">
-                      14-15th March, 2026
-                    </time>
-                  </div>
-                </div> */}
+              {/* Right Section: Partner Logos + Mobile Menu Button */}
+              <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
+                {/* Partner Logos */}
+                <div className="hidden md:flex items-center space-x-2 lg:space-x-3">
+                  <button
+                    onClick={() => window.open("https://invertisincubation.com/", "_blank")}
+                    className="group"
+                  >
+                    <Image
+                      src="/images/abhiruchi.png"
+                      alt="Abhiruchi Incubation Center - Innovation and startup support"
+                      width={120}
+                      height={36}
+                      className="h-8 sm:h-9 lg:h-11 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                      priority
+                    />
+                  </button>
+                  <button
+                    onClick={() => window.open("https://invertisincubation.com/", "_blank")}
+                    className="group"
+                  >
+                    <Image
+                      src="/itech-club.png"
+                      alt="iTech - The technical club of Invertis University, fostering innovation and technical skills"
+                      width={120}
+                      height={36}
+                      className="h-8 sm:h-9 lg:h-11 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                      priority
+                    />
+                  </button>
+                  {/* <button
+                    onClick={() => window.open("https://www.invertisuniversity.ac.in/", "_blank")}
+                    className="group"
+                  >
+                    <Image
+                      src="/invertis-logo.png"
+                      alt="Invertis University - Official university logo"
+                      width={180}
+                      height={54}
+                      className="h-8 sm:h-10 lg:h-11 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                      priority
+                    />
+                  </button> */}
+                  <button
+                    onClick={() => window.open("https://invertisincubation.com/", "_blank")}
+                    className="group"
+                  >
+                    <Image
+                      src="/images/incub.png"
+                      alt="Incubation Center - Innovation and startup support"
+                      width={120}
+                      height={36}
+                      className="h-8 sm:h-9 lg:h-11 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                      priority
+                    />
+                  </button>
+                  <button
+                    onClick={() => window.open("https://startinup.up.gov.in/", "_blank")}
+                    className="group"
+                  >
+                    <Image
+                      src="/StartInUP.png"
+                      alt="Smart India Hackathon - Official government initiative logo"
+                      width={120}
+                      height={36}
+                      className="h-8 sm:h-9 lg:h-11 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                      loading="lazy"
+                    />
+                  </button>
+                </div>
 
                 {/* Mobile Menu Button for Non-Scrolled State */}
                 <button
