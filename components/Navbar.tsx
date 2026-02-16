@@ -82,9 +82,9 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
               </div>
 
               {/* Right Section: Partner Logos + Mobile Menu Button */}
-              <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
+              <div className="flex items-center space-x-0.5 sm:space-x-1 lg:space-x-4">
                 {/* Partner Logos */}
-                <div className="hidden md:flex items-center space-x-2 lg:space-x-3">
+                <div className="flex items-center space-x-0.5 sm:space-x-1 lg:space-x-2">
                   <button
                     onClick={() => window.open("https://invertisincubation.com/", "_blank")}
                     className="group"
@@ -94,7 +94,7 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
                       alt="Abhiruchi Incubation Center - Innovation and startup support"
                       width={120}
                       height={36}
-                      className="h-8 sm:h-9 lg:h-11 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                      className="h-4 sm:h-6 lg:h-8 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
                       priority
                     />
                   </button>
@@ -107,23 +107,10 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
                       alt="iTech - The technical club of Invertis University, fostering innovation and technical skills"
                       width={120}
                       height={36}
-                      className="h-8 sm:h-9 lg:h-11 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                      className="h-4 sm:h-6 lg:h-8 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
                       priority
                     />
                   </button>
-                  {/* <button
-                    onClick={() => window.open("https://www.invertisuniversity.ac.in/", "_blank")}
-                    className="group"
-                  >
-                    <Image
-                      src="/invertis-logo.png"
-                      alt="Invertis University - Official university logo"
-                      width={180}
-                      height={54}
-                      className="h-8 sm:h-10 lg:h-11 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
-                      priority
-                    />
-                  </button> */}
                   <button
                     onClick={() => window.open("https://invertisincubation.com/", "_blank")}
                     className="group"
@@ -133,7 +120,7 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
                       alt="Incubation Center - Innovation and startup support"
                       width={120}
                       height={36}
-                      className="h-8 sm:h-9 lg:h-11 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                      className="h-4 sm:h-6 lg:h-8 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
                       priority
                     />
                   </button>
@@ -146,7 +133,7 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
                       alt="Smart India Hackathon - Official government initiative logo"
                       width={120}
                       height={36}
-                      className="h-8 sm:h-9 lg:h-11 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                      className="h-4 sm:h-6 lg:h-8 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
                       loading="lazy"
                     />
                   </button>
@@ -155,10 +142,10 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
                 {/* Mobile Menu Button for Non-Scrolled State */}
                 <button
                   onClick={() => setIsNavOpen(!isNavOpen)}
-                  className="md:hidden p-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+                  className="md:hidden p-0.5 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors ml-0.5"
                   aria-label="Toggle mobile menu"
                 >
-                  <Menu className="w-5 h-5 text-gray-700" />
+                  <Menu className="w-4 h-4 text-gray-700" />
                 </button>
               </div>
             </>
@@ -309,10 +296,10 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
 
           <nav className="px-3 py-4 space-y-1">
             <button
-              onClick={() => smoothScrollTo('SIH')}
+              onClick={() => smoothScrollTo('Milestones')}
               className="block w-full text-left py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
             >
-              ABOUT SIH
+              ABOUT
             </button>
             <button
               onClick={() => smoothScrollTo('program')}
@@ -332,30 +319,30 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
             >
               PROBLEM STATEMENTS
             </button>
-            <button
+            {/* <button
               onClick={() => smoothScrollTo('tracks')}
               className="block w-full text-left py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
             >
               TRACKS
-            </button>
+            </button> */}
             <button
               onClick={() => smoothScrollTo('prizes')}
               className="block w-full text-left py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
             >
               PRIZES
             </button>
-            <button
+            {/* <button
               onClick={() => smoothScrollTo('team')}
               className="block w-full text-left py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
             >
               TEAM
-            </button>
-            <button
+            </button> */}
+            {/* <button
               onClick={() => smoothScrollTo('faq')}
               className="block w-full text-left py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
             >
               FAQ&apos;S
-            </button>
+            </button> */}
 
             {/* Mobile Event Info - Compact */}
             <div className="pt-3 mt-3 border-t border-gray-200">
@@ -365,7 +352,7 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
               </div>
               <div className="flex items-center space-x-2 text-gray-600 px-3 py-1.5">
                 <Calendar className="w-3.5 h-3.5 text-orange-500 flex-shrink-0" />
-                <span className="text-xs">14-15th March, 2026</span>
+                <span className="text-xs">14-16th March, 2026</span>
               </div>
 
               {/* Mobile CTA Button */}
