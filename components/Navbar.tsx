@@ -84,8 +84,8 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
                   className="group"
                 >
                   <Image
-                    src="/images/itech.png"
-                    alt="iTech Incubation Center - Innovation and startup support"
+                    src="/itech-club.png"
+                    alt="iTech - The technical club of Invertis University, fostering innovation and technical skills"
                     width={120}
                     height={36}
                     className="h-6 sm:h-8 lg:h-9 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
