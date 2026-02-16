@@ -60,28 +60,48 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
           {/* Desktop Layout (when NOT scrolled) - Enhanced */}
           {!isScrolled && (
             <>
-              {/* Left Section: Enhanced Brand */}
-              <div className="flex items-center space-x-3 sm:space-x-5">
-                <div className="flex items-center space-x-2 sm:space-x-3">
-                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-700 transition-all duration-300">INVER</h1>
-                  <h1 className="text-2xl sm:text-3xl lg:text-4xl text-orange-600 font-bold transition-all duration-300">THON</h1>
-                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-orange-500 rounded-full animate-pulse ml-2"></div>
-                  <span className="text-lg sm:text-xl lg:text-4xl font-bold text-gray-900 transition-all duration-300">2.0</span>
-                </div>
-              </div>
+              {/* Left Section: Empty spacer for balance */}
+              <div className="flex-1"></div>
 
-              {/* Center Section: Partner Logos - Smaller on Mobile */}
-              <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
+              {/* Center Section: Partner Logos */}
+              <div className="flex items-center justify-center space-x-4 lg:space-x-6">
+                
+                <button
+                  onClick={() => window.open("https://invertisincubation.com/", "_blank")}
+                  className="group"
+                >
+                  <Image
+                    src="/images/abhiruchi.png"
+                    alt="Invertis Incubation Center - Innovation and startup support"
+                    width={120}
+                    height={36}
+                    className="h-6 sm:h-8 lg:h-9 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    loading="lazy"
+                  />
+                </button>
+                <button
+                  onClick={() => window.open("https://invertisincubation.com/", "_blank")}
+                  className="group"
+                >
+                  <Image
+                    src="/images/itech.png"
+                    alt="Invertis Incubation Center - Innovation and startup support"
+                    width={120}
+                    height={36}
+                    className="h-6 sm:h-8 lg:h-9 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    loading="lazy"
+                  />
+                </button>
                 <button
                   onClick={() => window.open("https://www.invertisuniversity.ac.in/", "_blank")}
                   className="group"
                 >
                   <Image
-                    src="/invertis.png"
+                    src="/invertis-logo.png"
                     alt="Invertis University - Official university logo"
-                    width={120}
-                    height={36}
-                    className="h-6 sm:h-8 lg:h-9 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    width={180}
+                    height={54}
+                    className="h-12 sm:h-15 lg:h-16 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
                     priority
                   />
                 </button>
@@ -98,6 +118,7 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
                     loading="lazy"
                   />
                 </button>
+                
                 <button
                   onClick={() => window.open("https://startinup.up.gov.in/", "_blank")}
                   className="group"
@@ -114,8 +135,8 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
               </div>
 
               {/* Right Section: Event Info & CTA - More Compact */}
-              <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
-                <div className="hidden lg:flex flex-col items-end text-right">
+              <div className="flex-1 flex items-center justify-end space-x-2 sm:space-x-3 lg:space-x-4">
+                {/* <div className="hidden lg:flex flex-col items-end text-right">
                   <div className="flex items-center space-x-1 text-gray-600">
                     <MapPin className="w-3 h-3 text-orange-500" />
                     <span className="text-xs font-medium">Invertis University, Bareilly</span>
@@ -126,7 +147,7 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
                       14-15th March, 2026
                     </time>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Mobile Menu Button for Non-Scrolled State */}
                 <button
