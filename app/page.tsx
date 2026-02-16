@@ -8,6 +8,7 @@ import Milestones from "@/components/Milestones"
 import Timeline from "@/components/Timeline"
 import Instructions from "@/components/Instructions"
 import TracksSection from "@/components/TracksSelection"
+import ProblemStatements from "@/components/ProblemStatements"
 import Prizes from "@/components/Prizes"
 import Team from "@/components/Team"
 import FAQ from "@/components/FAQ"
@@ -48,6 +49,9 @@ export default function Page() {
 
       {/* Instructions */}
       <Instructions onRegisterClick={() => setIsRegistrationOpen(true)} />
+
+      {/* Problem Statements */}
+      <ProblemStatements />
 
       {/* Tracks */}
       {/* <TracksSection /> */}

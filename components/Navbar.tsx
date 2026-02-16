@@ -166,6 +166,14 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
             <>
               {/* Left: Enhanced Brand with Logos */}
               <div className="flex items-center space-x-3 sm:space-x-4">
+                <Image
+                  src="/invertis-logo.png"
+                  alt="Inverthon Logo"
+                  width={40}
+                  height={40}
+                  className="h-8 w-auto sm:h-10"
+                  priority
+                />
                 <div
                   className="flex items-center space-x-1 sm:space-x-2 cursor-pointer group"
                   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -189,6 +197,10 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
                 </button>
                 <button onClick={() => smoothScrollTo('instructions')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
                   INSTRUCTIONS
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+                </button>
+                <button onClick={() => smoothScrollTo('problem-statements')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
+                  PROBLEMS
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
                 </button>
                 {/* <button onClick={() => smoothScrollTo('tracks')} className="relative text-gray-700 hover:text-orange-600 font-medium transition-all duration-300 text-xs xl:text-sm group">
@@ -310,6 +322,12 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
               className="block w-full text-left py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
             >
               INSTRUCTIONS
+            </button>
+            <button
+              onClick={() => smoothScrollTo('problem-statements')}
+              className="block w-full text-left py-2.5 px-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-all text-sm"
+            >
+              PROBLEM STATEMENTS
             </button>
             <button
               onClick={() => smoothScrollTo('tracks')}
