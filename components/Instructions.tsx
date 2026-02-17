@@ -144,7 +144,7 @@ const roboWarsCompetitions = {
     glowColor: "shadow-green-500/25",
     description: "Navigate your robocar through a challenging obstacle course to reach the destination in minimum time",
     highlights: [
-      { icon: Bot, label: "Robot Type", value: "Autonomous/Manual", color: "text-green-600" },
+      { icon: Bot, label: "Robot Type", value: "Manual", color: "text-green-600" },
       { icon: Users, label: "Team Size", value: "5 Members", color: "text-purple-600" },
       { icon: Route, label: "Course", value: "Multi-Level", color: "text-blue-600" },
       { icon: Clock, label: "Format", value: "Time Trial", color: "text-orange-600" }

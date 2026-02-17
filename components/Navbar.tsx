@@ -313,7 +313,7 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
                   />
                 </button>
                 <button
-                  onClick={() => window.open("https://startinup.up.gov.in/", "_blank")}
+                  onClick={() => window.open("https://shapemyskills.in/", "_blank")}
                   className="group"
                 >
                   <Image
