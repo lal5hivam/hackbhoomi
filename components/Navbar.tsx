@@ -137,6 +137,19 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
                       loading="lazy"
                     />
                   </button>
+                  <button
+                    onClick={() => window.open("https://startinup.up.gov.in/", "_blank")}
+                    className="group"
+                  >
+                    <Image
+                      src="/shapemyskills.jpg"
+                      alt="Shape My Skills"
+                      width={120}
+                      height={36}
+                      className="h-4 sm:h-6 lg:h-8 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                      loading="lazy"
+                    />
+                  </button>
                 </div>
 
                 {/* Mobile Menu Button for Non-Scrolled State */}
@@ -239,40 +252,86 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
         </div>
       </div>
 
-      {/* Enhanced Professional Registration Open Banner - Only show when scrolled and NOT in mobile menu */}
+      {/* Partner Logos Banner - Only show when scrolled and NOT in mobile menu */}
       {isScrolled && !isNavOpen && (
-        <div className="bg-gradient-to-r from-emerald-500 via-green-500 to-teal-500 text-white shadow-lg overflow-hidden">
-          <div className="px-3 py-2 sm:py-2.5">
+        <div className="bg-white border-t border-gray-200/30 shadow-sm">
+          <div className="px-3 py-3 sm:py-4">
             {/* Mobile-optimized responsive design */}
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-1 sm:space-y-0 sm:space-x-3 text-center">
-              {/* First line: Icon + Main title */}
-              <div className="flex items-center space-x-2">
-                <div className="relative">
-                  <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-white animate-pulse" />
-                  <div className="absolute inset-0 w-4 h-4 sm:w-5 sm:h-5 bg-white/20 rounded-full animate-ping"></div>
-                </div>
-                <span className="font-bold text-sm sm:text-base tracking-wide">
-                  REGISTRATION OPEN
-                </span>
+            <div className="flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0">
+              {/* Partner Logos - Larger Size */}
+              <div className="flex items-center space-x-2 sm:space-x-4 lg:space-x-6">
+                <button
+                  onClick={() => window.open("https://invertisincubation.com/", "_blank")}
+                  className="group"
+                >
+                  <Image
+                    src="/images/abhiruchi.png"
+                    alt="Abhiruchi Incubation Center"
+                    width={120}
+                    height={36}
+                    className="h-6 sm:h-8 lg:h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    priority
+                  />
+                </button>
+                <button
+                  onClick={() => window.open("https://invertisincubation.com/", "_blank")}
+                  className="group"
+                >
+                  <Image
+                    src="/itech-club.png"
+                    alt="iTech Club"
+                    width={120}
+                    height={36}
+                    className="h-6 sm:h-8 lg:h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    priority
+                  />
+                </button>
+                <button
+                  onClick={() => window.open("https://invertisincubation.com/", "_blank")}
+                  className="group"
+                >
+                  <Image
+                    src="/images/incub.png"
+                    alt="Incubation Center"
+                    width={120}
+                    height={36}
+                    className="h-6 sm:h-8 lg:h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    priority
+                  />
+                </button>
+                <button
+                  onClick={() => window.open("https://startinup.up.gov.in/", "_blank")}
+                  className="group"
+                >
+                  <Image
+                    src="/StartInUP.png"
+                    alt="StartInUP"
+                    width={120}
+                    height={36}
+                    className="h-6 sm:h-8 lg:h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    loading="lazy"
+                  />
+                </button>
+                <button
+                  onClick={() => window.open("https://startinup.up.gov.in/", "_blank")}
+                  className="group"
+                >
+                  <Image
+                    src="/shapemyskills.jpg"
+                    alt="Shape My Skills"
+                    width={120}
+                    height={36}
+                    className="h-6 sm:h-8 lg:h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    loading="lazy"
+                  />
+                </button>
               </div>
-              
-              {/* Separator dot - hidden on mobile */}
-              <div className="hidden sm:block w-2 h-2 bg-white/60 rounded-full"></div>
-              
-              {/* Second line: Message + Button side by side on mobile, separate on desktop */}
-              <div className="flex items-center justify-center space-x-2 sm:space-x-2">
-                {/* Main message */}
-                <div className="flex items-center space-x-1">
-                  <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-emerald-200" />
-                  <span className="font-medium text-xs sm:text-sm">
-                    Limited Spots Available!
-                  </span>
-                </div>
 
-                {/* Call to action button */}
+              {/* Right: Call to action button */}
+              <div className="flex items-center">
                 <button
                   onClick={onRegisterClick}
-                  className="bg-white text-emerald-600 px-2.5 py-0.5 sm:px-4 sm:py-1.5 rounded-full text-xs font-bold hover:bg-emerald-50 transition-all duration-300 shadow-md hover:shadow-lg"
+                  className="bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white px-4 py-2 sm:px-6 sm:py-2.5 rounded-full text-sm font-bold transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
                 >
                   REGISTER NOW
                 </button>
