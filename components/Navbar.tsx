@@ -86,70 +86,70 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
                 {/* Partner Logos */}
                 <div className="flex items-center space-x-0.5 sm:space-x-1 lg:space-x-2">
                   <button
-                    onClick={() => window.open("https://invertisincubation.com/", "_blank")}
-                    className="group"
-                  >
-                    <Image
-                      src="/images/abhiruchi.png"
-                      alt="Abhiruchi Incubation Center - Innovation and startup support"
-                      width={120}
-                      height={36}
-                      className="h-4 sm:h-6 lg:h-8 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
-                      priority
-                    />
-                  </button>
-                  <button
-                    onClick={() => window.open("https://invertisincubation.com/", "_blank")}
-                    className="group"
-                  >
-                    <Image
-                      src="/itech-club.png"
-                      alt="iTech - The technical club of Invertis University, fostering innovation and technical skills"
-                      width={120}
-                      height={36}
-                      className="h-4 sm:h-6 lg:h-8 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
-                      priority
-                    />
-                  </button>
-                  <button
-                    onClick={() => window.open("https://invertisincubation.com/", "_blank")}
-                    className="group"
-                  >
-                    <Image
-                      src="/images/incub.png"
-                      alt="Incubation Center - Innovation and startup support"
-                      width={120}
-                      height={36}
-                      className="h-4 sm:h-6 lg:h-8 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
-                      priority
-                    />
-                  </button>
-                  <button
-                    onClick={() => window.open("https://startinup.up.gov.in/", "_blank")}
-                    className="group"
-                  >
-                    <Image
-                      src="/StartInUP.png"
-                      alt="Smart India Hackathon - Official government initiative logo"
-                      width={120}
-                      height={36}
-                      className="h-4 sm:h-6 lg:h-8 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
-                      loading="lazy"
-                    />
-                  </button>
-                  <button
-                    onClick={() => window.open("https://startinup.up.gov.in/", "_blank")}
-                    className="group"
-                  >
-                    <Image
-                      src="/shapemyskills.jpg"
-                      alt="Shape My Skills"
-                      width={120}
-                      height={36}
-                      className="h-4 sm:h-6 lg:h-8 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
-                      loading="lazy"
-                    />
-                  </button>
+                  onClick={() => window.open("https://invertisincubation.com/", "_blank")}
+                  className="group"
+                >
+                  <Image
+                    src="/images/incub.png"
+                    alt="Incubation Center"
+                    width={120}
+                    height={36}
+                    className="h-6 sm:h-8 lg:h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    priority
+                  />
+                </button>
+                <button
+                  onClick={() => window.open("https://startinup.up.gov.in/", "_blank")}
+                  className="group"
+                >
+                  <Image
+                    src="/StartInUP.png"
+                    alt="StartInUP"
+                    width={120}
+                    height={36}
+                    className="h-6 sm:h-8 lg:h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    loading="lazy"
+                  />
+                </button>
+                <button
+                  onClick={() => window.open("https://shapemyskills.in/", "_blank")}
+                  className="group"
+                >
+                  <Image
+                    src="/shapemyskills.jpg"
+                    alt="Shape My Skills"
+                    width={120}
+                    height={36}
+                    className="h-6 sm:h-8 lg:h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    loading="lazy"
+                  />
+                </button>
+                <button
+                  onClick={() => window.open("", "_blank")}
+                  className="group"
+                >
+                  <Image
+                    src="/images/abhiruchi.png"
+                    alt="Abhiruchi Incubation Center"
+                    width={120}
+                    height={36}
+                    className="h-6 sm:h-8 lg:h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    priority
+                  />
+                </button>
+                <button
+                  onClick={() => window.open("", "_blank")}
+                  className="group"
+                >
+                  <Image
+                    src="/itech-club.png"
+                    alt="iTech Club"
+                    width={120}
+                    height={36}
+                    className="h-6 sm:h-8 lg:h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    priority
+                  />
+                </button>
                 </div>
 
                 {/* Mobile Menu Button for Non-Scrolled State */}
