@@ -265,32 +265,6 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
                   className="group"
                 >
                   <Image
-                    src="/images/abhiruchi.png"
-                    alt="Abhiruchi Incubation Center"
-                    width={120}
-                    height={36}
-                    className="h-6 sm:h-8 lg:h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
-                    priority
-                  />
-                </button>
-                <button
-                  onClick={() => window.open("https://invertisincubation.com/", "_blank")}
-                  className="group"
-                >
-                  <Image
-                    src="/itech-club.png"
-                    alt="iTech Club"
-                    width={120}
-                    height={36}
-                    className="h-6 sm:h-8 lg:h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
-                    priority
-                  />
-                </button>
-                <button
-                  onClick={() => window.open("https://invertisincubation.com/", "_blank")}
-                  className="group"
-                >
-                  <Image
                     src="/images/incub.png"
                     alt="Incubation Center"
                     width={120}
@@ -325,6 +299,33 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
                     loading="lazy"
                   />
                 </button>
+                <button
+                  onClick={() => window.open("", "_blank")}
+                  className="group"
+                >
+                  <Image
+                    src="/images/abhiruchi.png"
+                    alt="Abhiruchi Incubation Center"
+                    width={120}
+                    height={36}
+                    className="h-6 sm:h-8 lg:h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    priority
+                  />
+                </button>
+                <button
+                  onClick={() => window.open("", "_blank")}
+                  className="group"
+                >
+                  <Image
+                    src="/itech-club.png"
+                    alt="iTech Club"
+                    width={120}
+                    height={36}
+                    className="h-6 sm:h-8 lg:h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                    priority
+                  />
+                </button>
+                
               </div>
 
               {/* Right: Call to action button */}

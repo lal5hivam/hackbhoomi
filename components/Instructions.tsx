@@ -269,7 +269,7 @@ export default function Instructions({ onRegisterClick }: InstructionsProps) {
                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                   {activeCategory === "open-innovation" 
                     ? "Solve real-world problems from past SIH problem statements. Choose between Software or Hardware track based on your expertise."
-                    : "Battle your robots in exciting competitions! Participate in Balloon Popping RoboWar or navigate through the Obstacle Path Challenge."
+                    : "Battle your robots in exciting competitions! Participate in Balloon Popping RoboWar and navigate through the Obstacle Path Challenge."
                   }
                 </p>
               </div>
