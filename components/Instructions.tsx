@@ -50,7 +50,6 @@ const openInnovationTracks = {
     highlights: [
       { icon: Code, label: "Tech Stack", value: "Any Technology", color: "text-blue-600" },
       { icon: Users, label: "Team Size", value: "5 Members", color: "text-purple-600" },
-      { icon: Clock, label: "Duration", value: "24 Hours", color: "text-green-600" },
       { icon: Award, label: "Prizes", value: "₹25K+", color: "text-orange-600" }
     ],
     instructions: [
@@ -62,7 +61,7 @@ const openInnovationTracks = {
       "Present your solution to judges with a live demo"
     ],
     rules: [
-      "All code must be written during the hackathon - no pre-built solutions",
+      "All codes must be organized in Github Repository with proper documentation",
       "Teams can use open-source libraries and APIs",
       "Solution must directly address the chosen problem statement",
       "Working demo is mandatory for final evaluation",
@@ -76,23 +75,21 @@ const openInnovationTracks = {
     glowColor: "shadow-orange-500/25",
     description: "Design and build hardware prototypes combining electronics, IoT, and embedded systems",
     highlights: [
-      { icon: Wrench, label: "Components", value: "Provided", color: "text-orange-600" },
+      { icon: Wrench, label: "Components", value: "IOT", color: "text-orange-600" },
       { icon: Users, label: "Team Size", value: "5 Members", color: "text-purple-600" },
-      { icon: Clock, label: "Duration", value: "24 Hours", color: "text-green-600" },
       { icon: Award, label: "Prizes", value: "₹25K+", color: "text-red-600" }
     ],
     instructions: [
       "Form a team of 5 members with hardware and software expertise",
       "Select a hardware-focused problem statement from mentioned SIH challenges",
       "Plan your prototype using Arduino, Raspberry Pi, ESP32, or similar platforms",
-      "Bring your own basic components; additional components will be available",
+      "Bring your own basic components",
       "Integrate sensors, actuators, and IoT connectivity as needed",
       "Develop both hardware prototype and supporting software/app",
       "Document your circuit design and present a working demonstration"
     ],
     rules: [
-      "Hardware prototypes must be built during the hackathon",
-      "Pre-designed PCBs are not allowed; breadboard prototypes are acceptable",
+      "Hardware prototypes can be built before the hackathon",
       "Teams must demonstrate real hardware functionality, not simulations",
       "Safety guidelines must be followed for all electrical components",
       "All components used must be declared to the organizers"
@@ -124,8 +121,8 @@ const roboWarsCompetitions = {
       "Finals will be a knockout tournament format"
     ],
     rules: [
-      "Robot dimensions: Max 21cm x 29.7cm (A4 sheet size, excluding balloon mount)",
-      "Weight limit: Maximum 2kg including all attachments",
+      "Robot dimensions: Max 21cm x 29.7cm x 18cm",
+      "Weight limit: Maximum 2.5kg",
       "Balloon position and mount specifications will be standardized",
       "Remote control must be wireless",
       "Intentional damage to arena or safety violations = disqualification"
@@ -153,19 +150,17 @@ const roboWarsCompetitions = {
       "Design a robocar optimized for maneuverability and speed",
       "Robot must navigate through various obstacles including ramps, tunnels, and barriers",
       "Course includes tight turns, uneven surfaces, and precision challenges",
-      "Both autonomous and manual control modes are allowed",
+      "Manual control modes are allowed",
       "Complete the course from start to finish line",
       "Time starts when robot crosses start line and stops at finish",
       "Touching or knocking obstacles adds time penalties"
     ],
     rules: [
-      "Robot dimensions: Max 21cm x 29.7cm (A4 sheet size)",
-      "Weight limit: Maximum 2kg",
-      "Both wired and wireless control permitted",
+      "Robot dimensions: Max 21cm x 29.7cm x 18cm",
+      "Weight limit: Maximum 2.5kg",
+      "Wireless control permitted",
       "Touching obstacles: +5 seconds penalty per touch",
       "Knocking down obstacles: +10 seconds penalty",
-      "Robot must complete course unaided - no manual intervention in arena",
-      "Maximum 2 attempts allowed; best time counts"
     ],
     specifications: [
       "Course Length: Approximately 10-15 meters",

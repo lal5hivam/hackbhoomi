@@ -77,10 +77,10 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
     problemStatement: [],
     teamName: '',
     teamLead: { name: '', studentId: '', mobile: '', github: '', email: '' },
-    members: Array(3).fill({ name: '', studentId: '', mobile: '', github: '', email: '' }),
+    members: Array(4).fill({ name: '', studentId: '', mobile: '', github: '', email: '' }),
   });
 
-  const totalSteps = formData.track === 'open-innovation' ? 6 : formData.track === 'robowars' ? 5 : formData.track === 'both' ? 6 : 1;
+  const totalSteps = formData.track === 'open-innovation' ? 7 : formData.track === 'robowars' ? 6 : formData.track === 'both' ? 7 : 1;
 
   const handleClose = () => {
     setShowWarning(true);
@@ -95,7 +95,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
       problemStatement: [],
       teamName: '',
       teamLead: { name: '', studentId: '', mobile: '', github: '', email: '' },
-      members: Array(3).fill({ name: '', studentId: '', mobile: '', github: '', email: '' }),
+      members: Array(4).fill({ name: '', studentId: '', mobile: '', github: '', email: '' }),
     });
     onClose();
   };
