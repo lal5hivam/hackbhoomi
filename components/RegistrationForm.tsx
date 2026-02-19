@@ -80,7 +80,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
     members: Array(4).fill({ name: '', studentId: '', mobile: '', github: '', email: '' }),
   });
 
-  const totalSteps = formData.track === 'open-innovation' ? 7 : formData.track === 'robowars' ? 6 : formData.track === 'both' ? 7 : 1;
+  const totalSteps = formData.track === 'open-innovation' ? 6 : formData.track === 'robowars' ? 5 : formData.track === 'both' ? 6 : 1;
 
   const handleClose = () => {
     setShowWarning(true);
