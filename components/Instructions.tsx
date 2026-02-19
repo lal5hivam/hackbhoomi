@@ -124,8 +124,8 @@ const roboWarsCompetitions = {
       "Finals will be a knockout tournament format"
     ],
     rules: [
-      "Robot dimensions: Max 30cm x 30cm x 30cm (excluding balloon mount)",
-      "Weight limit: Maximum 3kg including all attachments",
+      "Robot dimensions: Max 21cm x 29.7cm (A4 sheet size, excluding balloon mount)",
+      "Weight limit: Maximum 2kg including all attachments",
       "Balloon position and mount specifications will be standardized",
       "Remote control must be wireless",
       "Intentional damage to arena or safety violations = disqualification"
@@ -133,8 +133,8 @@ const roboWarsCompetitions = {
     specifications: [
       "Arena Size: 4m x 4m enclosed battle zone",
       "Match Duration: 3 minutes per round",
-      "Balloon Size: Standard 9-inch latex balloons (provided)",
-      "Mount Height: 15-20cm from robot base"
+      "Balloon Size: Standard latex balloons (provided)",
+      "Mount Height: 10-15cm from robot base"
     ]
   },
   "obstacle-path": {
@@ -159,10 +159,9 @@ const roboWarsCompetitions = {
       "Touching or knocking obstacles adds time penalties"
     ],
     rules: [
-      "Robot dimensions: Max 25cm x 25cm x 20cm",
+      "Robot dimensions: Max 21cm x 29.7cm (A4 sheet size)",
       "Weight limit: Maximum 2kg",
       "Both wired and wireless control permitted",
-      "Autonomous robots get bonus time reduction",
       "Touching obstacles: +5 seconds penalty per touch",
       "Knocking down obstacles: +10 seconds penalty",
       "Robot must complete course unaided - no manual intervention in arena",
