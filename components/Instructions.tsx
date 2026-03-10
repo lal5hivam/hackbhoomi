@@ -401,7 +401,7 @@ export default function Instructions({ onRegisterClick }: InstructionsProps) {
             </Card>
 
             {/* Problem Statement Note */}
-            <Card className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 backdrop-blur-xl border-indigo-200/30 overflow-hidden">
+            {/* <Card className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 backdrop-blur-xl border-indigo-200/30 overflow-hidden">
               <CardContent className="p-4 sm:p-6">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -425,7 +425,7 @@ export default function Instructions({ onRegisterClick }: InstructionsProps) {
                   </div>
                 </div>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
         ) : (
           // RoboWars Content
