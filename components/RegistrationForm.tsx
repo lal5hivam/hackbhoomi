@@ -63,6 +63,13 @@ const problemStatements = {
   ],
 };
 
+// Input filtering helpers
+const filterName = (value: string) => value.replace(/[^a-zA-Z\s]/g, '');
+const filterMobile = (value: string) => value.replace(/[^0-9]/g, '').slice(0, 10);
+const filterStudentId = (value: string) => value.replace(/[^a-zA-Z0-9/\-]/g, '');
+const filterGithubUsername = (value: string) => value.replace(/[^a-zA-Z0-9\-]/g, '');
+const filterTeamName = (value: string) => value.replace(/[^a-zA-Z0-9\s\-_]/g, '');
+
 const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [showWarning, setShowWarning] = useState(false);
@@ -118,15 +125,25 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
       }
       if (!formData.teamName.trim()) {
         newErrors.teamName = 'Team name is required';
+      } else if (formData.teamName.trim().length < 2) {
+        newErrors.teamName = 'Team name must be at least 2 characters';
       }
       if (!formData.teamLead.name.trim()) {
         newErrors.teamLeadName = 'Team lead name is required';
+      } else if (formData.teamLead.name.trim().length < 2) {
+        newErrors.teamLeadName = 'Name must be at least 2 characters';
+      } else if (!/^[a-zA-Z\s]+$/.test(formData.teamLead.name.trim())) {
+        newErrors.teamLeadName = 'Name must contain only letters and spaces';
       }
       if (!formData.teamLead.studentId.trim()) {
         newErrors.teamLeadStudentId = 'Student ID is required';
+      } else if (!/^[a-zA-Z0-9/\-]+$/.test(formData.teamLead.studentId.trim())) {
+        newErrors.teamLeadStudentId = 'Student ID must be alphanumeric';
       }
       if (!formData.teamLead.mobile.trim()) {
         newErrors.teamLeadMobile = 'Mobile number is required';
+      } else if (!/^[0-9]{10}$/.test(formData.teamLead.mobile.trim())) {
+        newErrors.teamLeadMobile = 'Mobile number must be exactly 10 digits';
       }
       if (!formData.teamLead.email.trim()) {
         newErrors.teamLeadEmail = 'Email is required';
@@ -148,12 +165,20 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
       
       if (!member.name.trim()) {
         newErrors[`member${memberIndex}Name`] = 'Name is required';
+      } else if (member.name.trim().length < 2) {
+        newErrors[`member${memberIndex}Name`] = 'Name must be at least 2 characters';
+      } else if (!/^[a-zA-Z\s]+$/.test(member.name.trim())) {
+        newErrors[`member${memberIndex}Name`] = 'Name must contain only letters and spaces';
       }
       if (!member.studentId.trim()) {
         newErrors[`member${memberIndex}StudentId`] = 'Student ID is required';
+      } else if (!/^[a-zA-Z0-9/\-]+$/.test(member.studentId.trim())) {
+        newErrors[`member${memberIndex}StudentId`] = 'Student ID must be alphanumeric';
       }
       if (!member.mobile.trim()) {
         newErrors[`member${memberIndex}Mobile`] = 'Mobile number is required';
+      } else if (!/^[0-9]{10}$/.test(member.mobile.trim())) {
+        newErrors[`member${memberIndex}Mobile`] = 'Mobile number must be exactly 10 digits';
       }
       if (!member.email.trim()) {
         newErrors[`member${memberIndex}Email`] = 'Email is required';
@@ -189,9 +214,23 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
     const memberIndex = formData.track === 'open-innovation' || formData.track === 'both' ? currentStep - 3 : currentStep - 2;
     const member = formData.members[memberIndex];
     
-    if (!member.name.trim()) newErrors[`member${memberIndex}Name`] = 'Name is required';
-    if (!member.studentId.trim()) newErrors[`member${memberIndex}StudentId`] = 'Student ID is required';
-    if (!member.mobile.trim()) newErrors[`member${memberIndex}Mobile`] = 'Mobile number is required';
+    if (!member.name.trim()) {
+      newErrors[`member${memberIndex}Name`] = 'Name is required';
+    } else if (member.name.trim().length < 2) {
+      newErrors[`member${memberIndex}Name`] = 'Name must be at least 2 characters';
+    } else if (!/^[a-zA-Z\s]+$/.test(member.name.trim())) {
+      newErrors[`member${memberIndex}Name`] = 'Name must contain only letters and spaces';
+    }
+    if (!member.studentId.trim()) {
+      newErrors[`member${memberIndex}StudentId`] = 'Student ID is required';
+    } else if (!/^[a-zA-Z0-9/\-]+$/.test(member.studentId.trim())) {
+      newErrors[`member${memberIndex}StudentId`] = 'Student ID must be alphanumeric';
+    }
+    if (!member.mobile.trim()) {
+      newErrors[`member${memberIndex}Mobile`] = 'Mobile number is required';
+    } else if (!/^[0-9]{10}$/.test(member.mobile.trim())) {
+      newErrors[`member${memberIndex}Mobile`] = 'Mobile number must be exactly 10 digits';
+    }
     if (!member.email.trim()) {
       newErrors[`member${memberIndex}Email`] = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(member.email)) {
@@ -376,11 +415,12 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
                       required
                       value={formData.teamName}
                       onChange={(e) => {
-                        setFormData({ ...formData, teamName: e.target.value });
+                        setFormData({ ...formData, teamName: filterTeamName(e.target.value) });
                         setErrors({ ...errors, teamName: '' });
                       }}
                       placeholder="Enter your team name"
                       error={errors.teamName}
+                      maxLength={50}
                     />
 
                     {/* Team Lead Details */}
@@ -391,11 +431,13 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
                         required
                         value={formData.teamLead.name}
                         onChange={(e) => {
-                          updateTeamLead('name', e.target.value);
+                          updateTeamLead('name', filterName(e.target.value));
                           setErrors({ ...errors, teamLeadName: '' });
                         }}
                         placeholder="Enter full name"
                         error={errors.teamLeadName}
+                        maxLength={50}
+                        inputMode="text"
                       />
                       <InputField
                         icon={<Hash />}
@@ -403,11 +445,12 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
                         required
                         value={formData.teamLead.studentId}
                         onChange={(e) => {
-                          updateTeamLead('studentId', e.target.value);
+                          updateTeamLead('studentId', filterStudentId(e.target.value));
                           setErrors({ ...errors, teamLeadStudentId: '' });
                         }}
                         placeholder="Enter student ID"
                         error={errors.teamLeadStudentId}
+                        maxLength={20}
                       />
                       <InputField
                         icon={<Phone />}
@@ -416,11 +459,13 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
                         type="tel"
                         value={formData.teamLead.mobile}
                         onChange={(e) => {
-                          updateTeamLead('mobile', e.target.value);
+                          updateTeamLead('mobile', filterMobile(e.target.value));
                           setErrors({ ...errors, teamLeadMobile: '' });
                         }}
-                        placeholder="+91 XXXXX XXXXX"
+                        placeholder="10-digit mobile number"
                         error={errors.teamLeadMobile}
+                        maxLength={10}
+                        inputMode="numeric"
                       />
                       <InputField
                         icon={<Mail />}
@@ -434,13 +479,15 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
                         }}
                         placeholder="email@example.com"
                         error={errors.teamLeadEmail}
+                        maxLength={100}
                       />
                       <InputField
                         icon={<Github />}
                         label="GitHub Username"
                         value={formData.teamLead.github}
-                        onChange={(e) => updateTeamLead('github', e.target.value)}
-                        placeholder="github.com/username (Optional)"
+                        onChange={(e) => updateTeamLead('github', filterGithubUsername(e.target.value))}
+                        placeholder="github username (Optional)"
+                        maxLength={39}
                       />
                     </div>
                   </div>
@@ -654,16 +701,19 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
                               label="Name"
                               required
                               value={formData.members[memberIndex]?.name || ''}
-                              onChange={(e) => updateMember(memberIndex, 'name', e.target.value)}
+                              onChange={(e) => updateMember(memberIndex, 'name', filterName(e.target.value))}
                               placeholder="Enter full name"
+                              maxLength={50}
+                              inputMode="text"
                             />
                             <InputField
                               icon={<Hash />}
                               label="Student ID"
                               required
                               value={formData.members[memberIndex]?.studentId || ''}
-                              onChange={(e) => updateMember(memberIndex, 'studentId', e.target.value)}
+                              onChange={(e) => updateMember(memberIndex, 'studentId', filterStudentId(e.target.value))}
                               placeholder="Enter student ID"
+                              maxLength={20}
                             />
                             <InputField
                               icon={<Phone />}
@@ -671,8 +721,10 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
                               required
                               type="tel"
                               value={formData.members[memberIndex]?.mobile || ''}
-                              onChange={(e) => updateMember(memberIndex, 'mobile', e.target.value)}
-                              placeholder="+91 XXXXX XXXXX"
+                              onChange={(e) => updateMember(memberIndex, 'mobile', filterMobile(e.target.value))}
+                              placeholder="10-digit mobile number"
+                              maxLength={10}
+                              inputMode="numeric"
                             />
                             <InputField
                               icon={<Mail />}
@@ -682,13 +734,15 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isOpen, onClose }) 
                               value={formData.members[memberIndex]?.email || ''}
                               onChange={(e) => updateMember(memberIndex, 'email', e.target.value)}
                               placeholder="email@example.com"
+                              maxLength={100}
                             />
                             <InputField
                               icon={<Github />}
                               label="GitHub Username"
                               value={formData.members[memberIndex]?.github || ''}
-                              onChange={(e) => updateMember(memberIndex, 'github', e.target.value)}
-                              placeholder="github.com/username (Optional)"
+                              onChange={(e) => updateMember(memberIndex, 'github', filterGithubUsername(e.target.value))}
+                              placeholder="github username (Optional)"
+                              maxLength={39}
                             />
                           </div>
                         </>
@@ -934,6 +988,10 @@ interface InputFieldProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder: string;
   error?: string;
+  maxLength?: number;
+  minLength?: number;
+  pattern?: string;
+  inputMode?: 'text' | 'numeric' | 'tel' | 'email' | 'url';
 }
 
 const InputField: React.FC<InputFieldProps> = ({
@@ -945,6 +1003,10 @@ const InputField: React.FC<InputFieldProps> = ({
   onChange,
   placeholder,
   error,
+  maxLength,
+  minLength,
+  pattern,
+  inputMode,
 }) => {
   return (
     <div>
@@ -966,6 +1028,10 @@ const InputField: React.FC<InputFieldProps> = ({
               : 'border-gray-200 focus:border-indigo-500 focus:ring-indigo-200'
           }`}
           required={required}
+          maxLength={maxLength}
+          minLength={minLength}
+          pattern={pattern}
+          inputMode={inputMode}
         />
       </div>
       {error && (

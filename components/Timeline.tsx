@@ -30,7 +30,7 @@ const events = [
   },
   {
     title: "Registration Deadline",
-    date: "25th Feb",
+    date: "15th March",
     desc: "Get ready to innovate — Last chance to register!",
     icon: Clock,
     color: "bg-red-500"
@@ -51,7 +51,7 @@ const events = [
   },
   {
     title: "HACKATHON DAY - INVERTHON 2.0",
-    date: "14-16th March",
+    date: "2-4th April",
     desc: "Let the hacking begin! Build, code and create!",
     icon: Rocket,
     color: "bg-orange-500"
