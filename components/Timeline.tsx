@@ -23,7 +23,7 @@ const events = [
   },
   {
     title: "Mentorship Sessions",
-    date: "Ungoing",
+    date: "",
     desc: "Get expert guidance regarding your ideas and solutions!",
     icon: Users,
     color: "bg-yellow-500"

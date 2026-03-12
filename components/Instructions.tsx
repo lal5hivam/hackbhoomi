@@ -31,22 +31,24 @@ import {
 } from "lucide-react"
 
 // Category and Competition Types
-type Category = "open-innovation" | "robowars"
-type OpenInnovationTrack = "software" | "hardware"
+type Category = "hackathon" | "robowars"
+type HackathonTrack = "software" | "hardware"
+type HackathonMode = "ps-based" | "open-innovation"
 type RoboWarsCompetition = "balloon-pop" | "obstacle-path"
 
 interface InstructionsProps {
   onRegisterClick: () => void;
 }
 
-// Open Innovation Data
-const openInnovationTracks = {
+// Hackathon Data
+const hackathonTracks = {
   software: {
     title: "Software Track",
     icon: Monitor,
     color: "from-blue-600 to-cyan-600",
     glowColor: "shadow-blue-500/25",
     description: "Build innovative software solutions using cutting-edge technologies to solve real-world problems",
+    fields: ["Web Development", "Data Science", "Cloud"],
     highlights: [
       { icon: Code, label: "Tech Stack", value: "Any Technology", color: "text-blue-600" },
       { icon: Users, label: "Team Size", value: "5 Members", color: "text-purple-600" },
@@ -54,7 +56,9 @@ const openInnovationTracks = {
     ],
     instructions: [
       "Form a team of 5 members with diverse skills (developers, designers, presenters)",
-      "Browse and select a problem statement from the mentioned SIH problem statements",
+      "Choose your participation mode: PS-Based (pick a SIH problem statement) or Open Innovation (build on your own idea)",
+      "If PS-Based, browse and select a problem statement from the mentioned SIH problem statements",
+      "If Open Innovation, define your own problem and propose a creative solution",
       "Prepare your development environment and required tools before the event",
       "Build a working prototype/MVP prior to the hackathon day",
       "Create a compelling pitch deck explaining your solution's impact and feasibility",
@@ -63,7 +67,8 @@ const openInnovationTracks = {
     rules: [
       "All codes must be organized in Github Repository with proper documentation",
       "Teams can use open-source libraries and APIs",
-      "Solution must directly address the chosen problem statement",
+      "PS-Based: Solution must directly address the chosen problem statement",
+      "Open Innovation: Solution must address a real-world problem with clear impact",
       "Working demo is mandatory for final evaluation",
       "Plagiarism will result in immediate disqualification"
     ]
@@ -74,6 +79,7 @@ const openInnovationTracks = {
     color: "from-orange-600 to-red-600",
     glowColor: "shadow-orange-500/25",
     description: "Design and build hardware prototypes combining electronics, IoT, and embedded systems",
+    fields: [],
     highlights: [
       { icon: Wrench, label: "Components", value: "IOT", color: "text-orange-600" },
       { icon: Users, label: "Team Size", value: "5 Members", color: "text-purple-600" },
@@ -81,7 +87,9 @@ const openInnovationTracks = {
     ],
     instructions: [
       "Form a team of 5 members with hardware and software expertise",
-      "Select a hardware-focused problem statement from mentioned SIH challenges",
+      "Choose your participation mode: PS-Based (pick a SIH problem statement) or Open Innovation (build on your own idea)",
+      "If PS-Based, select a hardware-focused problem statement from mentioned SIH challenges",
+      "If Open Innovation, define your own hardware problem and propose a creative solution",
       "Plan your prototype using Arduino, Raspberry Pi, ESP32, or similar platforms",
       "Bring your own basic components",
       "Integrate sensors, actuators, and IoT connectivity as needed",
@@ -172,8 +180,8 @@ const roboWarsCompetitions = {
 }
 
 export default function Instructions({ onRegisterClick }: InstructionsProps) {
-  const [activeCategory, setActiveCategory] = useState<Category>("open-innovation")
-  const [activeOpenTrack, setActiveOpenTrack] = useState<OpenInnovationTrack>("software")
+  const [activeCategory, setActiveCategory] = useState<Category>("hackathon")
+  const [activeHackTrack, setActiveHackTrack] = useState<HackathonTrack>("software")
   const [activeRoboWars, setActiveRoboWars] = useState<RoboWarsCompetition>("balloon-pop")
 
   const handleDownload = (filename: string) => {
@@ -185,7 +193,7 @@ export default function Instructions({ onRegisterClick }: InstructionsProps) {
     document.body.removeChild(link);
   };
 
-  const currentOpenTrack = openInnovationTracks[activeOpenTrack]
+  const currentHackTrack = hackathonTracks[activeHackTrack]
   const currentRoboWars = roboWarsCompetitions[activeRoboWars]
 
   return (
@@ -218,15 +226,15 @@ export default function Instructions({ onRegisterClick }: InstructionsProps) {
         <div className="flex justify-center mb-6 sm:mb-8">
           <div className="inline-flex bg-white/60 backdrop-blur-md rounded-2xl p-1.5 border border-white/40 shadow-lg">
             <button
-              onClick={() => setActiveCategory("open-innovation")}
+              onClick={() => setActiveCategory("hackathon")}
               className={`flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 ${
-                activeCategory === "open-innovation"
+                activeCategory === "hackathon"
                   ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
                   : "text-gray-600 hover:text-gray-900 hover:bg-white/50"
               }`}
             >
               <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5" />
-              <span>Open Innovation</span>
+              <span>Hackathon</span>
             </button>
             <button
               onClick={() => setActiveCategory("robowars")}
@@ -247,22 +255,22 @@ export default function Instructions({ onRegisterClick }: InstructionsProps) {
           <CardContent className="p-4 sm:p-6">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center bg-gradient-to-r ${
-                activeCategory === "open-innovation" 
+                activeCategory === "hackathon" 
                   ? "from-blue-600 to-purple-600" 
                   : "from-red-600 to-orange-600"
               } shadow-lg flex-shrink-0`}>
-                {activeCategory === "open-innovation" 
+                {activeCategory === "hackathon" 
                   ? <Lightbulb className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
                   : <Bot className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
                 }
               </div>
               <div className="flex-1">
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">
-                  {activeCategory === "open-innovation" ? "Open Innovation Category" : "RoboWars Category"}
+                  {activeCategory === "hackathon" ? "Hackathon" : "RoboWars Category"}
                 </h3>
                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                  {activeCategory === "open-innovation" 
-                    ? "Solve real-world problems from past SIH problem statements. Choose between Software or Hardware track based on your expertise."
+                  {activeCategory === "hackathon" 
+                    ? "Choose PS-Based to solve SIH problem statements, or Open Innovation to build a solution on your own idea. Pick Software or Hardware track based on your expertise."
                     : "Battle your robots in exciting competitions! Participate in Balloon Popping RoboWar and navigate through the Obstacle Path Challenge."
                   }
                 </p>
@@ -273,12 +281,12 @@ export default function Instructions({ onRegisterClick }: InstructionsProps) {
 
         {/* Sub-category Tabs */}
         <div className="flex justify-center mb-6 sm:mb-8">
-          {activeCategory === "open-innovation" ? (
+          {activeCategory === "hackathon" ? (
             <div className="inline-flex bg-white/50 backdrop-blur-sm rounded-xl p-1 border border-white/30 shadow-md">
               <button
-                onClick={() => setActiveOpenTrack("software")}
+                onClick={() => setActiveHackTrack("software")}
                 className={`flex items-center gap-2 px-4 sm:px-5 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
-                  activeOpenTrack === "software"
+                  activeHackTrack === "software"
                     ? "bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-md"
                     : "text-gray-600 hover:text-blue-600 hover:bg-white/50"
                 }`}
@@ -287,9 +295,9 @@ export default function Instructions({ onRegisterClick }: InstructionsProps) {
                 <span>Software Track</span>
               </button>
               <button
-                onClick={() => setActiveOpenTrack("hardware")}
+                onClick={() => setActiveHackTrack("hardware")}
                 className={`flex items-center gap-2 px-4 sm:px-5 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
-                  activeOpenTrack === "hardware"
+                  activeHackTrack === "hardware"
                     ? "bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-md"
                     : "text-gray-600 hover:text-orange-600 hover:bg-white/50"
                 }`}
@@ -327,27 +335,73 @@ export default function Instructions({ onRegisterClick }: InstructionsProps) {
         </div>
 
         {/* Content Based on Selection */}
-        {activeCategory === "open-innovation" ? (
-          // Open Innovation Content
+        {activeCategory === "hackathon" ? (
+          // Hackathon Content
           <div className="space-y-6">
             {/* Track Header Card */}
             <Card className={`bg-white/40 backdrop-blur-xl border-white/30 overflow-hidden hover:shadow-xl transition-all duration-500`}>
               <CardHeader className="pb-4">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                  <div className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r ${currentOpenTrack.color} rounded-xl flex items-center justify-center shadow-lg ${currentOpenTrack.glowColor}`}>
-                    <currentOpenTrack.icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+                  <div className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r ${currentHackTrack.color} rounded-xl flex items-center justify-center shadow-lg ${currentHackTrack.glowColor}`}>
+                    <currentHackTrack.icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                   </div>
                   <div className="flex-1">
-                    <CardTitle className="text-xl sm:text-2xl text-gray-900 mb-1">{currentOpenTrack.title}</CardTitle>
-                    <p className="text-gray-600 text-sm sm:text-base">{currentOpenTrack.description}</p>
+                    <CardTitle className="text-xl sm:text-2xl text-gray-900 mb-1">{currentHackTrack.title}</CardTitle>
+                    <p className="text-gray-600 text-sm sm:text-base">{currentHackTrack.description}</p>
                   </div>
                 </div>
               </CardHeader>
             </Card>
 
+            {/* Participation Modes */}
+            <Card className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 backdrop-blur-xl border-indigo-200/30 overflow-hidden">
+              <CardContent className="p-4 sm:p-6">
+                <h4 className="font-bold text-gray-900 mb-3 text-base sm:text-lg flex items-center gap-2">
+                  <Target className="w-5 h-5 text-indigo-600" />
+                  Participation Modes
+                </h4>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  <div className="p-4 rounded-xl bg-white/60 border border-blue-200/50 shadow-sm">
+                    <div className="flex items-center gap-2 mb-2">
+                      <FileText className="w-5 h-5 text-blue-600" />
+                      <span className="font-semibold text-gray-900">PS-Based</span>
+                    </div>
+                    <p className="text-sm text-gray-600">Pick a problem statement from the curated SIH problem statements and build your solution around it.</p>
+                  </div>
+                  <div className="p-4 rounded-xl bg-white/60 border border-purple-200/50 shadow-sm">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Lightbulb className="w-5 h-5 text-purple-600" />
+                      <span className="font-semibold text-gray-900">Open Innovation</span>
+                    </div>
+                    <p className="text-sm text-gray-600">Have your own idea? Define your own problem and build a creative solution from scratch.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Software Fields */}
+            {currentHackTrack.fields.length > 0 && (
+              <Card className="bg-white/40 backdrop-blur-xl border-white/30 overflow-hidden">
+                <CardContent className="p-4 sm:p-6">
+                  <h4 className="font-bold text-gray-900 mb-3 text-base sm:text-lg flex items-center gap-2">
+                    <Sparkles className="w-5 h-5 text-blue-600" />
+                    Choose Your Field
+                  </h4>
+                  <div className="flex flex-wrap gap-3">
+                    {currentHackTrack.fields.map((field, idx) => (
+                      <div key={idx} className="px-5 py-3 rounded-xl bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200/60 shadow-sm flex items-center gap-2">
+                        <Code className="w-4 h-4 text-blue-600" />
+                        <span className="font-semibold text-gray-800 text-sm">{field}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
             {/* Highlights Grid */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-              {currentOpenTrack.highlights.map((highlight, index) => (
+              {currentHackTrack.highlights.map((highlight, index) => (
                 <Card key={index} className="bg-white/60 backdrop-blur-md border-white/40 hover:bg-white/70 hover:shadow-lg transition-all duration-300 hover:scale-105 group">
                   <CardContent className="p-3 sm:p-4 text-center">
                     <highlight.icon className={`w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-2 ${highlight.color} group-hover:scale-110 transition-transform duration-300`} />
@@ -368,9 +422,9 @@ export default function Instructions({ onRegisterClick }: InstructionsProps) {
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
-                  {currentOpenTrack.instructions.map((instruction, idx) => (
+                  {currentHackTrack.instructions.map((instruction, idx) => (
                     <div key={idx} className="flex items-start space-x-3 p-3 rounded-lg bg-white/30 backdrop-blur-sm border border-white/20 hover:bg-white/40 transition-all duration-300">
-                      <div className={`w-6 h-6 rounded-full bg-gradient-to-r ${currentOpenTrack.color} flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                      <div className={`w-6 h-6 rounded-full bg-gradient-to-r ${currentHackTrack.color} flex items-center justify-center flex-shrink-0 mt-0.5`}>
                         <span className="text-white text-xs font-bold">{idx + 1}</span>
                       </div>
                       <span className="text-gray-700 text-sm leading-relaxed">{instruction}</span>
@@ -390,7 +444,7 @@ export default function Instructions({ onRegisterClick }: InstructionsProps) {
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
-                  {currentOpenTrack.rules.map((rule, idx) => (
+                  {currentHackTrack.rules.map((rule, idx) => (
                     <div key={idx} className="flex items-start space-x-3 p-3 rounded-lg bg-red-50/50 backdrop-blur-sm border border-red-100/50 hover:bg-red-50/70 transition-all duration-300">
                       <AlertTriangle className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
                       <span className="text-gray-700 text-sm leading-relaxed">{rule}</span>
@@ -580,7 +634,7 @@ export default function Instructions({ onRegisterClick }: InstructionsProps) {
                 <Trophy className="w-8 h-8 sm:w-10 sm:h-10 mx-auto mb-3 text-yellow-300 animate-pulse" />
                 <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Ready to Compete?</h3>
                 <p className="text-indigo-100/90 mb-4 text-sm leading-relaxed">
-                  Register now and showcase your skills in {activeCategory === "open-innovation" ? "Open Innovation" : "RoboWars"}!
+                  Register now and showcase your skills in {activeCategory === "hackathon" ? "the Hackathon" : "RoboWars"}!
                 </p>
                 <Button 
                   size="default"

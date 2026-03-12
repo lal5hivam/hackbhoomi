@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code, Cpu, Lightbulb, X, BookOpen, Target } from 'lucide-react';
+import { Code, Cpu, Lightbulb, X, BookOpen, Target, Sparkles, Monitor, Wrench, Globe, Database, Cloud } from 'lucide-react';
 
 interface Description {
   background: string;
@@ -19,9 +19,10 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
   software: [
     {
       id: 'SIH25008',
-      title: 'Disaster Preparedness Education Platform',
+      title: 'Disaster Preparedness and Response Education System for Schools and Colleges',
       description: {
-        background: 'Natural disasters cause widespread damage due to lack of community preparedness. Most citizens are unaware of proper emergency protocols, evacuation routes, and survival techniques. A digital platform can bridge this gap by providing accessible, localized disaster preparedness training.',
+        background:
+          'Natural disasters cause widespread damage due to lack of community preparedness. Most citizens are unaware of proper emergency protocols, evacuation routes, and survival techniques. A digital platform can bridge this gap by providing accessible, localized disaster preparedness training.',
         expectedOutcome: [
           'Interactive web/mobile platform delivering region-specific disaster preparedness courses',
           'Quizzes and simulations to test and reinforce emergency knowledge',
@@ -35,7 +36,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25009',
       title: 'Gamified Environmental Education',
       description: {
-        background: 'Environmental awareness among youth remains low despite growing climate concerns. Traditional teaching methods fail to engage younger audiences effectively. Gamification can transform environmental education into an engaging, habit-forming experience.',
+        background:
+          'Environmental awareness among youth remains low despite growing climate concerns. Traditional teaching methods fail to engage younger audiences effectively. Gamification can transform environmental education into an engaging, habit-forming experience.',
         expectedOutcome: [
           'Gamified application teaching environmental conservation through challenges and rewards',
           'Community leaderboards to foster healthy competition',
@@ -46,9 +48,10 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
     },
     {
       id: 'SIH25010',
-      title: 'Smart Crop Advisory App',
+      title: 'Smart Crop Advisory System for Small and Marginal Farmers',
       description: {
-        background: 'Indian farmers often face crop losses due to incorrect crop selection, poor weather predictions, and untimely pest management. Access to data-driven agricultural advice remains limited in rural areas, leading to suboptimal yields.',
+        background:
+          'Indian farmers often face crop losses due to incorrect crop selection, poor weather predictions, and untimely pest management. Access to data-driven agricultural advice remains limited in rural areas, leading to suboptimal yields.',
         expectedOutcome: [
           'Personalized crop recommendations based on soil type, weather forecasts, and market trends',
           'Pest and disease detection using image recognition',
@@ -61,7 +64,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25011',
       title: 'Attendance & Activity App',
       description: {
-        background: 'Educational institutions struggle to track student engagement beyond basic attendance. Extra-curricular participation, project involvement, and skill development activities are rarely documented systematically, making holistic student assessment difficult.',
+        background:
+          'Educational institutions struggle to track student engagement beyond basic attendance. Extra-curricular participation, project involvement, and skill development activities are rarely documented systematically, making holistic student assessment difficult.',
         expectedOutcome: [
           'Comprehensive app tracking attendance alongside student activities',
           'Automated participation reports and analytics dashboards for educators',
@@ -74,7 +78,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25012',
       title: 'Rural School Attendance System',
       description: {
-        background: 'Rural schools face severe attendance tracking challenges due to lack of digital infrastructure, unreliable internet, and limited technical literacy among staff. Paper-based systems are prone to errors and manipulation.',
+        background:
+          'Rural schools face severe attendance tracking challenges due to lack of digital infrastructure, unreliable internet, and limited technical literacy among staff. Paper-based systems are prone to errors and manipulation.',
         expectedOutcome: [
           'Lightweight, offline-first attendance system optimized for low-cost devices',
           'Biometric or image-based student verification',
@@ -87,7 +92,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25013',
       title: 'Real-Time Public Transport Tracker',
       description: {
-        background: 'Commuters in Indian cities waste significant time waiting for buses and other public transport due to lack of real-time tracking information. This leads to reduced public transport usage and increased private vehicle dependency.',
+        background:
+          'Commuters in Indian cities waste significant time waiting for buses and other public transport due to lack of real-time tracking information. This leads to reduced public transport usage and increased private vehicle dependency.',
         expectedOutcome: [
           'Real-time tracking showing live bus locations and estimated arrival times',
           'Route information with stop details and interchange suggestions',
@@ -100,7 +106,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25016',
       title: 'Attendance Analytics Dashboard',
       description: {
-        background: 'Educational administrators lack tools to analyze attendance patterns across departments, courses, and time periods. Without data-driven insights, interventions for chronically absent students are reactive rather than proactive.',
+        background:
+          'Educational administrators lack tools to analyze attendance patterns across departments, courses, and time periods. Without data-driven insights, interventions for chronically absent students are reactive rather than proactive.',
         expectedOutcome: [
           'Visual analytics dashboard with attendance trends and pattern detection',
           'Predictive alerts identifying at-risk students before chronic absenteeism',
@@ -113,7 +120,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25017',
       title: 'Alumni Engagement Portal',
       description: {
-        background: 'Institutions struggle to maintain active relationships with alumni, missing opportunities for mentorship, fundraising, and industry connections. Existing alumni databases are outdated and engagement efforts are fragmented.',
+        background:
+          'Institutions struggle to maintain active relationships with alumni, missing opportunities for mentorship, fundraising, and industry connections. Existing alumni databases are outdated and engagement efforts are fragmented.',
         expectedOutcome: [
           'Portal connecting alumni with current students and faculty',
           'Mentorship program matching and job board features',
@@ -125,23 +133,10 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
     },
     {
       id: 'SIH25018',
-      title: 'Telemedicine Access Portal',
+      title: 'Digital Learning Platform for Rural School Students in Nabha',
       description: {
-        background: 'Rural and semi-urban populations face severe healthcare access challenges due to shortage of doctors and long travel distances to hospitals. Telemedicine can democratize healthcare access but existing solutions are too complex for target users.',
-        expectedOutcome: [
-          'Simplified portal enabling video consultations with doctors',
-          'Digital prescription management and health record maintenance',
-          'Voice-based navigation for non-tech-savvy users',
-          'Regional language support for wider accessibility',
-          'Integration with local pharmacy networks for medicine delivery',
-        ],
-      },
-    },
-    {
-      id: 'SIH25019',
-      title: 'Rural Learning Platform',
-      description: {
-        background: 'Students in rural India have limited access to quality educational content and qualified teachers. Digital divide and language barriers further restrict learning opportunities, widening the urban-rural education gap.',
+        background:
+          'Students in rural India have limited access to quality educational content and qualified teachers. Digital divide and language barriers further restrict learning opportunities, widening the urban-rural education gap.',
         expectedOutcome: [
           'Offline-capable learning platform with curriculum-aligned content',
           'Video lessons and interactive exercises in regional languages',
@@ -152,10 +147,84 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       },
     },
     {
-      id: 'SIH25028',
-      title: 'Smart Classroom Scheduler',
+      id: 'SIH25019',
+      title: 'Rural Learning Platform',
       description: {
-        background: 'Institutions face inefficiencies in classroom and resource allocation, leading to scheduling conflicts, underutilized spaces, and faculty dissatisfaction. Manual scheduling processes cannot handle the complexity of modern academic requirements.',
+        background:
+          'Students in rural India have limited access to quality educational content and qualified teachers. Digital divide and language barriers further restrict learning opportunities, widening the urban-rural education gap.',
+        expectedOutcome: [
+          'Offline-capable learning platform with curriculum-aligned content',
+          'Video lessons and interactive exercises in regional languages',
+          'Student progress tracking and performance analytics',
+          'Peer learning and discussion features',
+          'Optimized for low-bandwidth environments and budget devices',
+        ],
+      },
+    },
+    {
+      id: 'SIH25022',
+      title: 'Maximizing Section Throughput Using AI-Powered Precise Train Traffic Control',
+      description: {
+        background:
+          'Indian Railways faces congestion on high-density routes. Traditional manual traffic control limits the maximum number of trains that can safely pass through a section at any given time.',
+        expectedOutcome: [
+          'AI algorithm to predict and optimize train movements dynamically',
+          'Real-time traffic control dashboard for section controllers',
+          'Increased train throughput and reduced waiting times',
+          'Automated conflict resolution for scheduling overlaps',
+        ],
+      },
+    },
+    {
+      id: 'SIH25023',
+      title: 'Comprehensive Cloud-Based Practice Management & Nutrient Analysis Software for Ayurvedic Dietitians',
+      description: {
+        background:
+          'Ayurvedic dietitians lack specialized software to manage their practice and calculate nutritional values according to holistic Ayurvedic principles (such as Prakriti and Dosha).',
+        expectedOutcome: [
+          'Cloud-based patient management and appointment system',
+          'Nutrient analysis engine tailored specifically to Ayurvedic ingredients',
+          'Automated Ayurveda-focused diet plan generation',
+          'Progress tracking dashboard for patient health metrics',
+        ],
+      },
+    },
+    {
+      id: 'SIH25026',
+      title: 'Develop API Code to Integrate NAMASTE and/or ICD-11 via Traditional Medicine Module 2 into Existing EMR Systems',
+      description: {
+        background:
+          'Hospitals use disparate Electronic Medical Record (EMR) systems that cannot easily communicate or standardize traditional medicine data alongside allopathic records. This fragmentation hinders patient care continuity.',
+        expectedOutcome: [
+          'Standardized API middleware enabling interoperability between different EMR systems',
+          'Integration of NAMASTE and ICD-11 TM2 coding standards',
+          'Secure data exchange with end-to-end encryption',
+          'Patient consent management for data sharing',
+          'Format mapping and transformation between disparate data schemas',
+        ],
+      },
+    },
+    {
+      id: 'SIH25027',
+      title: 'Botanical Traceability Dashboard',
+      description: {
+        background:
+          'The herbal medicines and botanical products industry lacks traceability from raw material sourcing to finished products. This creates quality concerns, regulatory challenges, and difficulty in ensuring sustainable harvesting practices.',
+        expectedOutcome: [
+          'Dashboard tracking botanical raw materials from harvest to final product',
+          'GPS mapping of source/harvest areas',
+          'Quality test results linked to each batch',
+          'End-to-end batch tracking through the supply chain',
+          'Automated regulatory compliance report generation',
+        ],
+      },
+    },
+    {
+      id: 'SIH25028',
+      title: 'Smart Classroom and Timetable Scheduler for Optimizing University Operations',
+      description: {
+        background:
+          'Institutions face inefficiencies in classroom and resource allocation, leading to scheduling conflicts, underutilized spaces, and faculty dissatisfaction. Manual scheduling processes cannot handle the complexity of modern academic requirements.',
         expectedOutcome: [
           'AI-powered scheduling system for optimal classroom, lab, and faculty allocation',
           'Constraint handling for room capacity, equipment, and faculty preferences',
@@ -168,7 +237,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25029',
       title: 'Academia Validator',
       description: {
-        background: 'Academic credential fraud is a growing concern with fake degrees and certificates being used for employment and admissions. Manual verification is slow, expensive, and often unreliable across institutional boundaries.',
+        background:
+          'Academic credential fraud is a growing concern with fake degrees and certificates being used for employment and admissions. Manual verification is slow, expensive, and often unreliable across institutional boundaries.',
         expectedOutcome: [
           'Blockchain-based or cryptographically secure credential issuance platform',
           'Instant verification capability for employers and admissions offices',
@@ -181,7 +251,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25031',
       title: 'Civic Issue Reporting Tool',
       description: {
-        background: 'Citizens face difficulty reporting civic issues like potholes, broken streetlights, or garbage dumps to municipal authorities. The lack of a streamlined reporting mechanism results in unresolved issues and citizen frustration.',
+        background:
+          'Citizens face difficulty reporting civic issues like potholes, broken streetlights, or garbage dumps to municipal authorities. The lack of a streamlined reporting mechanism results in unresolved issues and citizen frustration.',
         expectedOutcome: [
           'Mobile app for geotagged civic issue reporting with photo/video evidence',
           'Automatic routing of reports to relevant municipal departments',
@@ -192,40 +263,69 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       },
     },
     {
-      id: 'SIH25026',
-      title: 'EMR API Integration',
+      id: 'SIH25035',
+      title: 'Sentiment Analysis System to Process Public Feedback from an eConsultation Module for Draft Laws',
       description: {
-        background: 'Hospitals use disparate Electronic Medical Record (EMR) systems that cannot communicate with each other. This fragmentation hinders patient care continuity, research, and healthcare analytics across institutions.',
+        background:
+          'Government eConsultation portals receive massive amounts of public feedback on draft laws. Manually analyzing this unstructured text data is time-consuming and inefficient.',
         expectedOutcome: [
-          'Standardized API middleware enabling interoperability between different EMR systems',
-          'Compliance with healthcare data standards (HL7/FHIR)',
-          'Secure data exchange with end-to-end encryption',
-          'Patient consent management for data sharing',
-          'Format mapping and transformation between disparate data schemas',
+          'NLP-based sentiment analysis engine to process text feedback',
+          'Automated categorization of public comments (positive, negative, neutral)',
+          'Dashboard visualizing public opinion trends and key concerns on draft laws',
+          'Summary report generation for policymakers',
         ],
       },
     },
     {
-      id: 'SIH25027',
-      title: 'Botanical Traceability Dashboard',
+      id: 'SIH25067',
+      title: 'Real-Time Groundwater Resource Evaluation Using DWLR (Digital Water Level Recorder) Data',
       description: {
-        background: 'The herbal medicines and botanical products industry lacks traceability from raw material sourcing to finished products. This creates quality concerns, regulatory challenges, and difficulty in ensuring sustainable harvesting practices.',
+        background:
+          'Groundwater depletion is a critical issue. Evaluating resources in real-time using Digital Water Level Recorder (DWLR) data is necessary for sustainable water management and policy enforcement.',
         expectedOutcome: [
-          'Dashboard tracking botanical raw materials from harvest to final product',
-          'GPS mapping of source/harvest areas',
-          'Quality test results linked to each batch',
-          'End-to-end batch tracking through the supply chain',
-          'Automated regulatory compliance report generation',
+          'Data pipeline to ingest and clean real-time DWLR telemetry',
+          'Analytics dashboard mapping groundwater level trends geospatially',
+          'Predictive modeling for future groundwater availability and depletion alerts',
+          'Automated reporting for water resource management authorities',
         ],
       },
     },
   ],
   hardware: [
     {
+      id: 'SIH25001',
+      title: 'Smart Community Health Monitoring and Early Warning System for Water-Borne Diseases in Rural Northeast India',
+      description: {
+        background:
+          'Rural Northeast India faces frequent outbreaks of water-borne diseases due to contaminated sources. A smart monitoring and early warning system is required to track water quality and predict local health outbreaks.',
+        expectedOutcome: [
+          'IoT-based water quality monitoring sensors deployed at community water sources',
+          'Early warning alert system delivering SMS/app notifications to local communities',
+          'Health data dashboard for rural healthcare workers to track outbreak clusters',
+          'Solar-powered hardware design for continuous operation in remote areas',
+        ],
+      },
+    },
+    {
+      id: 'SIH25005',
+      title: 'Image-Based Animal Type Classification for Cattle and Buffaloes',
+      description: {
+        background:
+          'Accurate identification and classification of cattle and buffaloes are essential for livestock management, breeding programs, and insurance claims. Manual classification is subjective and error-prone.',
+        expectedOutcome: [
+          'Edge AI camera system or mobile integration for rapid animal image capture',
+          'Machine learning model trained for specific breed and type classification',
+          'Digital registry system for farmers to log and track their livestock',
+          'Offline processing capabilities for use in remote farms',
+        ],
+      },
+    },
+    {
       id: 'SIH25014',
       title: 'Waste Segregation Monitoring',
       description: {
-        background: 'Urban waste management systems struggle with improper segregation at source, leading to contaminated recyclables, overburdened landfills, and inefficient waste processing. Monitoring compliance at household level remains impractical with current methods.',
+        background:
+          'Urban waste management systems struggle with improper segregation at source, leading to contaminated recyclables, overburdened landfills, and inefficient waste processing. Monitoring compliance at household level remains impractical with current methods.',
         expectedOutcome: [
           'Smart bin system with sensors detecting waste types (wet/dry/hazardous)',
           'Real-time fill level monitoring and collection service alerts',
@@ -236,9 +336,10 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
     },
     {
       id: 'SIH25015',
-      title: 'Intelligent Pesticide Sprinkler',
+      title: 'Intelligent Pesticide Sprinkling System',
       description: {
-        background: 'Excessive and indiscriminate pesticide usage harms soil health, contaminates water sources, and poses health risks to farmers. Manual spraying leads to uneven distribution and significant chemical waste.',
+        background:
+          'Excessive and indiscriminate pesticide usage harms soil health, contaminates water sources, and poses health risks to farmers. Manual spraying leads to uneven distribution and significant chemical waste.',
         expectedOutcome: [
           'Autonomous or semi-autonomous sprinkler system with computer vision',
           'Targeted pest-affected area identification and precision spraying',
@@ -251,7 +352,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25020',
       title: 'Contactless Track Monitoring',
       description: {
-        background: 'Railway track inspection is largely manual, slow, and hazardous. Undetected track defects like cracks, misalignments, and rail wear cause derailments. Continuous automated monitoring can prevent accidents and reduce maintenance costs.',
+        background:
+          'Railway track inspection is largely manual, slow, and hazardous. Undetected track defects like cracks, misalignments, and rail wear cause derailments. Continuous automated monitoring can prevent accidents and reduce maintenance costs.',
         expectedOutcome: [
           'Contactless monitoring using ultrasonic, laser, or vision-based sensors',
           'Mountable on rail vehicles for real-time defect detection',
@@ -262,14 +364,15 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
     },
     {
       id: 'SIH25021',
-      title: 'Laser QR Marking System',
+      title: 'AI-Based Development of Laser-Based QR Code Marking on Track Fittings on Indian Railways',
       description: {
-        background: 'Conventional product marking methods (ink printing, labels) are easily tampered with or degraded over time. Industries need permanent, machine-readable markings for traceability, anti-counterfeiting, and regulatory compliance.',
+        background:
+          'Conventional product marking methods are easily tampered with or degraded over time in harsh railway environments. The industry needs permanent, machine-readable markings for traceability and regulatory compliance.',
         expectedOutcome: [
-          'Laser-based system for permanent QR code engraving on metal, plastic, and glass',
-          'High-speed marking suitable for production lines',
+          'Laser-based system for permanent QR code engraving on metal railway track fittings',
+          'High-speed marking suitable for industrial production lines',
           'Variable data encoding support for unique product identification',
-          'Built-in readability verification with automatic quality grading',
+          'Built-in AI readability verification with automatic quality grading',
         ],
       },
     },
@@ -277,7 +380,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25025',
       title: 'E-tongue Sensor Device',
       description: {
-        background: 'Quality assessment of food, beverages, and pharmaceuticals currently relies on trained human taste panels, which are subjective, expensive, and inconsistent. An electronic tasting device can provide objective, repeatable measurements.',
+        background:
+          'Quality assessment of food, beverages, and pharmaceuticals currently relies on trained human taste panels, which are subjective, expensive, and inconsistent. An electronic tasting device can provide objective, repeatable measurements.',
         expectedOutcome: [
           'Portable electronic tongue with sensor arrays for taste detection',
           'Quantification of basic taste profiles: sweet, sour, salty, bitter, umami',
@@ -290,7 +394,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25051',
       title: 'Renewable Energy Monitor',
       description: {
-        background: 'Small-scale renewable energy installations (rooftop solar, small wind turbines) often underperform due to lack of monitoring, maintenance alerts, and performance optimization. Owners cannot easily identify issues or track ROI.',
+        background:
+          'Small-scale renewable energy installations (rooftop solar, small wind turbines) often underperform due to lack of monitoring, maintenance alerts, and performance optimization. Owners cannot easily identify issues or track ROI.',
         expectedOutcome: [
           'IoT-based device tracking energy generation, consumption, and battery status',
           'System health monitoring for solar panels and wind turbines',
@@ -304,7 +409,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25053',
       title: 'Onion Storage Improvement System',
       description: {
-        background: 'India loses 25-40% of its onion produce during storage due to sprouting, rotting, and weight loss caused by poor ventilation, humidity, and temperature control in traditional storage structures.',
+        background:
+          'India loses 25-40% of its onion produce during storage due to sprouting, rotting, and weight loss caused by poor ventilation, humidity, and temperature control in traditional storage structures.',
         expectedOutcome: [
           'Automated environment control for temperature, humidity, and ventilation',
           'Sensors for early spoilage and sprouting detection',
@@ -317,7 +423,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25054',
       title: 'MCB Short-Circuit Tester',
       description: {
-        background: 'Miniature Circuit Breakers (MCBs) are critical safety devices but testing their tripping characteristics requires expensive lab equipment. Field testing and quality verification of MCBs remains inaccessible to electricians and small manufacturers.',
+        background:
+          'Miniature Circuit Breakers (MCBs) are critical safety devices but testing their tripping characteristics requires expensive lab equipment. Field testing and quality verification of MCBs remains inaccessible to electricians and small manufacturers.',
         expectedOutcome: [
           'Portable, affordable MCB testing device for field use',
           'Verification of tripping current, tripping time, and insulation resistance',
@@ -330,7 +437,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25055',
       title: 'Cable Prep Automation',
       description: {
-        background: 'Cable preparation (stripping, cutting, crimping) in manufacturing and electrical work is labor-intensive, error-prone, and inconsistent when done manually. Poor cable preparation leads to unreliable electrical connections and safety hazards.',
+        background:
+          'Cable preparation (stripping, cutting, crimping) in manufacturing and electrical work is labor-intensive, error-prone, and inconsistent when done manually. Poor cable preparation leads to unreliable electrical connections and safety hazards.',
         expectedOutcome: [
           'Automated machine for insulation stripping, cutting to length, and terminal crimping',
           'Support for multiple wire gauges and cable sizes',
@@ -341,14 +449,15 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
     },
     {
       id: 'SIH25056',
-      title: 'Gold Testing Alternative System',
+      title: 'Exploring New/Alternative Non-Destructive Assaying Methods for Testing Gold Jewellery and Artefacts',
       description: {
-        background: 'Traditional gold purity testing methods (acid test, fire assay) are destructive, hazardous, and time-consuming. Consumers and small jewelers need a non-destructive, quick, and affordable way to verify gold purity accurately.',
+        background:
+          'Traditional gold purity testing methods (like fire assay) are destructive, hazardous, and time-consuming. Jewelers need a non-destructive, quick, and highly accurate way to verify gold purity.',
         expectedOutcome: [
-          'Non-destructive gold purity testing using XRF, conductivity, or ultrasonic methods',
-          'High-accuracy karat purity determination',
-          'Portable form factor suitable for jewelers and consumers',
-          'Results within seconds with clear digital display',
+          'Non-destructive gold purity testing equipment using alternative methods (e.g., XRF, ultrasonic)',
+          'High-accuracy karat purity determination without damaging the artefact',
+          'Portable or desktop form factor suitable for assaying centers',
+          'Instant digital test certificate generation',
         ],
       },
     },
@@ -356,7 +465,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25057',
       title: 'Metrology Compliance Checker',
       description: {
-        background: 'Legal metrology enforcement agencies manually check weighing and measuring instruments at shops and businesses, a process that is slow, subjective, and prone to corruption. Automated verification can improve accuracy and transparency.',
+        background:
+          'Legal metrology enforcement agencies manually check weighing and measuring instruments at shops and businesses, a process that is slow, subjective, and prone to corruption. Automated verification can improve accuracy and transparency.',
         expectedOutcome: [
           'Portable device connecting to weighing/measuring instruments',
           'Automatic calibration accuracy check against legal metrology standards',
@@ -369,7 +479,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25058',
       title: 'Tamper Detection in Instruments',
       description: {
-        background: 'Utility meters (electricity, water, gas) and commercial weighing instruments are frequently tampered with to show lower readings, causing revenue losses. Current tamper detection relies on periodic manual inspections.',
+        background:
+          'Utility meters (electricity, water, gas) and commercial weighing instruments are frequently tampered with to show lower readings, causing revenue losses. Current tamper detection relies on periodic manual inspections.',
         expectedOutcome: [
           'Smart tamper detection module retrofittable onto existing instruments',
           'Detection of physical tampering, magnetic interference, and firmware manipulation',
@@ -382,7 +493,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25062',
       title: 'Smart Hilly Agriculture System',
       description: {
-        background: 'Agriculture in hilly terrains faces unique challenges—steep slopes, terraced farming, water scarcity, and inaccessibility of modern farming equipment. These constraints lead to low productivity and farmer migration from hill regions.',
+        background:
+          'Agriculture in hilly terrains faces unique challenges—steep slopes, terraced farming, water scarcity, and inaccessibility of modern farming equipment. These constraints lead to low productivity and farmer migration from hill regions.',
         expectedOutcome: [
           'Integrated system with soil moisture sensors and automated drip irrigation',
           'Slope-aware farming tools designed for terraced agriculture',
@@ -395,7 +507,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25063',
       title: 'Break Detection in AC Lines',
       description: {
-        background: 'Broken or downed overhead AC power lines pose severe electrocution risks and cause power outages. Current protection systems may not detect high-impedance faults caused by broken conductors touching the ground.',
+        background:
+          'Broken or downed overhead AC power lines pose severe electrocution risks and cause power outages. Current protection systems may not detect high-impedance faults caused by broken conductors touching the ground.',
         expectedOutcome: [
           'Detection system for broken conductors in overhead AC distribution lines',
           'Current signature analysis, impedance monitoring, or sensor-based detection',
@@ -408,7 +521,8 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
       id: 'SIH25064',
       title: 'Grid Renewable Hosting Analyzer',
       description: {
-        background: 'Power distribution grids have limited capacity to absorb distributed renewable energy without causing voltage fluctuations, reverse power flow, and equipment damage. Utilities need tools to assess how much renewable capacity a grid segment can host.',
+        background:
+          'Power distribution grids have limited capacity to absorb distributed renewable energy without causing voltage fluctuations, reverse power flow, and equipment damage. Utilities need tools to assess how much renewable capacity a grid segment can host.',
         expectedOutcome: [
           'Hardware-software system measuring grid parameters (voltage, frequency, impedance)',
           'Calculation of maximum renewable energy hosting capacity per grid segment',
@@ -417,8 +531,23 @@ const problemStatements: { software: ProblemStatement[]; hardware: ProblemStatem
         ],
       },
     },
+    {
+      id: 'SIH25071',
+      title: 'AI-Based Rockfall Prediction and Alert System for Open-Pit Mines',
+      description: {
+        background:
+          'Rockfalls in open-pit mines pose severe safety hazards to workers and heavy machinery. An early prediction system utilizing field sensors is critical to prevent fatal accidents and operational downtime.',
+        expectedOutcome: [
+          'Sensor network (e.g., LiDAR, radar, or vibration sensors) deployed along mine slopes',
+          'AI model to analyze continuous sensor data and predict imminent rock slope failures',
+          'Real-time alert sirens and mobile notifications for immediate site evacuation',
+          'Geospatial dashboard tracking slope stability trends over time',
+        ],
+      },
+    },
   ],
 };
+
 
 export default function ProblemStatements() {
   const [activeTab, setActiveTab] = useState<'software' | 'hardware'>('software');
@@ -553,9 +682,133 @@ export default function ProblemStatements() {
           className="mt-12 p-6 bg-gradient-to-r from-orange-50 to-yellow-50 border-2 border-orange-200 rounded-xl"
         >
           <p className="text-gray-700 text-center">
-            <span className="font-bold text-orange-600">Note:</span> Teams participating in Open Innovation must select{' '}
+            <span className="font-bold text-orange-600">Note:</span> Teams participating in PS-Based mode must select{' '}
             <span className="font-bold">exactly 3 problem statements</span> from their chosen track (Software or Hardware) during registration.
           </p>
+        </motion.div>
+
+        {/* Open Innovation Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-16"
+        >
+          <div className="flex items-center justify-center mb-4">
+            <Sparkles className="w-8 h-8 text-purple-500 mr-3" />
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+              Open Innovation
+            </h2>
+          </div>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-10">
+            Have your own idea? Build a creative solution from scratch — no fixed problem statement needed!
+          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Software Open Innovation */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 shadow-lg"
+            >
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center shadow-md">
+                  <Monitor className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Software Track</h3>
+                  <p className="text-sm text-gray-600">Choose a field and build your own solution</p>
+                </div>
+              </div>
+
+              <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-blue-500" />
+                Choose Your Field
+              </h4>
+              <div className="flex flex-wrap gap-3 mb-6">
+                <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-blue-200 shadow-sm">
+                  <Globe className="w-4 h-4 text-blue-600" />
+                  <span className="font-semibold text-gray-800 text-sm">Web Development</span>
+                </div>
+                <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-blue-200 shadow-sm">
+                  <Database className="w-4 h-4 text-green-600" />
+                  <span className="font-semibold text-gray-800 text-sm">Data Science</span>
+                </div>
+                <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-blue-200 shadow-sm">
+                  <Cloud className="w-4 h-4 text-cyan-600" />
+                  <span className="font-semibold text-gray-800 text-sm">Cloud</span>
+                </div>
+              </div>
+
+              <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                <BookOpen className="w-4 h-4 text-blue-500" />
+                Instructions
+              </h4>
+              <ul className="space-y-2">
+                {[
+                  'Define your own real-world problem and propose a creative software solution',
+                  'Select one of the three fields: Web Development, Data Science, or Cloud',
+                  'Build a working prototype/MVP demonstrating your solution',
+                  'All code must be organized in a GitHub repository with proper documentation',
+                  'Prepare a compelling pitch deck explaining your solution\'s impact and feasibility',
+                  'Present your solution to judges with a live demo',
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2.5 text-gray-700 text-sm leading-relaxed">
+                    <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-500 text-white text-xs font-bold flex items-center justify-center mt-0.5">
+                      {idx + 1}
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Hardware Open Innovation */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="p-6 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 shadow-lg"
+            >
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center shadow-md">
+                  <Wrench className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Hardware Track</h3>
+                  <p className="text-sm text-gray-600">Design and build your own hardware idea</p>
+                </div>
+              </div>
+
+              <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                <BookOpen className="w-4 h-4 text-purple-500" />
+                Instructions
+              </h4>
+              <ul className="space-y-2">
+                {[
+                  'Identify a real-world problem that can be solved with a hardware solution',
+                  'Design your prototype using Arduino, Raspberry Pi, ESP32, or similar platforms',
+                  'Integrate sensors, actuators, and IoT connectivity as needed',
+                  'Develop both the hardware prototype and any supporting software/app',
+                  'Bring your own components — prototypes can be built before the hackathon',
+                  'Document your circuit design, components used, and system architecture',
+                  'Demonstrate real hardware functionality — simulations are not accepted',
+                  'Present a working demonstration to the judges with a clear pitch',
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2.5 text-gray-700 text-sm leading-relaxed">
+                    <span className="flex-shrink-0 w-5 h-5 rounded-full bg-purple-500 text-white text-xs font-bold flex items-center justify-center mt-0.5">
+                      {idx + 1}
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
 
@@ -579,11 +832,11 @@ export default function ProblemStatements() {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 30 }}
               transition={{ type: 'spring', damping: 28, stiffness: 320 }}
-              className="relative w-full max-w-2xl max-h-[85vh] overflow-hidden rounded-2xl shadow-2xl"
+              className="relative w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden rounded-2xl shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Gradient Header */}
-              <div className={`relative px-6 pt-6 pb-8 sm:px-8 sm:pt-8 sm:pb-10 ${
+              <div className={`relative flex-shrink-0 px-6 pt-6 pb-8 sm:px-8 sm:pt-8 sm:pb-10 ${
                 activeTab === 'software'
                   ? 'bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800'
                   : 'bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800'
@@ -617,7 +870,7 @@ export default function ProblemStatements() {
               </div>
 
               {/* Body */}
-              <div className="bg-white overflow-y-auto max-h-[calc(85vh-180px)] p-6 sm:p-8 space-y-6">
+              <div className="bg-white overflow-y-auto flex-1 min-h-0 p-6 sm:p-8 space-y-6">
                 {/* Background Section */}
                 <div className="group">
                   <div className="flex items-center gap-3 mb-3">
@@ -660,7 +913,7 @@ export default function ProblemStatements() {
               </div>
 
               {/* Footer */}
-              <div className="bg-gray-50 border-t border-gray-200 px-6 py-4 sm:px-8 flex justify-end">
+              <div className="flex-shrink-0 bg-gray-50 border-t border-gray-200 px-6 py-4 sm:px-8 flex justify-end">
                 <button
                   onClick={closePopup}
                   className={`px-6 py-2.5 rounded-lg font-semibold text-white transition-all shadow-md hover:shadow-lg ${

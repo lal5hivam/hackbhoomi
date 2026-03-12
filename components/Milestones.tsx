@@ -47,7 +47,7 @@ export default function Milestones() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">Inverthon 2.0</span>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-blue-200/90 max-w-3xl mx-auto leading-relaxed">
-            A premier inter-college competition designed to challenge and inspire the next generation of innovators and problem solvers
+            A premier competition designed to challenge and inspire the next generation of innovators and problem solvers
           </p>
         </div>
 
