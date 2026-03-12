@@ -92,7 +92,7 @@ export default function Milestones() {
             {/* Description Paragraphs */}
             <div className="space-y-4 sm:space-y-5 text-blue-100/90">
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
-                <span className="font-semibold text-yellow-300">Inverthon 2.0</span> is an inter-college innovation competition that brings together the brightest minds from colleges across the region. Participants will tackle real-world challenges through creative problem-solving, technical expertise, and teamwork.
+                <span className="font-semibold text-yellow-300">Inverthon 2.0</span> is an innovation competition that brings together the brightest minds from colleges across the region. Participants will tackle real-world challenges through creative problem-solving, technical expertise, and teamwork.
               </p>
               
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
