@@ -36,13 +36,6 @@ const events = [
     color: "bg-red-500"
   },
   {
-    title: "Problem Statement Allotment",
-    date: "Coming Soon.....",
-    desc: "Prepare your Idea PPT on the alloted PS!",
-    icon: Trophy,
-    color: "bg-purple-500"
-  },
-  {
     title: "Idea Submission Deadline",
     date: "Coming Soon.....",
     desc: "Submit your innovative ideas and solutions!",
@@ -51,7 +44,7 @@ const events = [
   },
   {
     title: "HACKATHON DAY - INVERTHON 2.0",
-    date: "2-4th April",
+    date: "14-16th April",
     desc: "Let the hacking begin! Build, code and create!",
     icon: Rocket,
     color: "bg-orange-500"

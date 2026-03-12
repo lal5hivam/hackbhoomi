@@ -234,7 +234,7 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
                   </div>
                   <div className="flex items-center space-x-1 text-gray-600">
                     <Calendar className="w-3 h-3 text-orange-500" />
-                    <span className="text-xs font-medium">2-4th April</span>
+                    <span className="text-xs font-medium">14-16th April</span>
                   </div>
                 </div>
 
@@ -412,7 +412,7 @@ export default function Navbar({ isScrolled, onRegisterClick }: NavbarProps) {
               </div>
               <div className="flex items-center space-x-2 text-gray-600 px-3 py-1.5">
                 <Calendar className="w-3.5 h-3.5 text-orange-500 flex-shrink-0" />
-                <span className="text-xs">2-4th April, 2026</span>
+                <span className="text-xs">14-16th April, 2026</span>
               </div>
 
               {/* Mobile CTA Button */}
