@@ -59,7 +59,7 @@ const HeroSection = memo(function HeroSection({ onRegisterClick }: HeroSectionPr
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center max-w-6xl pt-16 sm:pt-20 lg:pt-24">
 
         {/* Compact Professional Announcement Badge */}
-        <div className="mb-4 animate-fade-in-up">
+        {/* <div className="mb-4 animate-fade-in-up">
           <Badge
             variant="secondary"
             className="inline-flex items-center px-4 py-2 rounded-full bg-transaparent backdrop-blur-md border border-orange-400/30 text-white shadow-lg hover:shadow-orange-500/20 transition-all duration-300 hover:scale-105 text-xs sm:text-sm font-medium"
@@ -67,7 +67,7 @@ const HeroSection = memo(function HeroSection({ onRegisterClick }: HeroSectionPr
             <Sparkles className="w-3 h-3 mr-2 text-orange-300 animate-pulse" />
             🎯 Inter-College Competition
           </Badge>
-        </div>
+        </div> */}
 
         {/* SEO Optimized Main Heading */}
         <div className="mb-5 animate-fade-in-up">
