@@ -23,14 +23,14 @@ const events = [
   },
   {
     title: "Mentorship Sessions",
-    date: "",
+    date: "Ungoing",
     desc: "Get expert guidance regarding your ideas and solutions!",
     icon: Users,
     color: "bg-yellow-500"
   },
   {
     title: "Registration Deadline",
-    date: "15th March",
+    date: "17th March",
     desc: "Get ready to innovate — Last chance to register!",
     icon: Clock,
     color: "bg-red-500"

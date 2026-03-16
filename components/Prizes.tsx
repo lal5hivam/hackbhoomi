@@ -11,25 +11,25 @@ const Prizes: React.FC = () => {
     software: {
       title: 'Software Track',
       prizes: [
-        { place: '1st Place', amount: '₹11k', label: 'WINNER', color: 'yellow' },
-        { place: '2nd Place', amount: '₹5.1k', label: 'RUNNER-UP', color: 'gray' },
-        { place: '3rd Place', amount: '₹3.1k', label: '2ND RUNNER-UP', color: 'orange' },
+        { place: '1st Place', amount: '₹11,000', label: 'WINNER', color: 'yellow' },
+        { place: '2nd Place', amount: '₹5,100', label: 'RUNNER-UP', color: 'gray' },
+        { place: '3rd Place', amount: '₹3,100', label: '2ND RUNNER-UP', color: 'orange' },
       ],
     },
     hardware: {
       title: 'Hardware Track',
       prizes: [
-        { place: '1st Place', amount: '₹11k', label: 'WINNER', color: 'yellow' },
-        { place: '2nd Place', amount: '₹5.1k', label: 'RUNNER-UP', color: 'gray' },
-        { place: '3rd Place', amount: '₹3.1k', label: '2ND RUNNER-UP', color: 'orange' },
+        { place: '1st Place', amount: '₹11,000', label: 'WINNER', color: 'yellow' },
+        { place: '2nd Place', amount: '₹5,100', label: 'RUNNER-UP', color: 'gray' },
+        { place: '3rd Place', amount: '₹3,100', label: '2ND RUNNER-UP', color: 'orange' },
       ],
     },
     robowars: {
       title: 'RoboWars Track',
       prizes: [
-        { place: '1st Place', amount: '₹11k', label: 'WINNER', color: 'yellow' },
-        { place: '2nd Place', amount: '₹5.1k', label: 'RUNNER-UP', color: 'gray' },
-        { place: '3rd Place', amount: '₹3.1k', label: '2ND RUNNER-UP', color: 'orange' },
+        { place: '1st Place', amount: '₹11,000', label: 'WINNER', color: 'yellow' },
+        { place: '2nd Place', amount: '₹5,100', label: 'RUNNER-UP', color: 'gray' },
+        { place: '3rd Place', amount: '₹3,100', label: '2ND RUNNER-UP', color: 'orange' },
       ],
     },
   };
@@ -53,7 +53,7 @@ const Prizes: React.FC = () => {
             Win exciting prizes and recognition for your innovative solutions
           </p>
           <div className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-3 rounded-full text-xl font-bold shadow-lg">
-            Total Prize Pool: ₹60k
+            Total Prize Pool: ₹60,000
           </div>
         </div>
 
